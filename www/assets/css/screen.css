@@ -22,7 +22,7 @@ time, mark, audio, video {
 html {
   font-size: 16px;
   color: #181e20;
-  font-family: "Aktiv Grotesk", Helvetica, Arial, sans-serif;
+  font-family: "aktiv-grotesk-std", "Aktiv Grotesk", Helvetica, Arial, sans-serif;
   min-height: 100%; }
 
 article, aside, footer, header, menu, nav, section {
@@ -71,7 +71,7 @@ p {
     margin-top: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Proxima Nova Condensed", Helvetica, Arial, sans-serif; }
+  font-family: "proxima-nova-condensed", "Proxima Nova Condensed", Helvetica, Arial, sans-serif; }
 
 h1, h2, h3 {
   margin: 2rem 0 1rem; }
@@ -207,7 +207,7 @@ button,
   border: 1px solid #d1dadd;
   background: white;
   padding: 0.75rem;
-  font-family: "Aktiv Grotesk", Helvetica, Arial, sans-serif !important;
+  font-family: "aktiv-grotesk-std", "Aktiv Grotesk", Helvetica, Arial, sans-serif !important;
   font-size: 0.875rem;
   outline: none;
   color: #68838c;
@@ -641,7 +641,7 @@ footer {
   .page-sass .container-narrow section .section-headline {
     font-size: 1.875rem;
     border-bottom: 1px solid #eef1f3;
-    font-family: "Proxima Nova Condensed", Helvetica, Arial, sans-serif;
+    font-family: "proxima-nova-condensed", "Proxima Nova Condensed", Helvetica, Arial, sans-serif;
     color: #52676e; }
 .page-sass .container-narrow article {
   zoom: 1;
