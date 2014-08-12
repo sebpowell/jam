@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".checkbox").click(function(){var s=$(this).attr("data-value"),i=$(this).parent().find("input"),a=JSON.parse(i.val());if($(this).hasClass("disabled"))return!1;if($(this).hasClass("selected")){if(-1!==$.inArray(s,a)){var e=a.indexOf(s);a.splice(e,1)}}else-1==$.inArray(s,a)&&a.push(s);$(this).toggleClass("selected"),i.val(JSON.stringify(a))})});

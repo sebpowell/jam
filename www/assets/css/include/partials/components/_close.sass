@@ -1,0 +1,17 @@
+.close
+	@extend .text-center
+	+transition(color .25s)
+
+	position: absolute
+	top: 0
+	right: 0
+	width: $base-unit-layout
+	height: $base-unit-layout
+	cursor: pointer
+	color: rgba(0,0,0,.15)
+	text-decoration: none
+	font-weight: bold
+
+	+hover
+		color: rgba(0,0,0,.2)
+		text-decoration: none

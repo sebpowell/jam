@@ -1,0 +1,14 @@
+a, .link, .link-primary, .link-secondary
+	+transition(color .25s)
+	cursor: pointer
+	text-decoration: underline
+	color: $color-primary
+
+	+hover
+		color: $color-primary-600
+
+	&.link-secondary
+		color: $color-secondary
+
+		+hover
+			color: $color-secondary-600
