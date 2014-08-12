@@ -1,3 +1,10 @@
+// Implementation of Gulp:
+//
+// sudo npm install gulp -g
+// sudo npm install gulp
+// sudo npm install gulp-ruby-sass gulp-autoprefixer gulp-uglify gulp-concat gulp-notify
+
+
 /*
  * Init Gulp dependencies
  */
