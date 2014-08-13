@@ -1,5 +1,5 @@
 app.controller("GlobalController", function($scope, $location) {
-	console.log("lichi is now running");
+	console.log("JAM London is now running");
 
 	$scope.$watch(function(){
 		return $location.path();
@@ -19,6 +19,6 @@ app.controller("OoopsController", function($scope, $rootScope){
 	$rootScope.title = "Ooops";
 });
 
-app.controller("SassController", function($scope, $rootScope, $location){
-	$rootScope.title = "SASS Library";
+app.controller("MakingController", function($scope, $rootScope, $location){
+	$rootScope.title = "Making";
 });

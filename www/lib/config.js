@@ -1,8 +1,8 @@
 var appConfig = {
-	siteName: "litchi framework",
+	siteName: "JAM London",
 	siteLanguage: "en",
-	description: "litchi - Where beautiful Design meets beautiful Code...",
-	keywords: "litchi",
+	description: "JAM London - Bringing smart people together...",
+	keywords: "jam",
 	author: {
 		name: "Slavomir Vojacek",
 		email: "slavomirvojacek@gmail.com"
