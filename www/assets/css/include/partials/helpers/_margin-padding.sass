@@ -1,0 +1,46 @@
+// Needs refactoring
+
+.wipe-margin, .no-margin
+	margin: 0 !important
+
+.wipe-padding, .no-padding
+	padding: 0 !important
+
+.wipe-margin-padding,
+.wipe-padding-margin
+	margin: 0
+	padding: 0
+
+// Need to write SASS functions to automate these.
+
+.padding-vertical
+	&.unit-layout
+		padding: $base-unit-layout 0
+	&.double-unit-layout
+		padding: $double-unit-layout 0
+	&.triple-unit-layout
+		padding: $triple-unit-layout 0
+
+.padding-horizontal
+	&.unit-layout
+		padding: 0 $base-unit-layout
+	&.double-unit-layout
+		padding: 0 $double-unit-layout
+	&.triple-unit-layout
+		padding: 0 $triple-unit-layout
+
+.margin-vertical
+	&.unit-layout
+		margin: $base-unit-layout 0
+	&.double-unit-layout
+		margin: $double-unit-layout 0
+	&.triple-unit-layout
+		margin: $triple-unit-layout 0
+
+.margin-horizontal
+	&.unit-layout
+		margin: 0 $base-unit-layout
+	&.double-unit-layout
+		margin: 0 $double-unit-layout
+	&.triple-unit-layout
+		margin: 0 $triple-unit-layout

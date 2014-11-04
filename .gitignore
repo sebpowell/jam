@@ -1,7 +1,7 @@
 .sass-cache
 .divshot-cache
 
-/node_modules
+www/assets/node_modules
 
 .DS_Store
 .Spotlight-V100

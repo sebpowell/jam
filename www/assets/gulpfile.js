@@ -22,31 +22,31 @@ var gulp =
  */
 gulp.task("sass", function() {
 
-	gulp.src("www/assets/css/include/screen.sass")
+	gulp.src("css/include/screen.sass")
 		.pipe(sass({
-			loadPath: process.cwd() + "/www/assets/css/include",
+			loadPath: process.cwd() + "/css/include",
 			style: "nested"
 		}))
 		.pipe(autoprefixer("last 2 version", "> 1%"))
-		.pipe(gulp.dest("www/assets/css"))
+		.pipe(gulp.dest("css"))
 		.pipe(notify("SASS successfully compiled!"));
 
 });
 
 gulp.task("uglify", function() {
 
-	gulp.src("www/assets/js/include/*.js")
+	gulp.src("js/include/*.js")
 		.pipe(concat("app.js"))
 		.pipe(uglify("app.js"))
-		.pipe(gulp.dest("www/assets/js"))
+		.pipe(gulp.dest("js"))
 		.pipe(notify("JavaScript successfully compiled!"));
 
 });
 
 gulp.task("watch", function() {
 
-	gulp.watch("www/assets/css/include/**/*.sass", ["sass"]);
-	gulp.watch("www/assets/js/include/*.js", ["uglify"]);
+	gulp.watch("css/include/**/*.sass", ["sass"]);
+	gulp.watch("js/include/*.js", ["uglify"]);
 
 });
 
