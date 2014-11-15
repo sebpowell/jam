@@ -1,0 +1,22 @@
+{?
+global $app;
+?}
+
+<div class="container clear">
+	<a title="Log out" class="close" href="{href array($app["logoutPage"]) /href}">&times;</a>
+
+	<h1>Hello, {{ userData.Name|escape|capitalise }}</h1>
+	<p>
+		<a href="{href array($app["userPage"], "settings") /href}">Try editing your profile</a> OR <a href="{href array($app["userPage"], $template["randomProfile"]) /href}">visit someone else's profile!</a>
+	</p>
+
+	<hr>
+
+	{?
+	if (isset($template["userRemoteData"]) && $template["userRemoteData"] !== false) {
+		var_dump($template["userRemoteData"]);
+	}
+	?}
+
+	{inc param /inc}
+</div>

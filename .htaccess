@@ -1,0 +1,20 @@
+AddOutputFilterByType DEFLATE application/javascript application/json application/rss+xml application/xhtml+xml application/x-javascript application/xml text/css text/html text/javascript text/plain text/xml
+
+<FilesMatch "\.(ico|gif|jpg|jpeg|png|ico|swf|html|txt|js|css|pdf)$">
+	ExpiresDefault A1000000
+	Header append Cache-Control "public"
+	Header set Cache-Control "max-age=1000000, public"
+	Header set Vary: Accept-Encoding
+	Header set Connection keep-alive
+</FilesMatch>
+
+AddOutputFilter gzip html php css js txt
+<Files "\.(html|php|css|js|txt)$">
+	SetOutputFilter DEFLATE
+</Files>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) /index.php

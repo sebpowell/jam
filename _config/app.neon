@@ -1,0 +1,63 @@
+# app config
+
+welcomePage:
+
+	"/"
+
+userPage:
+
+	"/dashboard"
+
+logoutPage:
+
+	"/logout"
+
+ooopsPage:
+
+	"/ooops"
+
+siteName:
+
+	"litchi framework"
+
+description:
+
+	"litchi - Where beautiful Design meets beautiful Code..."
+
+keywords:
+
+	"litchi"
+
+dateTime:
+
+	"Europe/London"
+
+langs:
+
+	- "en"
+	- "fr"
+
+lang:
+
+	"en"
+
+encoding:
+
+	"UTF-8"
+
+contactMail:
+
+	email: "info@domain.com"
+	title: "litchi Support"
+
+author:
+
+	name: "Slavomir Vojacek"
+	web: "http://www.slavomirvojacek.com"
+
+SMTP:
+
+	host: ""
+	port: 465
+	login: ""
+	password: ""

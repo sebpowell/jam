@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ app.lang }}">
+	<head>
+
+		<meta charset="{{ app.encoding }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="description" content="{{ app.description }}">
+		<meta name="keywords" content="{{ app.keywords }}">
+
+		<title>{{ page.title|capitalise }} / {{ app.siteName }}</title>
+
+		<link rel="stylesheet" href="/assets/css/screen.css">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon-precomposed" href="/screen-icon.png">
+
+	</head>
+
+	<body class="preload page-{{ page.url.template|lower }} {{ app.lang }}">
+
+		<noscript>
+			<div id="warning">
+				To be able to experience {{ app.siteName }} with all its features, you need a browser that supports JavaScript, and it <strong>needs to be enabled.</strong>
+			</div>
+		</noscript>
+
+		{inc template /inc}
+
+		{module footer /module}
+
+		{?= DEBUG ? Utilities\Debug::getStats() : "" =?}
+
+		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="/assets/js/app.js" type="text/javascript"></script>
+
+		{?= (isset($template["page"]["scripts"]) && is_array($template["page"]["scripts"])) ? Template\jsCompile::compile($template["page"]["scripts"]) : "" =?}
+
+	</body>
+</html>
