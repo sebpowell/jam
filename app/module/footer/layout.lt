@@ -1,0 +1,5 @@
+<footer class="container">
+
+	<p>&copy; {?= date("Y") =?}, <a href="{href array(""), true /href}">{{ app.siteName }}</a></p>
+
+</footer>

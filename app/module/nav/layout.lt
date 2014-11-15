@@ -1,0 +1,9 @@
+{?
+$act = (isset($template["page"]["act"]) ? $template["page"]["act"] : 0);
+?}
+
+<ul>
+	<li{?= $act == 1 ? ' class="active"' : '' =?}><a href="{href array("") /href}">Welcome</a></li>
+	<li{?= $act == 2 ? ' class="active"' : '' =?}><a href="{href array("user", "sign-up") /href}">Sign up</a></li>
+	<li{?= $act == 3 ? ' class="active"' : '' =?}><a href="{href array("user", "sign-in") /href}">Sign in</a></li>
+</ul>

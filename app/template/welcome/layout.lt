@@ -1,0 +1,7 @@
+<div class="container-narrow">
+
+	<h1>Welcome to {{ app.siteName }}</h1>
+
+	{module nav /module}
+
+</div>

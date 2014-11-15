@@ -1,0 +1,50 @@
+.alert
+	+border-radius(3px)
+
+	padding: $base-unit-layout
+	background: $color-alert-warning
+	color: darken($color-alert-warning, 15%)
+	border: 1px solid darken($color-alert-warning, 10%)
+	margin: 0 0 $base-unit-layout
+	line-height: 1.5
+	position: relative
+
+	.close
+		color: darken($color-alert-warning, 15%)
+		top: $base-unit-layout
+		right: $base-unit-layout
+
+		+hover
+			color: darken($color-alert-warning, 20%)
+
+	&.info
+		background: $color-alert-info
+		color: darken($color-alert-info, 30%)
+		border: 1px solid darken($color-alert-info, 25%)
+
+		.close
+			color: darken($color-alert-info, 30%)
+
+			+hover
+				color: darken($color-alert-info, 35%)
+
+	&.success
+		background: $color-alert-success
+		color: darken($color-alert-success, 15%)
+		border: 1px solid darken($color-alert-success, 10%)
+
+		.close
+			color: darken($color-alert-success, 15%)
+
+			+hover
+				color: darken($color-alert-success, 20%)
+	&.error
+		background: $color-alert-error
+		color: darken($color-alert-error, 30%)
+		border: 1px solid darken($color-alert-error, 25%)
+
+		.close
+			color: darken($color-alert-error, 30%)
+
+			+hover
+				color: darken($color-alert-error, 35%)

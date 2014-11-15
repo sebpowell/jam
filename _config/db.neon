@@ -1,0 +1,6 @@
+# database configuration
+
+Connection:
+	Dsn: 'mysql:host=localhost;dbname=litchi;charset=utf8'
+	User: 'root'
+	Password: 'root'

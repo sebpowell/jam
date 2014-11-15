@@ -1,0 +1,10 @@
+{?
+global $app;
+?}
+
+<header></header>
+
+<p class="headline">
+	<strong>Ooops :-( The page you requested could not be found.</strong>
+	<a href="{href array($app["welcomePage"]) /href}">Go to homepage</a>
+</p>

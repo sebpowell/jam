@@ -1,0 +1,27 @@
+.page-ooops
+	background: $color-litchi
+	color: white
+	padding: 0 $base-unit-layout
+
+	header
+		// TODO change to icons
+		margin: $quadruple-unit-layout auto
+		width: $quadruple-unit-layout
+		height: $quadruple-unit-layout
+		background: url("#{$image-base}/icons/white/search.svg") no-repeat center center
+		background-size: contain
+
+	.headline
+		@extend .text-center
+		font-size: rem(26px)
+
+		strong
+			display: block
+			padding: 0 0 $base-unit-layout
+
+		a
+			color: white
+			font-size: rem(20px)
+
+	footer
+		display: none

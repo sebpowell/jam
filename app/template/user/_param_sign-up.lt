@@ -1,0 +1,9 @@
+<h1>{{ page.title|escape }}</h1>
+
+{module nav /module}
+
+{?
+	if (isset($template["alertSignUp"])) { echo $template["alertSignUp"]; }
+
+	echo $template["formSignUp"];
+?}

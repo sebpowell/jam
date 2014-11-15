@@ -1,0 +1,11 @@
+.sass-cache
+.idea
+
+error_log
+
+/node_modules
+
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db

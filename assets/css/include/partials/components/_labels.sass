@@ -1,0 +1,29 @@
+.label
+	+border-radius(3px)
+
+	font-size: rem(13px)
+	padding: $quarter-unit-layout $half-unit-layout
+	border: 1px solid $color-grey-300
+	color: $color-grey-300
+
+	&.primary
+		border-color: $color-primary
+		color: $color-primary
+
+	&.secondary
+		border-color: $color-secondary
+		color: $color-secondary
+
+	&.numeric
+		+border-radius($base-unit-layout + $quarter-unit-layout)
+
+		padding: 0 ($quarter-unit-layout  + rem(2px))
+		text-align: center
+		font-size: rem(11px)
+		display: inline-block
+		min-width: $base-unit-layout + $quarter-unit-layout
+		height: $base-unit-layout + $quarter-unit-layout
+		line-height: $base-unit-layout + $quarter-unit-layout
+		border: 0
+		color: white
+		background: $color-label-numeric
