@@ -7,7 +7,7 @@
 
 		<meta name="description" content="{{ app.description }}">
 
-		<title>{{ page.title|capitalise }} / {{ app.siteName }}</title>
+		<title>{{ app.siteName }} / {{ page.title|capitalise }}</title>
 
 		<link rel="stylesheet" href="/assets/css/screen.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">

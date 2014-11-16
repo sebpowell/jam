@@ -7,7 +7,7 @@
 
 		<meta name="description" content="<?php echo( $template["app"]["description"] ); ?>">
 
-		<title><?php echo( $template["page"]["title"] ); ?> / <?php echo( $template["app"]["siteName"] ); ?></title>
+		<title><?php echo( $template["app"]["siteName"] ); ?> / <?php echo( $template["page"]["title"] ); ?></title>
 
 		<link rel="stylesheet" href="/assets/css/screen.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
