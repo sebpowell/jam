@@ -2,8 +2,8 @@
 
 include "check.php";
 
-define("DEBUG", true);
-define("GRID", true);
+define("DEBUG", false);
+define("GRID", false);
 
 define("WWW_APP_DIR", APP_DIR . "/app");
 define("CONTENT_DIR", APP_DIR . "/assets/content");

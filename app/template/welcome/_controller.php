@@ -13,7 +13,7 @@ final class controller extends Controller\baseController
 
 		User::redirectIfSignedIn();
 
-		$this->template->page["title"] = "Welcome";
+		$this->template->page["title"] = "Makers, Thinkers and Doers";
 		$this->template->page["act"] = 1;
 
 		if (Http::isRequest("email")) {

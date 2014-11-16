@@ -9,6 +9,8 @@
 
 		<title><?php echo( $template["app"]["siteName"] ); ?> / <?php echo( $template["page"]["title"] ); ?></title>
 
+		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:700,400" rel="stylesheet" type="text/css">
+
 		<link rel="stylesheet" href="/assets/css/screen.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" href="/screen-icon.png">
