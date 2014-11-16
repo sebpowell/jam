@@ -11,6 +11,7 @@ button,
 	+placeholder
 		color: $color-grey-200
 
+	-webkit-appearance: none
 	border: 1px solid $color-grey-200
 	background: white
 	padding: rem(12px)
@@ -35,11 +36,8 @@ button,
 
 select
 	-webkit-appearance: none
-	background:
-		image: url("#{$image-base}/icons/grey/arrow-bottom.svg")
-		repeat: no-repeat
-		position: right $base-unit-layout top 50%
-		size: $half-unit-layout
+	background: url("#{$image-base}/icons/grey/arrow-bottom.svg") no-repeat right $base-unit-layout top 50%
+	background-size: $half-unit-layout
 
 textarea
 	min-height: $triple-unit-layout * 2
@@ -207,13 +205,8 @@ textarea:invalid
 				+border-radius(100%)
 
 .flash-message
-	// RESOLVE LOADER
-	background:
-		image: url("#{$image-base}/other/loading.gif")
-		repeat: no-repeat
-		position: center center
-		color: transparent
-		size: 22px 22px
+	background: url("#{$image-base}/other/loading.gif") no-repeat center center transparent
+	background-size: 22px 22px
 	min-height: $double-unit-layout
 	display: none
 	margin: 0 0 $base-unit-layout

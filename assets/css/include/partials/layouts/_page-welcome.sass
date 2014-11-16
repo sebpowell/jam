@@ -1,0 +1,130 @@
+.page-welcome,
+.page-manifesto
+	+transition(background .2s)
+
+	.content-center-center
+		min-height: 100vh
+		padding: $double-unit-layout
+
+		.container-narrow
+			display: flex
+
+			nav
+				min-width: 200px
+				display: flex
+				flex-direction: column
+				padding-bottom: $double-half-unit-layout
+
+				.logo
+					margin-top: $double-half-unit-layout
+					width: rem(100px)
+					height: rem(50px)
+					display: block
+					background:
+						image: url("#{$image-base}/logo/logo-jam.svg")
+						repeat: no-repeat
+						position: left top
+						size: 80% auto
+						color: transparent
+					overflow: hidden
+
+					h1, h2
+						opacity: 0
+						font:
+							size: rem(50px)
+
+					h2
+						font:
+							size: rem(16px)
+
+			article
+				//max-width: rem(600px)
+				padding: $base-unit-layout 0 $double-half-unit-layout
+
+				p
+					line-height: 2
+
+				form
+					padding-top: $double-unit-layout
+
+					p
+						line-height: 1.75
+						margin-bottom: 0
+						font:
+							size: rem(13px)
+
+					input
+						+border-radius(0)
+						+box-shadow(none)
+
+						background: transparent
+						margin: 0
+						width: 100%
+						border-top: 0
+						border-left: 0
+						border-right: 0
+						border-bottom: 1px dotted $color-black
+						padding-left: 0
+						color: $color-black
+						font:
+							size: rem(13px)
+
+						+hover
+							color: $color-black
+							border-bottom-color: $color-black
+
+						&:active
+							color: $color-black
+							border-bottom-color: $color-black
+
+	+respond-to-size(500px)
+		.content-center-center
+			.container-narrow
+				flex-direction: column
+
+				nav
+					padding-bottom: 0
+
+					.logo
+						margin-top: 0
+
+					footer
+						padding: $base-unit-layout 0
+
+	a.back
+		font:
+			size: rem(14px)
+
+	footer
+		font-size: rem(12px)
+		padding: $double-unit-layout 0 0
+
+		a
+			display: block
+			padding: 2px 0
+
+	&.dark
+		background: $color-black
+
+		.content-center-center
+			.container-narrow
+				color: $color-grey-200
+
+				nav
+					.logo
+						background:
+							image: url("#{$image-base}/logo/logo-jam-white.svg")
+
+				article
+					form
+						input
+							border-bottom-color: $color-grey-200
+							color: $color-grey-200
+
+							+hover
+								color: $color-grey-200
+								border-bottom-color: $color-grey-200
+
+							&:active
+								color: $color-grey-200
+								border-bottom-color: $color-grey-200

@@ -1,1 +1,6 @@
 User-agent: *
+
+Sitemap: /sitemap.xml
+
+Disallow: /*?*
+Disallow: /*.txt$

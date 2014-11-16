@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="description" content="<?php echo( $template["app"]["description"] ); ?>">
-		<meta name="keywords" content="<?php echo( $template["app"]["keywords"] ); ?>">
 
 		<title><?php echo( $template["page"]["title"] ); ?> / <?php echo( $template["app"]["siteName"] ); ?></title>
 
@@ -25,10 +24,6 @@
 		</noscript>
 
 		<?php Template\Template::getLayout(" template "); ?>
-
-		<?php Template\Template::getModule(" footer "); ?>
-
-		<?php echo( DEBUG ? Utilities\Debug::getStats() : "" ); ?>
 
 		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 		<script src="/assets/js/app.js" type="text/javascript"></script>

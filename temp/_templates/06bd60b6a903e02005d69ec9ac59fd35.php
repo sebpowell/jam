@@ -1,5 +1,9 @@
 <footer class="container">
 
-	<p>&copy; <?php echo( date("Y") ); ?>, <a href="<?php echo Template\Url::href( array(""), true ); ?>"><?php echo( $template["app"]["siteName"] ); ?></a></p>
+	<p>
+		<a href="#">Twitter</a>
+		<a href="#">Facebook</a>
+		<a href="#" id="theme-switch">Dark Theme</a>
+	</p>
 
 </footer>
