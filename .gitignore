@@ -2,6 +2,7 @@
 .idea
 
 error_log
+emails.txt
 
 /node_modules
 
