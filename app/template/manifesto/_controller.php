@@ -11,7 +11,7 @@ final class controller extends Controller\baseController
 
 		User::redirectIfSignedIn();
 
-		$this->template->page["title"] = "Welcome";
+		$this->template->page["title"] = "Manifesto";
 		$this->template->page["act"] = 1;
 	}
 

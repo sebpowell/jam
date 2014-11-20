@@ -10,12 +10,12 @@
 		</nav>
 
 		<article>
-			<p>JAM is a London-based <strong>community of makers, thinkers and doers</strong>. We bring together people who love building things. Our first event will launch in Spring 2014. Sign up to our mailing list, and we’ll let you know as soon as things start to get exciting.</p>
-			<p>If you need a bit more convincing, take a look at our short (but sweet) <a href="/manifesto">manifesto</a>.</p>
+			<p>JAM is a London-based community for people who love building products. Launching Spring 2015. Sign up for updates and we'll let you know as soon as things start to get exciting.</p>
+			<p>In the meantime, feel free to <a href="/manifesto">read our story</a>.</p>
 
 			<form method="post">
-				<p>To get a little <strong>reminder</strong> from us, enter your email and press Enter:</p>
-				<input type="email" name="email" required>
+				<h3>Get Involved</h3>
+				<p>We are organizing an event for spring 2015. If you would like to get involved as a <strong>volunteer / speaker / sponsor / other</strong>, <a href="mailto:sebastienpowell@gmail.com">get in touch</a>.</p>
 			</form>
 		</article>
 	</div>

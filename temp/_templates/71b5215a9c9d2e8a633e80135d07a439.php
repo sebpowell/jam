@@ -1,13 +1,26 @@
 <div class="content-center-center">
 	<div class="container-narrow">
+		<nav>
+			<a class="logo" href="/">
+				<h1>jam</h1>
+				<h2>Making jam in London</h2>
+			</a>
+
+			<a href="/">Welcome</a>
+			<a href="/manifesto">Manifesto</a>
+			<a href="/about">About</a>
+			<a href="/get-involved">Get Involved</a>
+
+			<?php Template\Template::getModule(" footer "); ?>
+		</nav>
+
 		<article>
-			<p><strong>Build Something Meaningful</strong></p>
-			<p>The new technologies of digital design and rapid prototyping have changed the way the world creates. This is the age of the maker. New tools combined with passion, creativity and innovation have the potential to solve some of the world’s greatest challenges. We want to encourage people to avoid working on products that solve superficial problems to focus on those that have real impact.</p>
-			<p><strong>Art + Engineering + More</strong></p>
-			<p>The best products are a balanced blend of art and technology. We do not favour one discipline over another. Jam is about the magic that happens when different ideas and skills meet.</p>
-			<p><strong>Artists Steal</strong></p>
-			<p>The best ideas are often improvements of old or existing ideas. Rather than reinvent the wheel, we believe in learning from the best.</p>
-			<p><a class="back" href="/">Back to home page</a></p>
+			<p>Building products is hard. When the three of us started working together at <a href="http://www.adbrain.com" target="_blank">Adbrain</a> a year ago, we struggled. We'd worked on products before, but nothing quite like this (ad tech products are complicated). How do you decide what to build? How do designers, engineers and product managers seamlessly work together? What tools are best for the job at hand? How does a good product become great?</p>
+			<p>We often wondered how other companies went about building products from scratch. We realised what we really needed was a place where we could learn from others that have been there and done it. Somewhere where we could discover and understand how all the parts fit together.</p>
+			<p>So we decided to start Jam. This is the community we wish we'd had all along, a place where people, across all disciplines can discuss their successes and failures, experiments, tools and techniques, and anything else that gets great products built.</p>
+			<p><strong>We hope you'll join us.</strong></p>
+			<h3>About us</h3>
+			<p>Jam is about the people that make building products possible; what inspired them, what tools they used, how they worked and improved, and how they went from good to great.</p>
 		</article>
 	</div>
 </div>
