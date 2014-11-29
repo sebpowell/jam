@@ -1,89 +1,76 @@
-// Needs refactoring
+// Number of columns & columns widths used in grid.
+$column-numbers: 12
+$column-width: 100% / $column-numbers
 
-%flex
-	+respond-to-size(500px)
-		flex: initial
+// Generates classses for columns 1 - 12.
+@for $i from 1 through $column-numbers
+	.columns-#{$i}
+		width: $i * $column-width
+		padding: 0 $base-unit-layout // Column gutters. Using padding as margin doens't work with % based widths.
 
-%flex-grid
+// For same-width block layouts (e.g. widgets), use the below instead of columns.
+// Columns won't work if a background colour is set, as no spacing will appear in between them
+// due to padding.
+
+@for $i from 1 through $column-numbers
+	.flex-grid-#{$i}
+		flex-wrap: wrap
+		> .flex-item
+			width: 100% / $i
+			padding: 0 $base-unit-layout // Column gutters. Using padding as margin doens't work with % based widths.
+			margin-bottom: $base-unit-layout
+
+// Creates a flex container. Negatives margins added to align child elements to side of container.
+.flex-container,
+.container-flex,
+.flex-row,
+[class^="flex-grid"]
 	display: flex
-	margin-left: -$double-unit-layout
-	flex-wrap: wrap
-	.flex-item
-		margin-bottom: $double-unit-layout
-		+respond-to-size(500px)
-			width: 100% !important
-	&.bordered
-		.flex-item
-			border-top: 1px solid $color-grey-200
-			border-bottom: 1px solid $color-grey-200
-			border-left: 1px solid $color-grey-200
-			&:last-child
-				border-right: 1px solid $color-grey-200
-	&.no-padding
-		margin-left: 0
-		.flex-item
-			padding: 0
+	margin-left: -($base-unit-layout)
+	margin-right: -($base-unit-layout)
 
-.flex-grid-2
-	@extend %flex-grid
-	.flex-item
-		width: 50%
+	&.gutter-half
+		margin-left: -($half-unit-layout)
+		margin-right: -($half-unit-layout)
+		> [class^="column"]
+			padding: 0 $half-unit-layout !important
 
-.flex-grid-3
-	@extend %flex-grid
-	.flex-item
-		width: 33.33%
+		> .flex-item
+			padding: 0 $half-unit-layout !important
 
-.flex-grid-4
-	@extend %flex-grid
-	.flex-item
-		width: 25%
+	&.full-bleed
+		margin-left: 0 !important
+		margin-right: 0 !important
+		> [class^="column"]
+			padding: 0 !important
 
+	// Other Helpers
+	&.vertical
+		height: 100vh
+		flex-direction: column
+		> [class^="column"]
+			flex: 1
+
+// Moves an item to the right of the screen.
 .align-right
 	align-self: flex-end
-	margin-left: auto
+	margin-left: auto !important
 
-.flex-vertical
-	flex-direction: column
-	.flex-item
-		padding: 0
-		padding-bottom: $double-unit-layout
-
-// This might need to be abstracted differently.
-
-.container-flex, .flex-row
+.flex
 	display: flex
-	margin-left: -$double-unit-layout
-	&.narrow
-		margin-left: -$half-unit-layout
-		.flex-item
-			padding-left: $half-unit-layout
 
-.flex-item
-	padding-left: $double-unit-layout
-// Needed to enable padding on child elements. Maybe need to create additional modifier classes?
+	&.column
+		flex-direction: column
 
-.flex-1,
-.flex-2,
-.flex-3,
-.flex-4,
-.flex-5,
-.flex-6
-	@extend %flex
+	&.row
+		flex-direction: row
 
-.flex-1
-	flex: 1
+	&.center-vertically
+		align-items: center
 
-.flex-2
-	flex: 2
+	&.center-horizontally
+		justify-content: center
 
-.flex-3
-	flex: 3
-
-.flex-4
-	flex: 4
-
-.content-center-center
-	display: flex
-	align-items: center
-	justify-content: center
+@for $i from 1 through $column-numbers
+	.flex-#{$i}
+		flex: $i

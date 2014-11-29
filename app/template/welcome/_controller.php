@@ -3,6 +3,7 @@
 use Model\User;
 use Utilities\Http;
 use Utilities\Validate;
+use Form\Control as Form;
 
 final class controller extends Controller\baseController
 {

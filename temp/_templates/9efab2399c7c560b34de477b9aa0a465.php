@@ -25,7 +25,19 @@
 			</div>
 		</noscript>
 
-		<?php Template\Template::getLayout(" template "); ?>
+		<div class="flex column container">
+			<nav class="flex center-vertically">
+				<a class="flex-1" href="/manifesto">Manifesto</a>
+				<a class="flex-1" href="mailto:mathildeleo@gmail.com">Get involved</a>
+			</nav>
+
+			<?php Template\Template::getLayout(" template "); ?>
+
+			<nav class="flex center-vertically">
+				<a class="flex-1" href="https://twitter.com/jamlon2015">Twitter</a>
+				<a class="flex-1" href="mailto:mathildeleo@gmail.com">Contact</a>
+			</nav>
+		</div>
 
 		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 		<script src="/assets/js/app.js" type="text/javascript"></script>

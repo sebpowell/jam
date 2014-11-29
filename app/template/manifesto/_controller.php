@@ -1,6 +1,8 @@
 <?php
 
 use Model\User;
+use Utilities\Http;
+use Utilities\Validate;
 
 final class controller extends Controller\baseController
 {
