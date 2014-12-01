@@ -34,7 +34,7 @@
 			<?php Template\Template::getLayout(" template "); ?>
 
 			<nav class="flex center-vertically">
-				<a class="flex-1" href="https://twitter.com/jamlon2015">Twitter</a>
+				<a class="flex-1" href="https://twitter.com/jamlondon2015">Twitter</a>
 				<a class="flex-1" href="mailto:mathildeleo@gmail.com">Contact</a>
 			</nav>
 		</div>

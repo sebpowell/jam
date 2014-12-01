@@ -4,8 +4,7 @@
 	</a>
 
 	<div class="content">
-		<p>JAM is a London-based community for people who love building
-			products.
+		<p>We're a London-based community for people who build products.
 			Launching Spring 2015.</p>
 
 		<form action="#" class="flex">

@@ -1,0 +1,1 @@
+{"/Users/sebpowell/Dropbox (Personal)/Sites/jam/gulpfile.js":{"sha1":"5c963e5819fb8470cc688797219e05114a74a4eb","tasks":{"sass":{"name":"sass","dependencies":""},"uglify":{"name":"uglify","dependencies":""},"watch":{"name":"watch","dependencies":""},"default":{"name":"default","dependencies":""}}}}
