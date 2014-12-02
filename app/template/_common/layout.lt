@@ -39,7 +39,7 @@
 			</nav>
 		</div>
 
-		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
 		<script src="/assets/js/app.js" type="text/javascript"></script>
 
 		{?= (isset($template["page"]["scripts"]) && is_array($template["page"]["scripts"])) ? Template\jsCompile::compile($template["page"]["scripts"]) : "" =?}
