@@ -958,11 +958,13 @@ a,
   margin: 0 3rem; }
 
 .text-center, .close, .page-welcome .container article .content p,
-.page-manifesto .container article .content p, .page-ooops .headline {
+.page-manifesto .container article .content p,
+.page-blog .container article .content p, .page-ooops .headline {
   text-align: center; }
 
 .text-right, .page-welcome .container nav a:last-of-type,
-.page-manifesto .container nav a:last-of-type {
+.page-manifesto .container nav a:last-of-type,
+.page-blog .container nav a:last-of-type {
   text-align: right; }
 
 .text-left, .page-manifesto .container article .content p {
@@ -988,27 +990,34 @@ a {
   text-decoration: none; }
 
 .page-welcome .container,
-.page-manifesto .container {
+.page-manifesto .container,
+.page-blog .container {
   height: 100%;
   height: 100vh; }
   .page-welcome .container nav,
-  .page-manifesto .container nav {
+  .page-manifesto .container nav,
+  .page-blog .container nav {
     height: 4rem;
     padding: 0 1.5rem; }
     .page-welcome .container nav a,
-    .page-manifesto .container nav a {
+    .page-manifesto .container nav a,
+    .page-blog .container nav a {
       color: #181e20;
       text-transform: capitalize;
       text-decoration: none; }
       .page-welcome .container nav a:hover, .page-welcome .container nav a:focus,
       .page-manifesto .container nav a:hover,
-      .page-manifesto .container nav a:focus {
+      .page-manifesto .container nav a:focus,
+      .page-blog .container nav a:hover,
+      .page-blog .container nav a:focus {
         color: #ffa55f; }
   .page-welcome .container article,
-  .page-manifesto .container article {
+  .page-manifesto .container article,
+  .page-blog .container article {
     overflow-y: scroll; }
     .page-welcome .container article #logo,
-    .page-manifesto .container article #logo {
+    .page-manifesto .container article #logo,
+    .page-blog .container article #logo {
       width: 6.25rem;
       height: 6.25rem;
       display: block;
@@ -1019,17 +1028,22 @@ a {
       background-position: center center;
       background-image: url("/assets/images/logo/logo.svg"); }
       .page-welcome .container article #logo h1,
-      .page-manifesto .container article #logo h1 {
+      .page-manifesto .container article #logo h1,
+      .page-blog .container article #logo h1 {
         opacity: 0; }
     .page-welcome .container article .content,
-    .page-manifesto .container article .content {
+    .page-manifesto .container article .content,
+    .page-blog .container article .content {
       max-width: 31.25rem; }
       .page-welcome .container article .content form,
-      .page-manifesto .container article .content form {
+      .page-manifesto .container article .content form,
+      .page-blog .container article .content form {
         padding: 2rem; }
         .page-welcome .container article .content form input, .page-welcome .container article .content form button,
         .page-manifesto .container article .content form input,
-        .page-manifesto .container article .content form button {
+        .page-manifesto .container article .content form button,
+        .page-blog .container article .content form input,
+        .page-blog .container article .content form button {
           box-shadow: none;
           -o-border-radius: 0;
           border-radius: 0;
@@ -1038,11 +1052,18 @@ a {
           border: 0;
           border-bottom: 1px solid #eef1f3; }
         .page-welcome .container article .content form button,
-        .page-manifesto .container article .content form button {
+        .page-manifesto .container article .content form button,
+        .page-blog .container article .content form button {
           border-color: #ffa55f; }
       .page-welcome .container article .content p,
-      .page-manifesto .container article .content p {
+      .page-manifesto .container article .content p,
+      .page-blog .container article .content p {
         line-height: 2; }
+
+.page-blog .content {
+  max-width: 31.25rem;
+  width: 90%;
+  margin: 4rem auto; }
 
 .page-manifesto .container article .content {
   max-width: 43.75rem; }
