@@ -61,7 +61,7 @@ hr {
   margin: 2rem 0; }
 
 strong, b {
-  font-weight: 500; }
+  font-weight: 700; }
 
 em, i {
   font-style: italic; }
@@ -419,12 +419,13 @@ textarea:invalid {
   margin: 0 0 1rem; }
 
 .label {
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
   font-size: 0.8125rem;
   padding: 0.25rem 0.5rem;
-  border: 1px solid #b4c2c7;
-  color: #b4c2c7; }
+  color: #b4c2c7;
+  background: skyblue;
+  color: white; }
   .label.primary {
     border-color: #ffa55f;
     color: #ffa55f; }
@@ -1022,7 +1023,7 @@ a {
       height: 6.25rem;
       display: block;
       overflow: hidden;
-      margin-bottom: 4rem;
+      margin: 0 auto 4rem;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
@@ -1034,7 +1035,8 @@ a {
     .page-welcome .container article .content,
     .page-manifesto .container article .content,
     .page-blog .container article .content {
-      max-width: 31.25rem; }
+      max-width: 31.25rem;
+      margin: 0 auto; }
       .page-welcome .container article .content form,
       .page-manifesto .container article .content form,
       .page-blog .container article .content form {
@@ -1060,13 +1062,36 @@ a {
       .page-blog .container article .content p {
         line-height: 2; }
 
-.page-blog .content {
-  max-width: 31.25rem;
-  width: 90%;
-  margin: 4rem auto; }
+.page-welcome .resources {
+  max-width: 37.5rem;
+  padding: 6rem 0 2rem;
+  margin: 0 auto; }
+  .page-welcome .resources h2 {
+    font-size: 1.5rem;
+    color: #ffa55f; }
+  .page-welcome .resources .description {
+    font-size: 0.9375rem;
+    color: #839ba3; }
+  .page-welcome .resources article {
+    padding: 3rem 0 0;
+    overflow: visible; }
+    .page-welcome .resources article p {
+      margin: 0; }
+    .page-welcome .resources article .title {
+      font-size: 1.125rem; }
+      .page-welcome .resources article .title small {
+        font-size: 0.75rem;
+        display: block;
+        color: #839ba3; }
+    .page-welcome .resources article .description {
+      font-size: 0.875rem;
+      color: #181e20;
+      padding: 0.5rem 0 1rem; }
+    .page-welcome .resources article .tags .label {
+      margin-right: 0.25rem; }
 
 .page-manifesto .container article .content {
-  max-width: 43.75rem; }
+  max-width: 37.5rem; }
 
 .page-ooops {
   background: #ff6961;

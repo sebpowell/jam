@@ -1,10 +1,82 @@
 [
 	{
-		"title": "OpenMaths.io launches beta!",
-		"desc": "An educational online tool for creating Mathematical papers just...",
-		"tags": ["maths", "open"],
-		"link": "https://openmaths.io"
-		"author": "Slavomir Vojacek"
-		"date": "8 Dec 2014"
+		"title": "A Map Of White Space For Product Managers",
+		"desc": "Where to locate critical gaps around your product.",
+		"tags": ["Product", "PM", "Theory"],
+		"link": "https://medium.com/@danielfschmidt/a-map-of-white-space-for-product-managers-17d65c397749",
+		"author": "Mathilde",
+		"date": "9 December 2014"
+	},
+
+	{
+		"title": "The Strategic Role of Product Management",
+		"desc": "Market-driven focus leads companies to build products people want to buy.",
+		"tags": ["Product", "PM", "Strategy"],
+		"link": "http://www.pragmaticmarketing.com/strategic-role-of-product-management",
+		"author": "Mathilde",
+		"date": "1 December 2014"
+	},
+
+	{
+		"title": "10 Tips For Writing Good User Stories",
+		"desc": "As its name suggests, a user story describes how a customer or a user employs the product.",
+		"tags": ["Stories", "Requirements", "Agile"],
+		"link": "http://www.romanpichler.com/blog/10-tips-writing-good-user-stories/",
+		"author": "Seb",
+		"date": "7 December 2014"
+	},
+
+	{
+		"title": "From Concept to Coding: The Art of Writing Requirements",
+		"desc": "Pathfinder Development's approach to writing requirements for agile software development.",
+		"tags": ["Requirements", "Agile"],
+		"link": "http://www.slideshare.net/bkappe/agile-requirements-writing",
+		"author": "Slavo",
+		"date": "2 November 2014"
+	},
+
+	{
+		"title": "Planning and Launching Software Products In An Agile Environment",
+		"desc": "Thoughts on software-as-a-service products, software-as-a-service product design and the impact of software-as-a-service on the technology landscape.",
+		"tags": ["Planning", "Agile", "Requirements"],
+		"link": "http://onsaasproducts.wordpress.com/2013/02/01/planning-and-launching-software-products-in-an-agile-environment/#more-559",
+		"author": "Slavo",
+		"date": "8 December 2014"
+	},
+
+	{
+		"title": "Product-Value Alignment - What Comes After Product-Market Fit",
+		"desc": "Reaching Product/Market Fit is a key objective in the life of a startup, whether it’s a journey, a continuum or a given point in time.",
+		"tags": ["Product"],
+		"link": "http://startupmanagement.org/2013/09/06/introducing-product-value-alignment-what-comes-after-productmarket-fit/",
+		"author": "Mathilde",
+		"date": "11 November 2014"
+	},
+
+	{
+		"title": "Spotify Engineering Culture",
+		"desc": "An attempt to describe our engineering culture. This is a journey in progress, not a journey completed, so the video is somewhere between \"How Things Are Today\" and \"How We Want Things To Be\".",
+		"tags": ["Culture", "Startups", "Teams", "Structure"],
+		"link": "http://vimeo.com/85490944",
+		"author": "Slavo",
+		"date": "20 November 2014"
+	},
+
+	{
+		"title": "How To Work With Engineers",
+		"desc": "A Cheat Sheet for Designers.",
+		"tags": ["People", "Culture", "Engineers", "Teams"],
+		"link": "https://medium.com/the-year-of-the-looking-glass/how-to-work-with-engineers-a3163ff1eced",
+		"author": "Seb",
+		"date": "4 November 2014"
+	},
+
+	{
+		"title": "Launching Adventure Teams at Moz",
+		"desc": "Like many software companies moving from the early to growth stage, we’ve experienced our fair share of challenges and pains.",
+		"tags": ["Culture", "Startups", "Teams", "Structure"],
+		"link": "http://moz.com/rand/launching-adventure-teams-moz/",
+		"author": "Mathilde",
+		"date": "27 November 2014"
 	}
 ]

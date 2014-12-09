@@ -1,4 +1,4 @@
-<article class="flex-1 flex column center-vertically center-horizontally">
+<article class="flex-1">
 	<a id="logo" href="/">
 		<h1>Making JAM London</h1>
 	</a>
@@ -26,5 +26,26 @@
 		</form>
 
 		<p>In the meantime, <a href="/manifesto">read our story</a>.</p>
+	</div>
+
+	<div class="resources">
+		<h2>Resources</h2>
+		<p class="description">We post tools, articles and resources we use and think you'll find useful too.</p>
+
+		{? foreach($template["content"] as $k) { ?}
+		<article>
+			<p class="title">
+				<a href="{?= $k["link"] =?}" target="_blank">{?= $k["title"] =?}</a>
+				<small><strong>{?= $k["date"] =?}</strong> by <strong>{?= $k["author"] =?}</strong></small>
+			</p>
+			<p class="description">{?= $k["desc"] =?}</p>
+			<div class="tags flex">
+				{? foreach ($k["tags"] as $tag) { ?}
+				<span class="label {?= $tag =?}">{?= $tag =?}</span>
+				{? } ?}
+			</div>
+		</article>
+		{? } ?}
+
 	</div>
 </article>

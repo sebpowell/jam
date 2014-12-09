@@ -1,4 +1,4 @@
-<article class="flex-1 flex column center-vertically center-horizontally">
+<article class="flex-1">
 	<a id="logo" href="/">
 		<h1>Making JAM London</h1>
 	</a>
