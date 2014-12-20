@@ -28,14 +28,14 @@
 		<div class="flex column container">
 			<nav class="flex center-vertically">
 				<a class="flex-1" href="/manifesto">Manifesto</a>
-				<a class="flex-1" href="mailto:mathildeleo@gmail.com">Get involved</a>
+				<a class="flex-1" href="/resources">Resources</a>
 			</nav>
 
 			{inc template /inc}
 
 			<nav class="flex center-vertically">
 				<a class="flex-1" href="https://twitter.com/jamlondon2015">Twitter</a>
-				<a class="flex-1" href="mailto:mathildeleo@gmail.com">Contact</a>
+				<a class="flex-1" href="mailto:mathildeleo@gmail.com">Get involved</a>
 			</nav>
 		</div>
 

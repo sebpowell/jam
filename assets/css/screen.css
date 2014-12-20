@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box; }
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
 
 .preload * {
   -webkit-transition: none !important;
@@ -683,7 +684,6 @@ h6 {
 .container-flex,
 .flex-row,
 [class^="flex-grid"] {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -721,8 +721,6 @@ h6 {
   .flex-row.vertical,
   [class^="flex-grid"].vertical {
     height: 100vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; }
@@ -730,7 +728,6 @@ h6 {
     .container-flex.vertical > [class^="column"],
     .flex-row.vertical > [class^="column"],
     [class^="flex-grid"].vertical > [class^="column"] {
-      -webkit-box-flex: 1;
       -webkit-flex: 1;
           -ms-flex: 1;
               flex: 1; }
@@ -742,101 +739,82 @@ h6 {
   margin-left: auto !important; }
 
 .flex {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
   .flex.column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; }
   .flex.row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row; }
   .flex.center-vertically {
-    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
   .flex.center-horizontally {
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
 
 .flex-1 {
-  -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
 
 .flex-2 {
-  -webkit-box-flex: 2;
   -webkit-flex: 2;
       -ms-flex: 2;
           flex: 2; }
 
 .flex-3 {
-  -webkit-box-flex: 3;
   -webkit-flex: 3;
       -ms-flex: 3;
           flex: 3; }
 
 .flex-4 {
-  -webkit-box-flex: 4;
   -webkit-flex: 4;
       -ms-flex: 4;
           flex: 4; }
 
 .flex-5 {
-  -webkit-box-flex: 5;
   -webkit-flex: 5;
       -ms-flex: 5;
           flex: 5; }
 
 .flex-6 {
-  -webkit-box-flex: 6;
   -webkit-flex: 6;
       -ms-flex: 6;
           flex: 6; }
 
 .flex-7 {
-  -webkit-box-flex: 7;
   -webkit-flex: 7;
       -ms-flex: 7;
           flex: 7; }
 
 .flex-8 {
-  -webkit-box-flex: 8;
   -webkit-flex: 8;
       -ms-flex: 8;
           flex: 8; }
 
 .flex-9 {
-  -webkit-box-flex: 9;
   -webkit-flex: 9;
       -ms-flex: 9;
           flex: 9; }
 
 .flex-10 {
-  -webkit-box-flex: 10;
   -webkit-flex: 10;
       -ms-flex: 10;
           flex: 10; }
 
 .flex-11 {
-  -webkit-box-flex: 11;
   -webkit-flex: 11;
       -ms-flex: 11;
           flex: 11; }
 
 .flex-12 {
-  -webkit-box-flex: 12;
   -webkit-flex: 12;
       -ms-flex: 12;
           flex: 12; }
@@ -960,11 +938,13 @@ a,
 
 .text-center, .close, .page-welcome .container article .content p,
 .page-manifesto .container article .content p,
+.page-resources .container article .content p,
 .page-blog .container article .content p, .page-ooops .headline {
   text-align: center; }
 
 .text-right, .page-welcome .container nav a:last-of-type,
 .page-manifesto .container nav a:last-of-type,
+.page-resources .container nav a:last-of-type,
 .page-blog .container nav a:last-of-type {
   text-align: right; }
 
@@ -992,16 +972,19 @@ a {
 
 .page-welcome .container,
 .page-manifesto .container,
+.page-resources .container,
 .page-blog .container {
   height: 100%;
   height: 100vh; }
   .page-welcome .container nav,
   .page-manifesto .container nav,
+  .page-resources .container nav,
   .page-blog .container nav {
     height: 4rem;
     padding: 0 1.5rem; }
     .page-welcome .container nav a,
     .page-manifesto .container nav a,
+    .page-resources .container nav a,
     .page-blog .container nav a {
       color: #181e20;
       text-transform: capitalize;
@@ -1009,15 +992,19 @@ a {
       .page-welcome .container nav a:hover, .page-welcome .container nav a:focus,
       .page-manifesto .container nav a:hover,
       .page-manifesto .container nav a:focus,
+      .page-resources .container nav a:hover,
+      .page-resources .container nav a:focus,
       .page-blog .container nav a:hover,
       .page-blog .container nav a:focus {
         color: #ffa55f; }
   .page-welcome .container article,
   .page-manifesto .container article,
+  .page-resources .container article,
   .page-blog .container article {
     overflow-y: scroll; }
     .page-welcome .container article #logo,
     .page-manifesto .container article #logo,
+    .page-resources .container article #logo,
     .page-blog .container article #logo {
       width: 6.25rem;
       height: 6.25rem;
@@ -1030,20 +1017,25 @@ a {
       background-image: url("/assets/images/logo/logo.svg"); }
       .page-welcome .container article #logo h1,
       .page-manifesto .container article #logo h1,
+      .page-resources .container article #logo h1,
       .page-blog .container article #logo h1 {
         opacity: 0; }
     .page-welcome .container article .content,
     .page-manifesto .container article .content,
+    .page-resources .container article .content,
     .page-blog .container article .content {
       max-width: 31.25rem;
       margin: 0 auto; }
       .page-welcome .container article .content form,
       .page-manifesto .container article .content form,
+      .page-resources .container article .content form,
       .page-blog .container article .content form {
         padding: 2rem; }
         .page-welcome .container article .content form input, .page-welcome .container article .content form button,
         .page-manifesto .container article .content form input,
         .page-manifesto .container article .content form button,
+        .page-resources .container article .content form input,
+        .page-resources .container article .content form button,
         .page-blog .container article .content form input,
         .page-blog .container article .content form button {
           box-shadow: none;
@@ -1055,39 +1047,43 @@ a {
           border-bottom: 1px solid #eef1f3; }
         .page-welcome .container article .content form button,
         .page-manifesto .container article .content form button,
+        .page-resources .container article .content form button,
         .page-blog .container article .content form button {
           border-color: #ffa55f; }
       .page-welcome .container article .content p,
       .page-manifesto .container article .content p,
+      .page-resources .container article .content p,
       .page-blog .container article .content p {
         line-height: 2; }
 
-.page-welcome .resources {
+.page-resources p {
+  text-align: left !important; }
+.page-resources .resources {
   max-width: 37.5rem;
   padding: 6rem 0 2rem;
   margin: 0 auto; }
-  .page-welcome .resources h2 {
+  .page-resources .resources h2 {
     font-size: 1.5rem;
     color: #ffa55f; }
-  .page-welcome .resources .description {
+  .page-resources .resources .description {
     font-size: 0.9375rem;
     color: #839ba3; }
-  .page-welcome .resources article {
+  .page-resources .resources article {
     padding: 3rem 0 0;
     overflow: visible; }
-    .page-welcome .resources article p {
+    .page-resources .resources article p {
       margin: 0; }
-    .page-welcome .resources article .title {
+    .page-resources .resources article .title {
       font-size: 1.125rem; }
-      .page-welcome .resources article .title small {
+      .page-resources .resources article .title small {
         font-size: 0.75rem;
         display: block;
         color: #839ba3; }
-    .page-welcome .resources article .description {
+    .page-resources .resources article .description {
       font-size: 0.875rem;
       color: #181e20;
       padding: 0.5rem 0 1rem; }
-    .page-welcome .resources article .tags .label {
+    .page-resources .resources article .tags .label {
       margin-right: 0.25rem; }
 
 .page-manifesto .container article .content {
