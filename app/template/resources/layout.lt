@@ -2,7 +2,7 @@
 <div class="content">
 <div class="resources">
 		<h2>Resources</h2>
-		<p class="description">Tools &amp; food for thought, updated daily.</p>
+		<p class="description">Curated tools &amp; food for thought, updated daily.</p>
 
 		{? foreach($template["content"] as $k) { ?}
 		<article>
