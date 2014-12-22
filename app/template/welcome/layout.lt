@@ -25,7 +25,7 @@
 
 		</form>
 
-		<p>In the meantime, <a href="/manifesto">read our story</a>.</p>
+		<p>In the meantime, <a href="/about">read our story</a>.</p>
 	</div>
 
 </article>
