@@ -12,6 +12,71 @@
 	padding: 0
 
 // Need to write SASS functions to automate these.
+// NEW helpers
+%margins
+	&.quarter-unit
+		margin: $quarter-unit-layout
+	&.half-unit
+		margin: $half-unit-layout
+	&.base-unit, &.unit-layout
+		margin: $unit-layout
+	&.double-half-unit
+		margin: $double-half-unit-layout
+	&.double-unit, &.double-unit-layout
+		margin: $double-unit-layout
+	&.triple-unit
+		margin: $triple-unit-layout
+	&.quadruple-unit
+		margin: $quadruple-unit-layout
+
+%padding
+	&.quarter-unit
+		padding: $quarter-unit-layout
+	&.half-unit
+		padding: $half-unit-layout
+	&.base-unit, &.unit-layout
+		padding: $unit-layout
+	&.double-half-unit
+		padding: $double-half-unit-layout
+	&.double-unit, &.double-unit-layout
+		padding: $double-unit-layout
+	&.triple-unit
+		padding: $triple-unit-layout
+	&.quadruple-unit
+		padding: $quadruple-unit-layout
+
+.padding-all
+	@extend %padding
+
+.margin-left
+	@extend %margins
+	margin-top: 0 !important
+	margin-right: 0 !important
+	margin-bottom: 0 !important
+
+.margin-right
+	@extend %margins
+	margin-top: 0 !important
+	margin-left: 0 !important
+	margin-bottom: 0 !important
+
+.margin-top
+	@extend %margins
+	margin-left: 0 !important
+	margin-right: 0 !important
+	margin-bottom: 0 !important
+
+.margin-bottom
+	@extend %margins
+	margin-top: 0 !important
+	margin-left: 0 !important
+	margin-right: 0 !important
+
+.margin-all
+	@extend %margins
+	margin-top: 0 !important
+	margin-left: 0 !important
+	margin-right: 0 !important
 
 .padding-vertical
 	&.unit-layout

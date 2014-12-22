@@ -27,7 +27,7 @@
 
 		<div class="flex column container">
 			<nav class="flex center-vertically">
-				<a class="flex-1" href="/manifesto">Manifesto</a>
+				<a class="flex-1" href="/about">About</a>
 				<a class="flex-1" href="/resources">Resources</a>
 			</nav>
 

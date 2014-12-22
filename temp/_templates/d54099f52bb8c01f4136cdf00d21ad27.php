@@ -4,6 +4,7 @@
 	</a>
 
 	<div class="content">
+		<!-- TODO: margin on h2 and p top is impractical - let's change this !-->
 		<h2>Manifesto</h2>
 		<p>Building products is hard. When the three of us started working
 			together at <a href="http://www.adbrain.com">Adbrain</a> a year ago, we struggled. We’d
@@ -26,7 +27,7 @@
 
 			<p>We hope you’ll join us.</p>
 	<h2>The Team</h2>
-	<div class="flex-row margin-bottom unit-layout">
+	<div class="flex-row margin-bottom double-unit-layout">
 		<div class="columns-4">
 			<img src="../../assets/images/team/mathilde-leo.png">
 		</div>
@@ -37,7 +38,7 @@
 				<a target="_blank" href="https://twitter.com/Mathilde_Leo">Twitter</a>
 		</div>
 	</div>
-	<div class="flex-row">
+	<div class="flex-row margin-bottom double-unit-layout">
 		<div class="columns-4">
 			<img src="../../assets/images/team/seb-powell.png">
 		</div>
