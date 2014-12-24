@@ -1,5 +1,14 @@
 [
 	{
+		"title": "Developers starting with Angular JS? Familiarise with Lo-Dash!",
+		"desc": "A utility library delivering consistency, customization, performance, & extras.",
+		"tags": ["Developers", "Engineers", "Tools"],
+		"link": "https://lodash.com/",
+		"author": "Slavo",
+		"date": "24 December 2014"
+	},
+
+	{
 		"title": "How To Work With Engineers",
 		"desc": "A cheat sheet for designers.",
 		"tags": ["People", "Culture", "Engineers", "Teams"],
@@ -53,5 +62,5 @@
 		"date": "19 December 2014"
 	}
 
-	
+
 ]
