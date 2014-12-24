@@ -2,7 +2,7 @@
 <div class="content">
 <div class="resources">
 		<h2>Resources</h2>
-		<p class="description">We post tools, articles and resources we use and think you'll find useful too.</p>
+		<p class="description">Curated tools &amp; food for thought, updated daily.</p>
 
 		<?php  foreach($template["content"] as $k) {  ?>
 		<article>
