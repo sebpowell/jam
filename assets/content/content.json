@@ -1,5 +1,14 @@
 [
 	{
+		"title": "Discover Spotify Engineering Culture",
+		"desc": "How is the Spotify engineering team organized to maximize growth, productivity and communication? This insigthful video describes it all.",
+		"tags": ["Team", "Culture", "Processes"],
+		"link": "http://vimeo.com/85490944",
+		"author": "Mathilde",
+		"date": "28 December 2014"
+	},
+
+	{
 		"title": "10 principles for good design",
 		"desc": "The possibilities for innovation are not, by any means, exhausted...",
 		"tags": ["Design"],
