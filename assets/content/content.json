@@ -1,5 +1,17 @@
 [
 
+
+	{
+		"title": "From Idea To Reality, The Story Of Buffer",
+		"desc": "Buffer's CEO tells the story behind his content sharing product and how the lean startup helped his team iterate on the initial prototype.",
+		"tags": ["Product", "Startup", "Growth", "MVP"],
+		"link": "http://joel.is/4-short-stories-of-our-attempts-to-be-lean-at-our/",
+		"author": "Mathilde",
+		"date": "3 January 2015"
+	},
+
+
+
 	{
 		"title": "Designing the Lyft Split Payment Experience Using Pixate and Framer",
 		"desc": "How did Lyft's product design team prototype it, test it and communicated the details of implementation to the engineering team?",
