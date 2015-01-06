@@ -1,6 +1,15 @@
 [
 
 {
+		"title": "How Am I Going To Move My Product Forward Today?",
+		"desc": "A clever hack to help product designers stay focused on delivering value and improving their product.",
+		"tags": ["PM", "Process", "Hack"],
+		"link": "http://zurb.com/article/1331/the-prd-is-dead-long-live-the-prototype/",
+		"author": "Mathilde",
+		"date": "6 January 2015"
+	},
+
+{
 		"title": "The PRD is Dead, Long Live the Prototype!",
 		"desc": "Every product begins with an idea; but how do you go from idea to reality? How do you turn a bunch of requirements into a set of features? Forget PRDs; prototypes can help! ",
 		"tags": ["Product", "Specifications", "Requirements", "Process"],
