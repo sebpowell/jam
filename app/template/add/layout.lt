@@ -1,9 +1,11 @@
 <article>
 	<div class="content">
-		<?php 
+		<p>Add a new resource:</p>
+
+		{?
 		if (isset($template["alertAdd"])) { echo $template["alertAdd"]; }
 
 		echo $template["formAdd"];
-		 ?>
+		?}
 	</div>
 </article>

@@ -17,7 +17,7 @@ final class controller extends Controller\baseController
 
 		User::redirectIfSignedIn ();
 
-		$this->template->page[ "title" ] = "Blog";
+		$this->template->page[ "title" ] = "Add";
 		$this->template->page[ "act" ] = 1;
 		//$this->template->page[ "scripts" ] = ["form"];
 
@@ -66,21 +66,27 @@ final class controller extends Controller\baseController
 	private function addContent ( $data )
 	{
 
+		if ($data["code"] !== "jamissuperawesome") {
+			return Alert::render ( "Your secret code is not valid, sorry. Not able to publish anything." , "alert error" );
+		}
+
 		$timeStamp = strtotime ( $data[ "date" ] );
 		$newJsonName = APP_DIR . "/assets/content/" . $timeStamp . ".json";
 
 		$categories = explode ( "," , $data[ "tags" ] );
 		$categoriesCleansed = array_map ( function ( $item ) {
+
 			return trim ( $item );
 		} , $categories );
 
-		// Button name included in the POST object, so this fixes it
+		// Gets rid of redundant entries
 		unset( $data[ "dispatch" ] );
+		unset( $data[ "code" ] );
 
 		$newContent = $data;
 		$newContent[ "tags" ] = $categoriesCleansed;
 
-		$newJsonContent = json_encode ( $newContent );
+		$newJsonContent = json_encode ( $newContent , JSON_PRETTY_PRINT );
 
 		if ( file_exists ( $newJsonName ) ) {
 			$m = Alert::render ( "Name $newJsonName already exists!" , "alert error" );
@@ -98,6 +104,7 @@ final class controller extends Controller\baseController
 
 		$form = new Form( "post" , "add" );
 
+		$form->addInput ( "text" , "code" , "App Secret" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "author" , "Author's name" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "title" , "Title" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "link" , "Article URL" , false , false , false , [ "required" ] );
