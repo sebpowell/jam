@@ -89,10 +89,10 @@ final class controller extends Controller\baseController
 		$newJsonContent = json_encode ( $newContent , JSON_PRETTY_PRINT );
 
 		if ( file_exists ( $newJsonName ) ) {
-			$m = Alert::render ( "Name $newJsonName already exists!" , "alert error" );
+			$m = Alert::render ( "Name /assets/content/" . $timeStamp . ".json already exists!" , "alert error" );
 		} else {
 			if ( file_put_contents ( $newJsonName , $newJsonContent ) ) {
-				$m = Alert::render ( "File $newJsonName was successfully created!<br>" , "alert success" );
+				$m = Alert::render ( "File /assets/content/" . $timeStamp . ".json was successfully created!<br>" , "alert success" );
 			}
 		}
 
@@ -104,7 +104,7 @@ final class controller extends Controller\baseController
 
 		$form = new Form( "post" , "add" );
 
-		$form->addInput ( "text" , "code" , "App Secret" , false , false , false , [ "required" ] );
+		$form->addInput ( "password" , "code" , "App Secret" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "author" , "Author's name" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "title" , "Title" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "link" , "Article URL" , false , false , false , [ "required" ] );
