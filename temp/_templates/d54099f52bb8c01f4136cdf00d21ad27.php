@@ -20,7 +20,7 @@
 			where we could discover and understand how all the parts fit
 			together.</p>
 
-			<p>So we decided to start Jam. This is the community we wish we’d had
+			<p>So we decided to start JAM. This is the community we wish we’d had
 			all along, a place where people, across all disciplines can discuss
 			their successes and failures, experiments, tools and techniques, and
 			anything else that gets great products built.</p>
@@ -46,6 +46,7 @@
 				<h4>Seb Powell</h4>
 				<p>Head of Design. Amateur developer.</p>
 				<a target="_blank" href="http://uk.linkedin.com/in/sebastienpowell">LinkedIn</a>
+				<a target="_blank" href="https://twitter.com/sebpowell">Twitter</a>
 		</div>
 	</div>
 	<div class="flex-row">
@@ -54,8 +55,9 @@
 		</div>
 			<div class="columns-8">
 				<h4>Slavo Vojacek</h4>
-				<p>UX Designer &amp; Developer. Lover of fine English litterature.</p>
+				<p>UX Designer &amp; Developer. Lover of fine English literature.</p>
 				<a target="_blank" href="http://uk.linkedin.com/pub/slavo-vojacek/14/6a/78b">LinkedIn</a>
+				<a target="_blank" href="https://twitter.com/slavomirvojacek">Twitter</a>
 		</div>
 	</div>
 	</div>
