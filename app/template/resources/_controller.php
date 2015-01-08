@@ -23,23 +23,24 @@ final class controller extends Controller\baseController
 
 	private function getContent ()
 	{
+		$data = [];
 
-		$file = file_get_contents ( APP_DIR . "/assets/content/content.json" );
+		$contentsDir = APP_DIR . "/assets/content";
+		$f = glob ( $contentsDir . "/*" );
 
-		$contentRaw = json_decode ( $file , true );
+		foreach ( $f as $path ) {
+			// This gets the file name from the current file path.
+			$fileName = (int) basename ( $path , ".json" );
 
-		foreach($contentRaw as $k => $v) {
-			$time = strtotime ( $v[ "date" ] );
-			if ($time > time()) {
-				// do nothing
-			} else {
-				$content[$time] = $v;
-			}
+			$fileContents = file_get_contents ( $path );
+			$content = json_decode ( $fileContents , true );
+
+			$data[$fileName] = $content;
 		}
 
-		krsort($content);
+		krsort($data);
 
-		$this->template->content = $content;
+		$this->template->content = $data;
 	}
 
 }
