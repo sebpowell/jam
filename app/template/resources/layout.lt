@@ -1,24 +1,39 @@
 <article class="flex-1">
-<div class="content">
-<div class="resources">
-		<h2>Resources</h2>
-		<p class="description">Curated tools &amp; food for thought, updated daily.</p>
+	<div class="content">
+		<div class="resources">
+			{? if (isset($template["resourceDetails"])) { ?}
+				<h2><a href="{{ resourceDetails.link }}" target="_blank">{{ resourceDetails.title }}</a></h2>
 
-		{? foreach($template["content"] as $k) { ?}
-		<article>
-			<p class="title">
-				<a href="{?= $k["link"] =?}" target="_blank">{?= $k["title"] =?}</a>
-				<small><strong>{?= $k["date"] =?}</strong> by <strong>{?= $k["author"] =?}</strong></small>
-			</p>
-			<p class="description">{?= $k["desc"] =?}</p>
-			<div class="tags flex">
-				{? foreach ($k["tags"] as $tag) { ?}
-				<span class="label {?= $tag =?}">{?= $tag =?}</span>
+				<article style="padding-top: 0">
+					<p class="title">
+						<small><strong>{{ resourceDetails.date }}</strong> by <strong>{{ resourceDetails.author }}</strong></small>
+					</p>
+					<p class="description">{{ resourceDetails.desc }}</p>
+					<div class="tags flex">
+						{? foreach ($template["resourceDetails"]["tags"] as $tag) { ?}
+						<span class="label {?= $tag =?}">{?= $tag =?}</span>
+						{? } ?}
+					</div>
+				</article>
+			{? } else { ?}
+				<h2>Resources</h2>
+				<p class="description">Curated tools &amp; food for thought, updated daily.</p>
+
+				{? foreach($template["content"] as $k) { ?}
+				<article>
+					<p class="title">
+						<a href="{?= $k["link"] =?}" target="_blank">{?= $k["title"] =?}</a>
+						<small><strong>{?= $k["date"] =?}</strong> by <strong>{?= $k["author"] =?}</strong></small>
+					</p>
+					<p class="description">{?= $k["desc"] =?}</p>
+					<div class="tags flex">
+						{? foreach ($k["tags"] as $tag) { ?}
+						<span class="label {?= $tag =?}">{?= $tag =?}</span>
+						{? } ?}
+					</div>
+				</article>
 				{? } ?}
-			</div>
-		</article>
-		{? } ?}
-
-	</div>
+			{? } ?}
+		</div>
 	</div>
 </article>

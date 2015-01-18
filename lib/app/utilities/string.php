@@ -27,7 +27,7 @@ class String
 		$c = preg_replace("/\@/", "-at-", $c);
 		$c = preg_replace("/\&/", "-and-", $c);
 		$c = preg_replace("/[\/_|+ -]+/", "-", $c);
-		$c = preg_replace("/[\!?<>]+/", "", $c);
+		$c = preg_replace("/[\!?,'`.#;<>]+/", "", $c);
 		$c = mb_strtolower(trim($c, "-"));
 
 		return $c;

@@ -79,6 +79,9 @@ img {
   margin: 0 0 1rem;
   line-height: 1.5;
   position: relative; }
+  .alert a {
+    color: #433b00;
+    text-decoration: underline; }
   .alert .close {
     color: #907e00;
     top: 1rem;
@@ -89,6 +92,8 @@ img {
     background: #aec6cf;
     color: #557f8f;
     border: 1px solid #5e8d9f; }
+    .alert.info a {
+      color: #557f8f; }
     .alert.info .close {
       color: #557f8f; }
       .alert.info .close:hover, .alert.info .close:focus {
@@ -97,6 +102,8 @@ img {
     background: #a9ce03;
     color: #6b8302;
     border: 1px solid #809c02; }
+    .alert.success a {
+      color: #2d3701; }
     .alert.success .close {
       color: #6b8302; }
       .alert.success .close:hover, .alert.success .close:focus {
@@ -105,6 +112,8 @@ img {
     background: #ff784b;
     color: #b12c00;
     border: 1px solid #cb3300; }
+    .alert.error a, noscript #warning a {
+      color: #b12c00; }
     .alert.error .close, noscript #warning .close {
       color: #b12c00; }
       .alert.error .close:hover, noscript #warning .close:hover, .alert.error .close:focus, noscript #warning .close:focus {
