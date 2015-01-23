@@ -55,13 +55,17 @@ final class controller extends Controller\baseController
 			// This gets the file name from the current file path.
 			$fileName = (int) basename ( $path , ".json" );
 
-			$today = strtotime ( date ( "d F Y" ) );
+			if ($fileName !== 0) {
 
-			if ( $fileName <= $today ) {
-				$fileContents = file_get_contents ( $path );
-				$content = json_decode ( $fileContents , true );
+				$today = strtotime ( date ( "d F Y" ) );
 
-				$data[ $fileName ] = $content;
+				if ( $fileName <= $today ) {
+					$fileContents = file_get_contents ( $path );
+					$content = json_decode ( $fileContents , true );
+
+					$data[ $fileName ] = $content;
+				}
+
 			}
 		}
 
