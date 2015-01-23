@@ -3,6 +3,7 @@
 use Model\User;
 use Utilities\Http;
 use Utilities\Validate;
+use Template\Url;
 use Form\Control as Form;
 
 final class controller extends Controller\baseController
@@ -15,16 +16,17 @@ final class controller extends Controller\baseController
 
 		User::redirectIfSignedIn ();
 
+		$this->template->page[ "title" ] = "Makers, Thinkers and Doers";
+		$this->template->page[ "act" ] = 1;
+
 		if ( isset( $this->template->page[ "url" ][ "param" ] ) ) {
 			$this->returnPossibleParams();
 
 			$this->template->parseParam (array_keys($this->map));
 
 			$this->loadResourceDetails();
+			$this->assignMeta();
 		}
-
-		$this->template->page[ "title" ] = "Makers, Thinkers and Doers";
-		$this->template->page[ "act" ] = 1;
 
 		$this->getContent ();
 	}
@@ -72,6 +74,12 @@ final class controller extends Controller\baseController
 		krsort ( $data );
 
 		$this->template->content = $data;
+	}
+
+	private function assignMeta() {
+		$this->template->omTitle = trim($this->template->resourceDetails["title"]);
+		$this->template->omDescription = trim($this->template->resourceDetails["desc"]);
+		$this->template->omUrl = Url::returnBaseUrl() . "/" . $this->template->page["url"]["template"] . "/" . $this->template->page["url"]["param"];
 	}
 
 }
