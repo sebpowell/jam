@@ -39,9 +39,9 @@ class templateController
 			return true;
 		}
 		elseif ($dbe && is_array($dbe)) {
-			$db = Db::getInstance();
 
-			if (!$db->exists($dbe[0], array($dbe[1], $this->page["url"]["param"], $dbe[2], $dbe[3]))) {
+
+			if (!in_array($this->page["url"]["param"], $dbe)) {
 				goto err;
 			}
 

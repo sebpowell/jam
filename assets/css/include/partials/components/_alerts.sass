@@ -9,6 +9,10 @@
 	line-height: 1.5
 	position: relative
 
+	a
+		color: darken($color-alert-warning, 30%)
+		text-decoration: underline
+
 	.close
 		color: darken($color-alert-warning, 15%)
 		top: $base-unit-layout
@@ -22,6 +26,9 @@
 		color: darken($color-alert-info, 30%)
 		border: 1px solid darken($color-alert-info, 25%)
 
+		a
+			color: darken($color-alert-info, 30%)
+
 		.close
 			color: darken($color-alert-info, 30%)
 
@@ -33,15 +40,22 @@
 		color: darken($color-alert-success, 15%)
 		border: 1px solid darken($color-alert-success, 10%)
 
+		a
+			color: darken($color-alert-success, 30%)
+
 		.close
 			color: darken($color-alert-success, 15%)
 
 			+hover
 				color: darken($color-alert-success, 20%)
+
 	&.error
 		background: $color-alert-error
 		color: darken($color-alert-error, 30%)
 		border: 1px solid darken($color-alert-error, 25%)
+
+		a
+			color: darken($color-alert-error, 30%)
 
 		.close
 			color: darken($color-alert-error, 30%)

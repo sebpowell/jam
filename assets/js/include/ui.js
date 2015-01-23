@@ -24,7 +24,9 @@ $(document).ready(function () {
 				if (data.result != "success") {
 					$(".alert.warning").removeClass("hide").html(data.msg);
 				} else {
-					$(".alert.success").removeClass("hide").html(data.msg);
+					$(".alert.success").removeClass("hide").html(
+						"Almost done! To confirm your suscription, please click the link in the email we've just sent you."
+					);
 				}
 			}
 		});

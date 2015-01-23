@@ -2,7 +2,7 @@
 
 include "check.php";
 
-define("DEBUG", false);
+define("DEBUG", true);
 define("GRID", false);
 
 define("WWW_APP_DIR", APP_DIR . "/app");

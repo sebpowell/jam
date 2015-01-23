@@ -3,8 +3,7 @@
 use Model\User;
 use Form\Control as Form;
 use Utilities\Http;
-use Utilities\Debug;
-use Utilities\appException;
+use Utilities\String;
 use Utilities\Alert;
 
 final class controller extends Controller\baseController
@@ -19,7 +18,6 @@ final class controller extends Controller\baseController
 
 		$this->template->page[ "title" ] = "Add";
 		$this->template->page[ "act" ] = 1;
-		//$this->template->page[ "scripts" ] = ["form"];
 
 		$this->assignFormAdd ();
 
@@ -39,35 +37,11 @@ final class controller extends Controller\baseController
 
 	}
 
-	// OOD implementation to re-gen. individual items from content.json
-	private function tempGenContent ()
-	{
-
-		$file = file_get_contents ( APP_DIR . "/assets/content/content.json" );
-
-		$content = json_decode ( $file , true );
-
-		foreach ( $content as $k ) {
-			$timeStamp = strtotime ( $k[ "date" ] );
-
-			$newJsonName = APP_DIR . "/assets/content/" . $timeStamp . ".json";
-			$newJsonContent = json_encode ( $k );
-
-			if ( file_exists ( $newJsonName ) ) {
-				Debug::err ( new appException( "Name $newJsonName already exists!" ) );
-			} else {
-				if ( file_put_contents ( $newJsonName , $newJsonContent ) ) {
-					echo "File $newJsonName was successfully created!<br>";
-				}
-			}
-		}
-	}
-
 	private function addContent ( $data )
 	{
 
-		if ($data["code"] !== "jamissuperawesome") {
-			return Alert::render ( "Your secret code is not valid, sorry. Not able to publish anything." , "alert error" );
+		if ( $data[ "code" ] !== "jamisawesome" ) {
+			return Alert::render ( "Your secret code is not valid, sorry. I am not going to publish anything." , "alert error" );
 		}
 
 		$timeStamp = strtotime ( $data[ "date" ] );
@@ -92,11 +66,49 @@ final class controller extends Controller\baseController
 			$m = Alert::render ( "Name /assets/content/" . $timeStamp . ".json already exists!" , "alert error" );
 		} else {
 			if ( file_put_contents ( $newJsonName , $newJsonContent ) ) {
-				$m = Alert::render ( "File /assets/content/" . $timeStamp . ".json was successfully created!<br>" , "alert success" );
+				if ($this->createMap ( $data[ "title" ] , $timeStamp )) {
+					$m = Alert::render ( "File /assets/content/" . $timeStamp . ".json was successfully created!<br>Your link to grab is <strong>http://www.jam2015.london/resources/" . String::sanUrl($data["title"]) . "</strong>" , "alert success" );
+				} else {
+					$m = Alert::render ( "Error creating a Key - Value store!" , "alert error" );
+				}
 			}
 		}
 
 		return $m;
+	}
+
+	private function createMap ( $newTitle , $newTimeStamp )
+	{
+
+		$contentsDir = APP_DIR . "/assets/content";
+		$f = glob ( $contentsDir . "/*" );
+
+		foreach ( $f as $path ) {
+			$fileName = (int) basename ( $path , ".json" );
+
+			if ($fileName !== 0) {
+				$fileContents = file_get_contents ( $path );
+				$content = json_decode ( $fileContents , true );
+
+				$key = String::sanUrl ( $content[ "title" ] );
+				$value = $fileName;
+
+				$data[ $key ] = $value;
+			}
+		};
+
+		$newKey = String::sanUrl ( $newTitle );
+		$newValue = $newTimeStamp;
+
+		$data[ $newKey ] = $newValue;
+
+		$newJsonContent = json_encode ( $data , JSON_PRETTY_PRINT );
+
+		if ( file_put_contents ( $contentsDir . "/map.json" , $newJsonContent ) ) {
+			return true;
+		}
+
+		return false;
 	}
 
 	private function assignFormAdd ()
