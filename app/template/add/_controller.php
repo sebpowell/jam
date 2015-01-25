@@ -45,7 +45,8 @@ final class controller extends Controller\baseController
 		}
 
 		$timeStamp = strtotime ( $data[ "date" ] );
-		$newJsonName = APP_DIR . "/assets/content/" . $timeStamp . ".json";
+		$fileName = String::sanUrl ( $data[ "title" ] );
+		$newJsonName = APP_DIR . "/assets/content/" . $fileName . ".json";
 
 		$categories = explode ( "," , $data[ "tags" ] );
 		$categoriesCleansed = array_map ( function ( $item ) {
@@ -63,52 +64,14 @@ final class controller extends Controller\baseController
 		$newJsonContent = json_encode ( $newContent , JSON_PRETTY_PRINT );
 
 		if ( file_exists ( $newJsonName ) ) {
-			$m = Alert::render ( "Name /assets/content/" . $timeStamp . ".json already exists!" , "alert error" );
+			$m = Alert::render ( "Name /assets/content/" . $fileName . ".json already exists!" , "alert error" );
 		} else {
 			if ( file_put_contents ( $newJsonName , $newJsonContent ) ) {
-				if ($this->createMap ( $data[ "title" ] , $timeStamp )) {
-					$m = Alert::render ( "File /assets/content/" . $timeStamp . ".json was successfully created!<br>Your link to grab is <strong>http://www.jam2015.london/resources/" . String::sanUrl($data["title"]) . "</strong>" , "alert success" );
-				} else {
-					$m = Alert::render ( "Error creating a Key - Value store!" , "alert error" );
-				}
+				$m = Alert::render ( "File /assets/content/" . $timeStamp . ".json was successfully created!<br>Your link to grab is <strong>http://www.jam2015.london/resources/" . $fileName . "</strong>" , "alert success" );
 			}
 		}
 
 		return $m;
-	}
-
-	private function createMap ( $newTitle , $newTimeStamp )
-	{
-
-		$contentsDir = APP_DIR . "/assets/content";
-		$f = glob ( $contentsDir . "/*" );
-
-		foreach ( $f as $path ) {
-			$fileName = (int) basename ( $path , ".json" );
-
-			if ($fileName !== 0) {
-				$fileContents = file_get_contents ( $path );
-				$content = json_decode ( $fileContents , true );
-
-				$key = String::sanUrl ( $content[ "title" ] );
-				$value = $fileName;
-
-				$data[ $key ] = $value;
-			}
-		};
-
-		$newKey = String::sanUrl ( $newTitle );
-		$newValue = $newTimeStamp;
-
-		$data[ $newKey ] = $newValue;
-
-		$newJsonContent = json_encode ( $data , JSON_PRETTY_PRINT );
-
-		if ( file_put_contents ( $contentsDir . "/map.json" , $newJsonContent ) ) {
-			return true;
-		}
-
-		return false;
 	}
 
 	private function assignFormAdd ()
@@ -120,6 +83,7 @@ final class controller extends Controller\baseController
 		$form->addInput ( "text" , "author" , "Author's name" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "title" , "Title" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "link" , "Article URL" , false , false , false , [ "required" ] );
+		$form->addInput ( "text" , "image" , "Image to go with it" );
 		$form->addInput ( "text" , "desc" , "Description" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "date" , "Date" , date ( "d F Y" ) , false , false , [ "required" ] );
 		$form->addInput ( "text" , "tags" , "Comma separated categories" , false , false , false , [ "required" ] );

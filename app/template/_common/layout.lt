@@ -9,7 +9,7 @@
 		<meta property="og:title" content="{? echo isset($template["omTitle"]) ? $template["omTitle"] : "JAM London" ?}">
 		<meta property="og:description" content="{? echo isset($template["omDescription"]) ? $template["omDescription"] : $template["app"]["description"] ?}">
 		<meta property="og:url" content="{? echo isset($template["omUrl"]) ? $template["omUrl"] : "http://www.jam2015.london" ?}">
-		<meta property="og:image" content="http://www.jam2015.london/assets/images/logo/logo-social.png">
+		<meta property="og:image" content="{? echo $template["omImage"] ? $template["omImage"] : "http://www.jam2015.london/assets/images/logo/logo-social.png" ?}">
 
 		<title>{{ app.siteName }} / {{ page.title }}</title>
 
