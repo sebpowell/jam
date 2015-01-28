@@ -78,7 +78,7 @@ img {
   white-space: nowrap;
   position: fixed;
   left: 0;
-  top: 0;
+  top: -4rem;
   width: 100%;
   height: 4rem;
   padding: 0.5rem 1rem;
