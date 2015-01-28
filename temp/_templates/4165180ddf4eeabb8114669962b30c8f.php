@@ -2,6 +2,10 @@
 	<div class="content">
 		<div class="resources">
 			<?php  if (isset($template["resourceDetails"])) {  ?>
+				<a id="logo" href="/">
+					<h1>Making JAM London</h1>
+				</a>
+
 				<h2><a href="<?php echo( $template["resourceDetails"]["link"] ); ?>" target="_blank"><?php echo( $template["resourceDetails"]["title"] ); ?></a></h2>
 
 				<article style="padding-top: 0">
