@@ -29,18 +29,37 @@
 			</div>
 		</noscript>
 
-		<div class="flex column container">
-			<nav class="flex center-vertically">
-				<a class="flex-1" href="/about">About</a>
-				<a class="flex-1" href="/resources">Resources</a>
-			</nav>
+		<div class="alert flex center-horizontally center-vertically info">This is an info message</div>
+		<div class="alert flex center-horizontally center-vertically warning">This is a warning message</div>
+		<div class="alert flex center-horizontally center-vertically error">This is an error message</div>
+		<div class="alert flex center-horizontally center-vertically success">This is a success message</div>
 
-			<?php Template\Template::getLayout(" template "); ?>
+		<div class="flex column container-outer">
+			<?php  if ($template["page"]["url"]["template"] !== "welcome") {  ?>
+			<div class="sign-up-top flex center-horizontally center-vertically">
+				<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex">
+					<input style="display: none" type="text" name="b_7f799244738e8b8558a646378_6c81011ad7" tabindex="-1" value="">
+					<input autofocus class="flex-8" type="email" name="EMAIL" placeholder="Get curated tools &amp; food for thought weekly" required/>
+					<button class="flex-4 button primary" name="subscribe">Sign up</button>
+				</form>
+			</div>
+			<?php  }  ?>
 
-			<nav class="flex center-vertically">
-				<a class="flex-1" href="https://twitter.com/jamlondon2015">Twitter</a>
-				<a class="flex-1" href="mailto:mathildeleo@gmail.com">Get involved</a>
-			</nav>
+			<div class="flex-1 flex column container">
+				<nav class="flex center-vertically">
+					<a id="glyph" href="/"></a>
+
+					<a class="flex-1" href="/about">About</a>
+					<a class="flex-1" href="/resources">Resources</a>
+				</nav>
+
+				<?php Template\Template::getLayout(" template "); ?>
+
+				<nav class="flex center-vertically">
+					<a class="flex-1" href="https://twitter.com/jamlondon2015">Twitter</a>
+					<a class="flex-1" href="mailto:mathildeleo@gmail.com">Get involved</a>
+				</nav>
+			</div>
 		</div>
 
 		<script src="/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>

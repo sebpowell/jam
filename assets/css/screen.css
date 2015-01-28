@@ -70,54 +70,32 @@ img {
   width: 100%; }
 
 .alert {
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  padding: 1rem;
-  background: #dcc100;
-  color: #907e00;
-  border: 1px solid #a99400;
-  margin: 0 0 1rem;
-  line-height: 1.5;
-  position: relative; }
+  -webkit-transition: top 0.25s;
+  transition: top 0.25s;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem 1rem;
+  background: #fdd835;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.5; }
+  .alert.active {
+    top: 0; }
   .alert a {
-    color: #433b00;
+    color: rgba(0, 0, 0, 0.5) !important;
     text-decoration: underline; }
-  .alert .close {
-    color: #907e00;
-    top: 1rem;
-    right: 1rem; }
-    .alert .close:hover, .alert .close:focus {
-      color: #766800; }
   .alert.info {
-    background: #aec6cf;
-    color: #557f8f;
-    border: 1px solid #5e8d9f; }
-    .alert.info a {
-      color: #557f8f; }
-    .alert.info .close {
-      color: #557f8f; }
-      .alert.info .close:hover, .alert.info .close:focus {
-        color: #4b717f; }
+    background: #26c6da; }
   .alert.success {
-    background: #a9ce03;
-    color: #6b8302;
-    border: 1px solid #809c02; }
-    .alert.success a {
-      color: #2d3701; }
-    .alert.success .close {
-      color: #6b8302; }
-      .alert.success .close:hover, .alert.success .close:focus {
-        color: #576902; }
+    background: #cddc39; }
   .alert.error, noscript #warning {
-    background: #ff784b;
-    color: #b12c00;
-    border: 1px solid #cb3300; }
-    .alert.error a, noscript #warning a {
-      color: #b12c00; }
-    .alert.error .close, noscript #warning .close {
-      color: #b12c00; }
-      .alert.error .close:hover, noscript #warning .close:hover, .alert.error .close:focus, noscript #warning .close:focus {
-        color: #982600; }
+    background: #ff7043; }
 
 #appInfo {
   -webkit-transition: color 0.25s;
@@ -298,14 +276,14 @@ textarea {
 
 input:invalid,
 textarea:invalid {
-  color: #ff784b; }
+  color: #ff7043; }
   input:invalid:hover, input:invalid:focus,
   textarea:invalid:hover,
   textarea:invalid:focus {
-    color: #ff784b; }
+    color: #ff7043; }
   input:invalid:focus,
   textarea:invalid:focus {
-    border-color: #ff784b; }
+    border-color: #ff7043; }
 
 .file-button {
   position: relative;
@@ -1059,98 +1037,157 @@ a,
 a {
   text-decoration: none; }
 
-.page-welcome .container,
-.page-about .container,
-.page-resources .container,
-.page-add .container {
+.container-outer {
   height: 100%;
   height: 100vh; }
-  .page-welcome .container nav,
-  .page-about .container nav,
-  .page-resources .container nav,
-  .page-add .container nav {
-    height: 4rem;
-    padding: 0 1.5rem; }
-    .page-welcome .container nav a,
-    .page-about .container nav a,
-    .page-resources .container nav a,
-    .page-add .container nav a {
-      color: #181e20;
-      text-transform: capitalize;
-      text-decoration: none; }
-      .page-welcome .container nav a:hover, .page-welcome .container nav a:focus,
-      .page-about .container nav a:hover,
-      .page-about .container nav a:focus,
-      .page-resources .container nav a:hover,
-      .page-resources .container nav a:focus,
-      .page-add .container nav a:hover,
-      .page-add .container nav a:focus {
-        color: #ffa55f; }
-  .page-welcome .container article,
-  .page-about .container article,
-  .page-resources .container article,
-  .page-add .container article {
-    overflow-y: scroll; }
-    .page-welcome .container article #logo,
-    .page-about .container article #logo,
-    .page-resources .container article #logo,
-    .page-add .container article #logo {
-      width: 6.25rem;
-      height: 6.25rem;
-      display: block;
-      overflow: hidden;
-      margin: 0 auto 4rem;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url("/assets/images/logo/logo.svg"); }
-      .page-welcome .container article #logo h1,
-      .page-about .container article #logo h1,
-      .page-resources .container article #logo h1,
-      .page-add .container article #logo h1 {
-        opacity: 0; }
-    .page-welcome .container article .content,
-    .page-about .container article .content,
-    .page-resources .container article .content,
-    .page-add .container article .content {
-      max-width: 31.25rem;
-      margin: 0 auto; }
-      .page-welcome .container article .content form,
-      .page-about .container article .content form,
-      .page-resources .container article .content form,
-      .page-add .container article .content form {
-        padding: 2rem; }
-        .page-welcome .container article .content form input, .page-welcome .container article .content form button,
-        .page-about .container article .content form input,
-        .page-about .container article .content form button,
-        .page-resources .container article .content form input,
-        .page-resources .container article .content form button,
-        .page-add .container article .content form input,
-        .page-add .container article .content form button {
-          box-shadow: none;
-          -o-border-radius: 0;
-          border-radius: 0;
-          margin: 0;
-          min-width: inherit;
-          border: 0;
-          border-bottom: 1px solid #eef1f3; }
-        .page-welcome .container article .content form button,
-        .page-about .container article .content form button,
-        .page-resources .container article .content form button,
-        .page-add .container article .content form button {
-          border-color: #ffa55f; }
-      .page-welcome .container article .content p,
-      .page-about .container article .content p,
-      .page-resources .container article .content p,
-      .page-add .container article .content p {
-        line-height: 2; }
+
+.sign-up-top {
+  background: #f8f9fa;
+  width: 100%;
+  height: 4rem; }
+  .sign-up-top form {
+    width: 37.5rem;
+    padding: 0 2rem; }
+  .sign-up-top input, .sign-up-top button {
+    box-shadow: none;
+    -o-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    font-size: 0.6875rem;
+    margin: 0;
+    min-width: inherit;
+    border: 1px solid #d1dadd !important; }
+  .sign-up-top button {
+    -o-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    border: 1px solid #ffa55f !important; }
+  .sign-up-top input {
+    border-right: 0 !important; }
+
+.page-welcome .container nav,
+.page-about .container nav,
+.page-resources .container nav,
+.page-add .container nav {
+  height: 4rem;
+  padding: 0 1.5rem; }
+  .page-welcome .container nav a,
+  .page-about .container nav a,
+  .page-resources .container nav a,
+  .page-add .container nav a {
+    color: #181e20;
+    text-transform: capitalize;
+    text-decoration: none; }
+    .page-welcome .container nav a:hover, .page-welcome .container nav a:focus,
+    .page-about .container nav a:hover,
+    .page-about .container nav a:focus,
+    .page-resources .container nav a:hover,
+    .page-resources .container nav a:focus,
+    .page-add .container nav a:hover,
+    .page-add .container nav a:focus {
+      color: #ffa55f; }
+.page-welcome .container article,
+.page-about .container article,
+.page-resources .container article,
+.page-add .container article {
+  overflow-y: scroll; }
+  .page-welcome .container article #logo,
+  .page-about .container article #logo,
+  .page-resources .container article #logo,
+  .page-add .container article #logo {
+    width: 6.25rem;
+    height: 6.25rem;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto 4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("/assets/images/logo/logo.svg"); }
+    .page-welcome .container article #logo h1,
+    .page-about .container article #logo h1,
+    .page-resources .container article #logo h1,
+    .page-add .container article #logo h1 {
+      opacity: 0; }
+  .page-welcome .container article .content,
+  .page-about .container article .content,
+  .page-resources .container article .content,
+  .page-add .container article .content {
+    max-width: 37.5rem;
+    margin: 0 auto; }
+    .page-welcome .container article .content form,
+    .page-about .container article .content form,
+    .page-resources .container article .content form,
+    .page-add .container article .content form {
+      padding: 2rem; }
+      .page-welcome .container article .content form input, .page-welcome .container article .content form button,
+      .page-about .container article .content form input,
+      .page-about .container article .content form button,
+      .page-resources .container article .content form input,
+      .page-resources .container article .content form button,
+      .page-add .container article .content form input,
+      .page-add .container article .content form button {
+        box-shadow: none;
+        -o-border-radius: 0;
+        border-radius: 0;
+        margin: 0;
+        min-width: inherit;
+        border: 0;
+        border-bottom: 1px solid #eef1f3; }
+      .page-welcome .container article .content form button,
+      .page-about .container article .content form button,
+      .page-resources .container article .content form button,
+      .page-add .container article .content form button {
+        border-color: #ffa55f; }
+    .page-welcome .container article .content p,
+    .page-about .container article .content p,
+    .page-resources .container article .content p,
+    .page-add .container article .content p {
+      line-height: 2; }
+.page-welcome.page-about nav:first-of-type, .page-welcome.page-resources nav:first-of-type,
+.page-about.page-about nav:first-of-type,
+.page-about.page-resources nav:first-of-type,
+.page-resources.page-about nav:first-of-type,
+.page-resources.page-resources nav:first-of-type,
+.page-add.page-about nav:first-of-type,
+.page-add.page-resources nav:first-of-type {
+  position: relative; }
+  .page-welcome.page-about nav:first-of-type #glyph, .page-welcome.page-resources nav:first-of-type #glyph,
+  .page-about.page-about nav:first-of-type #glyph,
+  .page-about.page-resources nav:first-of-type #glyph,
+  .page-resources.page-about nav:first-of-type #glyph,
+  .page-resources.page-resources nav:first-of-type #glyph,
+  .page-add.page-about nav:first-of-type #glyph,
+  .page-add.page-resources nav:first-of-type #glyph {
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+    display: block;
+    opacity: 0;
+    width: 9rem;
+    height: 2rem;
+    left: 50%;
+    top: 50%;
+    margin-left: -4.5rem;
+    margin-top: -1rem;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("/assets/images/logo/logo-horizontal.svg"); }
+    .page-welcome.page-about nav:first-of-type #glyph.active, .page-welcome.page-resources nav:first-of-type #glyph.active,
+    .page-about.page-about nav:first-of-type #glyph.active,
+    .page-about.page-resources nav:first-of-type #glyph.active,
+    .page-resources.page-about nav:first-of-type #glyph.active,
+    .page-resources.page-resources nav:first-of-type #glyph.active,
+    .page-add.page-about nav:first-of-type #glyph.active,
+    .page-add.page-resources nav:first-of-type #glyph.active {
+      opacity: 1; }
 
 .page-add .container article .content form input, .page-add .container article .content form button {
   margin-bottom: 0.5rem;
   width: 100%; }
 
 .page-about .container article .content {
-  max-width: 37.5rem; }
+  max-width: 37.5rem;
+  padding: 0 2rem 3rem; }
 
 .page-ooops {
   background: #ff6961;
@@ -1177,7 +1214,7 @@ a {
   text-align: left !important; }
 .page-resources .resources {
   max-width: 37.5rem;
-  padding: 6rem 0 2rem;
+  padding: 0 2rem 3rem;
   margin: 0 auto; }
   .page-resources .resources h2 {
     font-size: 1.5rem;
@@ -1188,6 +1225,8 @@ a {
   .page-resources .resources article {
     padding: 3rem 0 0;
     overflow: visible; }
+    .page-resources .resources article:first-of-type {
+      padding-top: 0; }
     .page-resources .resources article p {
       margin: 0; }
     .page-resources .resources article .title {
@@ -1269,13 +1308,13 @@ a {
       .page-sass .container-narrow article aside .color.blue {
         background: #6699cc; }
       .page-sass .container-narrow article aside .color.alert-warning {
-        background: #dcc100; }
+        background: #fdd835; }
       .page-sass .container-narrow article aside .color.alert-info {
-        background: #aec6cf; }
+        background: #26c6da; }
       .page-sass .container-narrow article aside .color.alert-success {
-        background: #a9ce03; }
+        background: #cddc39; }
       .page-sass .container-narrow article aside .color.alert-error {
-        background: #ff784b; }
+        background: #ff7043; }
       .page-sass .container-narrow article aside .color.grey {
         width: 50%;
         float: left; }

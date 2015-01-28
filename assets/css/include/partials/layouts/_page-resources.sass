@@ -1,11 +1,11 @@
 .page-resources
-
 	p
 		text-align: left !important
 		// TODO: this is due to inherited style from common.sass - need to refactor.
+
 	.resources
 		max-width: rem(600px)
-		padding: ($triple-unit-layout * 2) 0 $double-unit-layout
+		padding: 0 $double-unit-layout $triple-unit-layout
 		margin: 0 auto
 
 		h2
@@ -20,10 +20,11 @@
 			padding: $triple-unit-layout 0 0
 			overflow: visible
 
+			&:first-of-type
+				padding-top: 0
 
 			p
 				margin: 0
-
 
 			.title
 				font-size: rem(18px)
