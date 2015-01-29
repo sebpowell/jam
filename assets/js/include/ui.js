@@ -17,19 +17,48 @@ $(document).ready(function () {
 			dataType: 'json',
 			contentType: "application/json; charset=utf-8",
 			error: function (err) {
-				$(".alert.error").removeClass("hide").html(data.msg);
-				alert("Could not connect to the registration server. Please try again later.");
+				$(".alert.error").addClass("active").html(data.msg);
+
+				setTimeout(function () {
+					$(".alert.error").removeClass("active");
+				}, 2500);
 			},
 			success: function (data) {
 				if (data.result != "success") {
-					$(".alert.warning").removeClass("hide").html(data.msg);
+					$(".alert.warning").addClass("active").html(data.msg);
+
+					setTimeout(function () {
+						$(".alert.warning").removeClass("active");
+					}, 2500);
 				} else {
-					$(".alert.success").removeClass("hide").html(
+					$(".alert.success").addClass("active").html(
 						"Almost done! To confirm your suscription, please click the link in the email we've just sent you."
 					);
+
+					setTimeout(function () {
+						$(".alert.success").removeClass("active");
+					}, 2500);
 				}
 			}
 		});
+	});
+
+	// This function removes or adds the .transparent class to main navigation
+	// depending on its offset from the top of a page.
+	var changeNavMain = function () {
+		var scrollTop = $("#measureScroll").scrollTop();
+
+		if (scrollTop > (100)) {
+			$("#glyph").addClass("active");
+		} else {
+			$("#glyph").removeClass("active");
+		}
+	};
+
+	changeNavMain();
+
+	$("#measureScroll").scroll(function () {
+		changeNavMain();
 	});
 
 });

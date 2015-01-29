@@ -1,10 +1,9 @@
-<article class="flex-1">
+<article class="flex-1" id="measureScroll">
 	<a id="logo" href="/">
 		<h1>Making JAM London</h1>
 	</a>
 
 	<div class="content">
-		<!-- TODO: margin on h2 and p top is impractical - let's change this !-->
 		<h2>Manifesto</h2>
 		<p>Building products is hard. When the three of us started working
 			together at <a href="http://www.adbrain.com">Adbrain</a> a year ago, we struggled. We’d
