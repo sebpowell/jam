@@ -1,4 +1,5 @@
 bash push.sh "commit message"
-
+php -S localhost:8000
 
 http://www.jam2015.london/resources/
+
