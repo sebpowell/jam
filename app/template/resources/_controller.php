@@ -59,8 +59,9 @@ final class controller extends Controller\baseController
 
 			$today = strtotime ( date ( "d F Y" ) );
 
+			array_push($this->map, $fileName);
+
 			if ( $contentTimestamp <= $today ) {
-				array_push($this->map, $fileName);
 				$data[ $contentTimestamp ] = $content;
 			}
 		}
