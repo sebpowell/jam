@@ -2,10 +2,12 @@
 	<div class="content">
 		<p>Add a new resource:</p>
 
+		<div class="temporary-alert hide">
 		{?
 		if (isset($template["alertAdd"])) { echo $template["alertAdd"]; }
-
-		echo $template["formAdd"];
 		?}
+		</div>
+
+		{?= $template["formAdd"] =?}
 	</div>
 </article>

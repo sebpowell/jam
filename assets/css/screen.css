@@ -1219,6 +1219,10 @@ a {
   .page-resources .resources h2 {
     font-size: 1.5rem;
     color: #ffa55f; }
+    .page-resources .resources h2 a {
+      text-decoration: underline; }
+      .page-resources .resources h2 a:hover, .page-resources .resources h2 a:focus {
+        text-decoration: none; }
   .page-resources .resources .description {
     font-size: 0.9375rem;
     color: #839ba3; }

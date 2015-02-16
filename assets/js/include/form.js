@@ -1,14 +1,14 @@
 var validateData = {
-	empty: function(val) {
+	empty: function (val) {
 		return val !== '' && val !== false && val !== null;
 	},
-	email: function(val) {
+	email: function (val) {
 		return (/^("([ !\x23-\x5B\x5D-\x7E]*|\\[ -~])+"|[-a-z0-9!#$%&'*+\/=?^_`{|}~]+(\.[-a-z0-9!#$%&'*+\/=?^_`{|}~]+)*)@([0-9a-z\u00C0-\u02FF\u0370-\u1EFF]([-0-9a-z\u00C0-\u02FF\u0370-\u1EFF]{0,61}[0-9a-z\u00C0-\u02FF\u0370-\u1EFF])?\.)+[a-z\u00C0-\u02FF\u0370-\u1EFF][-0-9a-z\u00C0-\u02FF\u0370-\u1EFF]{0,17}[a-z\u00C0-\u02FF\u0370-\u1EFF]$/i).test(val);
 	},
-	int: function(val) {
+	int: function (val) {
 		return (/^-?[0-9]+$/).test(val);
 	},
-	password: function(val) {
+	password: function (val) {
 		return (/^.*(?=.{6,})(?=.*\d)(?=.*[a-žA-Ž]).*$/).test(val);
 	}
 };
@@ -69,20 +69,36 @@ function clearForm(form) {
 	return form;
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
+
+	var flashMessage = $(".temporary-alert");
+	var alertClasses = flashMessage.find(".alert").attr("class").split(" ");
+
+	if (alertClasses.length > 0) {
+		var alertClassesTarget = "." + alertClasses.join(".");
+		var alertContent = flashMessage.find("p").html();
+
+		if ($.inArray("success", alertClasses) == -1) {
+			setTimeout(function () {
+				$(alertClassesTarget).removeClass("active");
+			}, 2500);
+		}
+	}
+
+	$(alertClassesTarget).html(alertContent).addClass("active");
 
 	/**
 	 * Validates each form
 	 */
-	$("button").click(function() {
+	$("button").click(function () {
 		var form = $(this).parent();
-		var flashMessage = $(form).find(".flash-message");
+		//var flashMessage = $(form).find(".flash-message");
 		var inputs = form.find(":input");
 		var r;
 
-		flashMessage.addClass('show');
+		//flashMessage.addClass('show');
 
-		inputs.each(function() {
+		inputs.each(function () {
 			var dataRule = $(this).attr("data-rule");
 			var required = $(this).attr("required");
 
@@ -112,11 +128,14 @@ $(document).ready(function() {
 		});
 
 		if (!isUndefined(r)) {
-			flashMessage.html('<div class="alert warning"><p>' + r + '</p></div>');
+			$(".alert.warning").html(r).addClass("active");
+
+			setTimeout(function () {
+				$(".alert.warning").removeClass("active");
+			}, 2500);
+
 			return false;
 		}
-
-		flashMessage.html("");
 	});
 
 });

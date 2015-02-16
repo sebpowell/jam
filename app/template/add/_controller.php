@@ -41,7 +41,7 @@ final class controller extends Controller\baseController
 	{
 
 		if ( $data[ "code" ] !== "jamisawesome" ) {
-			return Alert::render ( "Your secret code is not valid, sorry. I am not going to publish anything." , "alert error" );
+			return Alert::render ( "Your secret code is not valid, sorry. I am not going to publish anything!!" , "alert error" );
 		}
 
 		$timeStamp = strtotime ( $data[ "date" ] );
@@ -67,7 +67,7 @@ final class controller extends Controller\baseController
 			$m = Alert::render ( "Name /assets/content/" . $fileName . ".json already exists!" , "alert error" );
 		} else {
 			if ( file_put_contents ( $newJsonName , $newJsonContent ) ) {
-				$m = Alert::render ( "File /assets/content/" . $timeStamp . ".json was successfully created!<br>Your link to grab is <strong>http://www.jam2015.london/resources/" . $fileName . "</strong>" , "alert success" );
+				$m = Alert::render ( "New resource was successfully created!<br>Your link to grab is <strong>http://www.jam2015.london/resources/" . $fileName . "</strong>" , "alert success" );
 			}
 		}
 
