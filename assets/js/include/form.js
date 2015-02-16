@@ -72,11 +72,15 @@ function clearForm(form) {
 $(document).ready(function () {
 
 	var flashMessage = $(".temporary-alert");
-	var alertClasses = flashMessage.find(".alert").attr("class").split(" ");
+	var alertInFlashMessage = flashMessage.find(".alert");
 
-	if (alertClasses.length > 0) {
+	if (!isUndefined(flashMessage.html()) && !isUndefined(alertInFlashMessage.html())) {
+		var alertClasses = flashMessage.find(".alert").attr("class").split(" ");
+
 		var alertClassesTarget = "." + alertClasses.join(".");
 		var alertContent = flashMessage.find("p").html();
+
+		$(alertClassesTarget).html(alertContent).addClass("active");
 
 		if ($.inArray("success", alertClasses) == -1) {
 			setTimeout(function () {
@@ -84,8 +88,6 @@ $(document).ready(function () {
 			}, 2500);
 		}
 	}
-
-	$(alertClassesTarget).html(alertContent).addClass("active");
 
 	/**
 	 * Validates each form

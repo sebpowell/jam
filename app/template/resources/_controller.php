@@ -19,13 +19,13 @@ final class controller extends Controller\baseController
 		$this->template->page[ "title" ] = "Makers, Thinkers and Doers";
 		$this->template->page[ "act" ] = 1;
 
-		$this->template->content = [];
-		$this->map = [];
+		$this->template->content = [ ];
+		$this->map = [ ];
 
 		$this->getContent ();
 
 		if ( isset( $this->template->page[ "url" ][ "param" ] ) ) {
-			$this->template->resourceDetails = [];
+			$this->template->resourceDetails = [ ];
 
 			$this->template->parseParam ( $this->map );
 
@@ -45,6 +45,7 @@ final class controller extends Controller\baseController
 	{
 
 		$data = [ ];
+		$tags = [ ];
 
 		$contentsDir = APP_DIR . "/assets/content";
 		$f = glob ( $contentsDir . "/*" );
@@ -55,11 +56,15 @@ final class controller extends Controller\baseController
 
 			$fileContents = file_get_contents ( $path );
 			$content = json_decode ( $fileContents , true );
-			$contentTimestamp = strtotime ($content["date"]);
+			$contentTimestamp = strtotime ( $content[ "date" ] );
 
 			$today = strtotime ( date ( "d F Y" ) );
 
-			array_push($this->map, $fileName);
+			array_push ( $this->map , $fileName );
+
+			foreach ( $content[ "tags" ] as $k ) {
+				$tags[ $k ][] = "";
+			}
 
 			if ( $contentTimestamp <= $today ) {
 				$data[ $contentTimestamp ] = $content;
@@ -67,6 +72,11 @@ final class controller extends Controller\baseController
 		}
 
 		krsort ( $data );
+
+		foreach ($tags as $k => $v) {
+			$tags[ $k ] = count($v);
+			// echo $k . " => " . count($v) . "<br>";
+		}
 
 		$this->template->content = $data;
 	}
