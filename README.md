@@ -1,48 +1,8 @@
-# litchi
+# Manifesto
+Building products is hard. When the three of us started working together at Adbrain a year ago, we struggled. We’d worked on products before, but nothing quite like this (ad tech products are complicated). How do you decide what to build? How do designers, engineers and product managers seamlessly work together? What tools are best for the job at hand? How does a good product become great?
 
-A light-weight & easy-to-learn Model-View-Controller framework built to simplify and speed up the production process of your PHP applications. It takes care of the logic and helps you maintain consistency throughout your projects.
+We often wondered how other companies went about building products from scratch. We realised what we really needed was a place where we could learn from others that have been there and done it. Somewhere where we could discover and understand how all the parts fit together.
 
-## Installation and setup
+So we decided to start JAM. This is the community we wish we’d had all along, a place where people, across all disciplines can discuss their successes and failures, experiments, tools and techniques, and anything else that gets great products built.
 
-### Prerequisites
-
-First off, please make sure that you have the latest node.js (http://nodejs.org/) installed on your machine, as to run litchi's SASS and JS compilation on save, gulp.js (http://gulpjs.com/) is required:
-
-**sudo npm install gulp -g**
-
-To run litchi, you will need an Apache server with PHP 5.4.0+ running.
-
-It is recommended that you use the **git clone** command to install litchi, thus, make sure you have git installed on your machine.
-
-### Installation
-
-To install, use the **git clone** command:
-
-**git clone https://github.com/slavomirvojacek/litchi.git**
-
-All resources should be located in the *www root* of your project. Once done, you are ready to launch litchi in your browser.
-
-To deploy all *.sass* and *.js* assets on filechange you need to install gulp and litchi's dependencies locally. To do this, run the following commands once you have navigated into your *www root* (where *gulpfile.js* is located):
-
-**sudo npm install gulp**
-
-**sudo npm install gulp-ruby-sass gulp-autoprefixer gulp-uglify gulp-concat gulp-notify**
-
-After you have installed gulp and all the dependencies, you are ready to run:
-
-**gulp**
-
-every time you start progress on your project (NOTE: this command watches both assets/css/_src and assets/js/_src files and once it detects a change, it automatically compiles these assets into assets/css and assets/js folders.
-
-## Documentation
-
-### Creating your first litchi application
-
-#### What is MVC?
-#### What is Model?
-#### What is Controller?
-#### What is View?
-
-### Deploying your application
-
-#### Application Assets and Dependencies
+We hope you’ll join us.
