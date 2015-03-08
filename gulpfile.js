@@ -7,12 +7,18 @@ var gulp =
 	autoprefixer = require("gulp-autoprefixer"),
 	uglify = require("gulp-uglify"),
 	concat = require("gulp-concat"),
-	notify = require("gulp-notify");
-
+	notify = require("gulp-notify"),
+	connect = require("gulp-connect-php");
 
 /*
  * Gulp tasks
  */
+gulp.task("start-php", function() {
+	connect.server({
+		port: 8001
+	});
+});
+
 gulp.task("sass", function() {
 
 	gulp.src("assets/css/include/screen.sass")
@@ -47,6 +53,6 @@ gulp.task("watch", function() {
 /*
  * Default Gulp task
  */
-gulp.task("default", function() {
+gulp.task("default", ["start-php"], function() {
 	gulp.start("watch");
 });
