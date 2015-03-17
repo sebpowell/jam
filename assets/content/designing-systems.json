@@ -1,0 +1,12 @@
+{
+    "author": "Mathilde",
+    "title": "Designing Systems",
+    "link": "http:\/\/atomicdesign.bradfrost.com\/chapter-1\/#style-guide-benefits",
+    "image": "http:\/\/atomicdesign.bradfrost.com\/images\/content\/styleguide-wvu.png",
+    "desc": "Tearing up page-based design.",
+    "date": "18 March 2015",
+    "tags": [
+        "System",
+        "Design"
+    ]
+}
