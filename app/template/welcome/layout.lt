@@ -1,18 +1,13 @@
-<article class="flex-1">
-	<a id="logo" href="/">
-		<h1>Making JAM London</h1>
-	</a>
+<h1>Sharing the stories behind great products.<br/>
+	1 day. 8 speakers. Great coffee.</h1>
+<h2>London, Saturday 3rd of October 2015. 10am - 6pm.</h2>
 
-	<div class="content">
-		<p>We're a London-based community for people who build products. Launching Spring 2015.</p>
+<div class="flex">
+	<button>Book Tickets</button>
+	<small>20 Early Bird Tickets Left</small>
+</div>
 
-		<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex">
-			<input style="display: none" type="text" name="b_7f799244738e8b8558a646378_6c81011ad7" tabindex="-1" value="">
-			<input autofocus class="flex-8" type="email" name="EMAIL" placeholder="Sign up for updates" required/>
-			<button class="flex-4 button primary" name="subscribe">Sign up</button>
-		</form>
-
-		<p>In the meantime, <a href="/about">read our story</a>.</p>
-	</div>
-
-</article>
+<section>
+	<h3>Why Jam?</h3>
+	<p>We stared JAM to create a place where people, across all disciplines can discuss their successes and failures, experiments, tools and techniques, and anything else that gets great products built.</p>
+</section>
