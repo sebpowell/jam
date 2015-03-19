@@ -1,28 +1,49 @@
-// This behaviour ensures that the custom - alternative, non-standard -
-// radio buttons work as expected. There is a hidden input element located
-// within parent element of every radio button, whose value gets updated
-// depending on the currently selected radio button.
-$(document).on("click", ".radio-button", function() {
+// The radio buttons work by using a hidden input (that is a sibling of the radio buttons) that is updated whenever a
+// non-disabled radio button is checked or unchecked.
 
-	// This gets the value of the radio button div that has been selected.
-	var radioButtonValue = $(this).attr("data-value");
+$(function () {
+	// Setup the default value for the radio buttons' hidden input
+	$(".radio-button-holder").each(function () {
+		updateRadioButtonsHiddenInputValue(this);
+	});
 
-	// This pinpoints the input element located within parent element.
-	var radioButtonInput = $(this).parent().find("input");
+	// Setup the behaviour when an element is clicked
+	$(".radio-button:not(.disabled)").click(function () {
+		toggleRadioButton(this);
+	});
 
-	// If the radio button div is disabled, return false and do nothing.
-	if ($(this).hasClass("disabled")) {
-		return false;
-	}
+	// Setup the behaviour when space or enter is pressed
+	$(".radio-button").keypress(function (e) {
+		switch (e.keyCode || e.which) {
+			case 32:
+				toggleRadioButton(e.target);
+				break;
+			case 13:
+				var form = $(e.target).closest('form');
+				form.submit();
+				break;
+		}
+	});
 
-	// This resets the current value of the input located within parent.
-	// element
-	radioButtonInput.val("");
-
-	// This adds the .selected class only to the one selected radio button.
-	$(this).parent().find(".radio-button").removeClass("selected")
-	$(this).addClass("selected");
-
-	// Updates the value of the input located within parent element.
-	radioButtonInput.val(radioButtonValue);
+	setupRadioButtonTabbing();
 });
+
+function updateRadioButtonsHiddenInputValue(parent) {
+	var valueOfFirstSelectedRadioButton = $(parent).find(".selected").first().attr("data-value");
+	var radioButtonsHiddenInput = $(parent).find("input");
+	radioButtonsHiddenInput.val(valueOfFirstSelectedRadioButton);
+}
+
+function toggleRadioButton(radioButtonElement) {
+	// Change the radio buttons so only the selected one has the selected class
+	$(radioButtonElement).parent().find(".radio-button").removeClass("selected");
+	$(radioButtonElement).addClass("selected");
+
+	updateRadioButtonsHiddenInputValue($(radioButtonElement).parent());
+}
+
+function setupRadioButtonTabbing() {
+	$(".radio-button:not(.disabled)").each(function () {
+		$(this).attr("tabIndex", 0);
+	});
+}

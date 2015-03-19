@@ -15,7 +15,7 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:700,400" rel="stylesheet" type="text/css">
 
-		<link rel="stylesheet" href="/assets/css/screen.css">
+		<link rel="stylesheet" href="/assets/css/litchi.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" href="/screen-icon.png">
 
@@ -44,6 +44,18 @@
 		</nav>
 
 		{inc template /inc}
+
+		<footer>
+			<nav>
+				<ul>
+					<li>Story</li>
+					<li>Resources</li>
+					<li>Contact</li>
+					<li>Privacy Policy</li>
+					<li>Terms &amp; Conditions</li>
+				</ul>
+			</nav>
+		</footer>
 
 		<script src="/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
 		<script src="/assets/js/app.js" type="text/javascript"></script>

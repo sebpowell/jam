@@ -1,51 +1,51 @@
-// This behaviour ensures that the custom - alternative, non-standard -
-// checkboxes work as expected. There is a hidden input element located within
-// parent element of every checkbox whose value gets updated as checkboxes
-// are being checked and unchecked. It is important to note that there is
-// one and only one input for a specific group of checkboxes and its value
-// represents a JSON object.
-$(document).on("click", ".checkbox", function() {
+// The checkboxes work by using a hidden input (that is a sibling of the checkboxes) that is updated whenever a
+// non-disabled checkbox is checked or unchecked.
 
-	// This gets the value of the checkbox div that has been selected.
-	var checkboxValue = $(this).attr("data-value");
+$(function () {
+	// Setup the default value for the checkboxes' hidden input
+	$(".checkbox-holder").each(function () {
+		updateCheckboxHiddenInputValue(this);
+	});
 
-	// This pinpoints the input element located within parent element.
-	var checkboxInput = $(this).parent().find("input");
+	// Setup the behaviour when an element is clicked
+	$(".checkbox:not(.disabled)").click(function () {
+		toggleCheckBox(this);
+	});
 
-	// This gets the value of the hidden input element located within parent
-	// element. It parses JSON so this variable now represents an array.
-	var checkboxInputValue = JSON.parse(checkboxInput.val());
-
-	// If the checkbox div is disabled, return false and do nothing else.
-	if ($(this).hasClass("disabled")) {
-		return false;
-	}
-
-	// If the checkbox div is currently selected, pop out the value from
-	// input's value.
-	if ($(this).hasClass("selected")) {
-
-		// Checks if the value is in the very array from which it is to be
-		// popped out.
-		if ($.inArray(checkboxValue, checkboxInputValue) !== (-1)) {
-			var indexOfValue = checkboxInputValue.indexOf(checkboxValue);
-			checkboxInputValue.splice(indexOfValue, 1);
+	// Setup the behaviour when space or enter is pressed
+	$(".checkbox").keypress(function (e) {
+		switch (e.keyCode || e.which) {
+			case 32:
+				toggleCheckBox(e.target);
+				break;
+			case 13:
+				var form = $(e.target).closest('form');
+				form.submit();
+				break;
 		}
-	}
-	else {
+	});
 
-		// Checks if the value is not already included in the very array it
-		// is to be pushed into, in order to prevent repetitions.
-		if ($.inArray(checkboxValue, checkboxInputValue) == (-1)) {
-			checkboxInputValue.push(checkboxValue);
-		}
-	}
-
-	// Toggles the .selected class. It is essential that this happens after
-	// injection / deletion is executed, because otherwise the whole
-	// functionality would be flawed.
-	$(this).toggleClass("selected");
-
-	// Updates the value of the input located within parent element.
-	checkboxInput.val(JSON.stringify(checkboxInputValue));
+	setupCheckboxTabbing();
 });
+
+function updateCheckboxHiddenInputValue(parent) {
+	var checkedBoxesArray = [];
+	$(parent).find(".checkbox.selected").each(function () {
+		var selectedCheckboxValue = $(this).attr("data-value");
+		checkedBoxesArray.push(selectedCheckboxValue);
+	});
+
+	var checkboxHiddenInput = $(parent).find("input");
+	checkboxHiddenInput.val(JSON.stringify(checkedBoxesArray));
+}
+
+function toggleCheckBox(checkBoxElement) {
+	$(checkBoxElement).toggleClass("selected");
+	updateCheckboxHiddenInputValue($(checkBoxElement).parent());
+}
+
+function setupCheckboxTabbing() {
+	$(".checkbox:not(.disabled)").each(function () {
+		$(this).attr("tabIndex", 0);
+	});
+}
