@@ -324,8 +324,9 @@ input:invalid, textarea:invalid {
   padding: 1rem 1.5rem;
   cursor: pointer; }
   .button:hover, .button:focus, button:hover, button:focus {
-    border-color: #b4c2c7;
-    color: #b4c2c7; }
+    border-color: #181e20;
+    background-color: #181e20;
+    color: white; }
   .button:disabled, button:disabled {
     background: #f8f9fa;
     border-color: #eef1f3;

@@ -29,15 +29,15 @@
 			</div>
 		</noscript>
 
-		<div class="alert flex center-horizontally center-vertically info">This is an info message</div>
-		<div class="alert flex center-horizontally center-vertically warning">This is a warning message</div>
-		<div class="alert flex center-horizontally center-vertically error">This is an error message</div>
-		<div class="alert flex center-horizontally center-vertically success">This is a success message</div>
+		<!--<div class="alert flex center-horizontally center-vertically info">This is an info message</div>-->
+		<!--<div class="alert flex center-horizontally center-vertically warning">This is a warning message</div>-->
+		<!--<div class="alert flex center-horizontally center-vertically error">This is an error message</div>-->
+		<!--<div class="alert flex center-horizontally center-vertically success">This is a success message</div>-->
 
 		<nav>
-			<ul>
-				<li>Conference</li>
-				<li>Resources</li>
+			<ul class="container-narrow">
+				<li class="active"><a href="#">Conference</a></li>
+				<li><a href="#">Resources</a></li>
 			</ul>
 
 			<button>Book Tickets</button>

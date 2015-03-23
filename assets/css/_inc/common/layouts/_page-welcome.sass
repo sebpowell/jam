@@ -1,0 +1,32 @@
+.page-welcome
+	section
+		&#masthead
+			height: 100vh
+
+			h1
+				line-height: 1.5
+				font:
+					weight: 700
+
+			h2
+				color: $color-grey-300
+				font:
+					size: rem(24px)
+
+		&.yellow
+			@extend .text-center
+
+			padding: $quadruple-unit-layout + $base-unit-layout
+			background: $color-yellow
+			border-top: 1px solid $color-yellow-600
+			border-bottom: 1px solid $color-yellow-600
+
+			h2
+				font:
+					weight: 700
+
+			p
+				max-width: rem(700px)
+				margin: 0 auto $double-unit-layout
+				font:
+					size: rem(20px)
