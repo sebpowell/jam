@@ -4,15 +4,16 @@ nav
 	position: fixed
 	width: 100%
 	height: $nav-height
-	border-bottom: 1px solid $color-grey-100
+	//border-bottom: 1px solid $color-grey-100
 	background:
 		color: rgba(255,255,255,.975)
+	background: $color-grey-50
 
 	button
 		position: absolute
-		right: $base-unit-layout
+		right: rem(55px) / 2
 		top: 50%
-		margin: -($quadruple-unit-layout / 2) 0 0
+		margin: -(rem(55px) / 2) 0 0
 
 	ul
 		+clearfix
@@ -29,7 +30,7 @@ nav
 			height: 100%
 
 			+hover
-				background-color: $color-grey-50
+				background-color: white
 
 			&.active
 				a
@@ -57,7 +58,7 @@ nav
 				overflow: hidden
 				background:
 					color: transparent
-					position: left center
+					position: center center
 					repeat: no-repeat
 					size: $triple-unit-layout
 					image: url("#{$image-base}/logo/glyph.svg")

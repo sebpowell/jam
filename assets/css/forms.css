@@ -321,9 +321,14 @@ input:invalid, textarea:invalid {
 .button, button {
   text-decoration: none;
   padding: 0 1.5rem;
-  height: 4rem;
-  line-height: 3.9375rem;
+  height: 3.4375rem;
+  line-height: 3.375rem;
   cursor: pointer; }
+  .button.large, button.large {
+    height: 4.375rem;
+    line-height: 4.3125rem;
+    font-size: 1rem;
+    padding: 0 2rem; }
   .button:hover, .button:focus, button:hover, button:focus {
     border-color: #181e20;
     background-color: #181e20;
@@ -362,3 +367,9 @@ input:invalid, textarea:invalid {
     .button.yellow:hover, .button.yellow:focus, button.yellow:hover, button.yellow:focus {
       border-color: #d6ae0d;
       color: #d6ae0d; }
+  .button.turquoise, button.turquoise {
+    border-color: #1abc9c;
+    color: #1abc9c; }
+    .button.turquoise:hover, .button.turquoise:focus, button.turquoise:hover, button.turquoise:focus {
+      background: #1abc9c;
+      color: white; }

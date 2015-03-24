@@ -5,9 +5,15 @@ $colors: blue, yellow, green, red
 
 	text-decoration: none
 	padding: 0 $double-half-unit-layout
-	height: $quadruple-unit-layout
-	line-height: $quadruple-unit-layout - rem(1px)
+	height: rem(55px)
+	line-height: rem(54px)
 	cursor: pointer
+
+	&.large
+		height: rem(70px)
+		line-height: rem(69px)
+		font-size: rem(16px)
+		padding: 0 $double-unit-layout
 
 	+hover
 		border-color: $color-black
@@ -57,3 +63,11 @@ $colors: blue, yellow, green, red
 		+hover
 			border-color: $color-yellow-600
 			color: $color-yellow-600
+
+	&.turquoise
+		border-color: $color-turquoise
+		color: $color-turquoise
+
+		+hover
+			background: $color-turquoise
+			color: white

@@ -45,7 +45,7 @@
 				<!--<li><a href="#">Get Involved</a></li>-->
 			</ul>
 
-			<button>Tickets</button>
+			<button class="turquoise">Tickets</button>
 		</nav>
 
 		<?php Template\Template::getLayout(" template "); ?>

@@ -5,9 +5,9 @@
 
 		<h2>London, Saturday 3rd of October 2015. 10am - 6pm.</h2>
 
-		<div class="flex">
-			<button>Book Tickets</button>
-			<small>20 Early Bird Tickets Left</small>
+		<div class="flex center-vertically">
+			<button class="no-margin turquoise large">Book Tickets</button>
+			<small class="margin-left-base">Hurry up! Only <strong>20 Early Bird Tickets</strong> Left</small>
 		</div>
 	</div>
 </section>
@@ -20,7 +20,7 @@
 			successes and failures, experiments, tools and techniques, and anything else that gets
 			great products built.</p>
 
-		<button>Our story</button>
+		<button class="large">Our story</button>
 	</div>
 </section>
 
