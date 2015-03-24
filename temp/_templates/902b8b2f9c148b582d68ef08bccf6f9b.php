@@ -7,7 +7,9 @@
 
 		<div class="flex center-vertically">
 			<button class="no-margin turquoise large">Book Tickets</button>
-			<small class="margin-left-base">Hurry up! Only <strong>20 Early Bird Tickets</strong> Left</small>
+			<small class="margin-left-base">Hurry up! Only <strong>20 Early Bird Tickets</strong>
+				Left
+			</small>
 		</div>
 	</div>
 </section>
@@ -24,21 +26,22 @@
 	</div>
 </section>
 
-<section>
+<section id="speakers" class="text-center">
 	<div class="container-narrow">
 		<h3>Straight from the horses’ mouth.<br/>
 			9 speakers share how they’ve done it.</h3>
-
-		<ul class="flex-grid-3">
-			<li class="flex-item">
-				<strong>James Gill</strong>
-
-				<small>Co-founder & CEO<br/>
-					GoCardless
-				</small>
-			</li>
-		</ul>
 	</div>
+
+	<ul class="flex-grid-3 unstyled">
+		<li class="flex-item">
+			<img src="/assets/images/team/mathilde-leo.png" alt="Mathilde Leo's Avatar"/>
+			<strong>James Gill</strong>
+
+			<small>Co-founder & CEO<br/>
+				GoCardless
+			</small>
+		</li>
+	</ul>
 </section>
 
 <section>
