@@ -13,10 +13,13 @@
 				font:
 					size: rem(24px)
 
+			small
+				font-family: $font-family-custom
+
 		&.yellow
 			@extend .text-center
 
-			padding: $quadruple-unit-layout + $base-unit-layout
+			padding: ($quadruple-unit-layout + $base-unit-layout) 0
 			background: $color-yellow-300
 			border-top: 1px solid $color-yellow
 			border-bottom: 1px solid $color-yellow
@@ -29,11 +32,15 @@
 				max-width: rem(700px)
 				margin: 0 auto $double-unit-layout
 				font:
+					family: $font-family-custom
 					size: rem(20px)
 
 		&#speakers
-			padding: $quadruple-unit-layout + $base-unit-layout
+			padding: ($quadruple-unit-layout + $base-unit-layout) 0
+
 			ul
+				margin-top: $quadruple-unit-layout
+
 				> .flex-item
 					img
 						max-width: 250px
@@ -45,3 +52,48 @@
 						font:
 							size: rem(20px)
 					small
+						color: $color-grey
+						font-family: $font-family-custom
+
+		&#schedule
+			padding: ($quadruple-unit-layout + $base-unit-layout) 0
+			background: $color-grey-50
+			border-top: 1px solid $color-grey-100
+			border-bottom: 1px solid $color-grey-100
+
+			article
+				max-width: rem(550px)
+				margin: $triple-unit-layout auto 0
+
+				p
+					margin: 0
+					line-height: 1.4
+					font:
+						family: $font-family-custom
+
+				h4
+					color: $color-turquoise
+					font:
+						size: rem(22px)
+						weight: 700
+
+				.bio
+					+clearfix
+
+					img
+						float: left
+						max-height: 50px
+
+					aside
+						float: left
+						padding: $half-unit-layout 0 0 $base-unit-layout
+
+						strong
+							display: block
+							margin-bottom: $quarter-unit-layout
+
+						small
+							font-family: $font-family-custom
+
+		&#venue
+			padding: ($quadruple-unit-layout + $base-unit-layout) 0

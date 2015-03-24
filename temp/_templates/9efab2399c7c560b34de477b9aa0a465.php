@@ -35,7 +35,7 @@
 		<!--<div class="alert flex center-horizontally center-vertically error">This is an error message</div>-->
 		<!--<div class="alert flex center-horizontally center-vertically success">This is a success message</div>-->
 
-		<nav>
+		<nav id="top-nav">
 			<ul class="container-narrow">
 				<li><a href="/">JAM</a></li>
 				<li class="active"><a href="#">Story</a></li>
@@ -52,7 +52,7 @@
 
 		<footer>
 			<nav>
-				<ul>
+				<ul class="unstyled">
 					<li>Story</li>
 					<li>Resources</li>
 					<li>Contact</li>

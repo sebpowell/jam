@@ -117,40 +117,40 @@ dl {
     color: #68838c;
     font-size: 0.875rem; }
 
-nav {
+nav#top-nav {
   position: fixed;
   width: 100%;
   height: 6.5rem;
   background-color: rgba(255, 255, 255, 0.975);
   background: #f8f9fa; }
-  nav button {
+  nav#top-nav button {
     position: absolute;
     right: 1.71875rem;
     top: 50%;
     margin: -1.71875rem 0 0; }
-  nav ul {
+  nav#top-nav ul {
     zoom: 1;
     width: 100%;
     height: 100%;
     margin-bottom: 0;
     display: table; }
-    nav ul:before, nav ul:after {
+    nav#top-nav ul:before, nav#top-nav ul:after {
       content: "";
       display: table; }
-    nav ul:after {
+    nav#top-nav ul:after {
       clear: both; }
-    nav ul li {
+    nav#top-nav ul li {
       -webkit-transition: background .25s;
       -o-transition: background .25s;
       transition: background .25s;
       display: table-cell;
       height: 100%; }
-      nav ul li:hover, nav ul li:focus {
+      nav#top-nav ul li:hover, nav#top-nav ul li:focus {
         background-color: white; }
-      nav ul li.active a {
+      nav#top-nav ul li.active a {
         color: #181e20;
         font-weight: 700; }
-      nav ul li a {
+      nav#top-nav ul li a {
         -webkit-transition: color .25s;
         -o-transition: color .25s;
         transition: color .25s;
@@ -160,16 +160,16 @@ nav {
         height: 100%;
         line-height: 6.5rem;
         font-size: 1.25rem; }
-        nav ul li a:hover, nav ul li a:focus {
+        nav#top-nav ul li a:hover, nav#top-nav ul li a:focus {
           color: #181e20; }
-      nav ul li:first-of-type {
+      nav#top-nav ul li:first-of-type {
         overflow: hidden;
         background-color: transparent;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: 3rem;
         background-image: url("../images//logo/glyph.svg"); }
-        nav ul li:first-of-type a {
+        nav#top-nav ul li:first-of-type a {
           opacity: 0; }
 
 table {
@@ -187,8 +187,7 @@ p, h1, h2, h3, h4, h5, h6 {
   line-height: 1.6; }
 
 p {
-  margin: 1rem 0;
-  font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+  margin: 1rem 0; }
   p:last-child {
     margin-bottom: 0; }
   p:first-child {
@@ -198,6 +197,9 @@ h1, h2, h3 {
   margin: 2rem 0 1rem;
   font-weight: 500; }
 
+h3 {
+  font-weight: 700; }
+
 h4, h5, h6 {
   margin: 1rem 0 0.5rem;
   font-weight: 500; }
@@ -206,10 +208,10 @@ h1 {
   font-size: 2.375rem; }
 
 h2 {
-  font-size: 2.125rem; }
+  font-size: 2.5rem; }
 
 h3 {
-  font-size: 1.875rem; }
+  font-size: 2.375rem; }
 
 h4 {
   font-size: 1.625rem; }
@@ -745,7 +747,7 @@ h1, h2, h3, h4, h5, h6 {
 .margin-double {
   margin: 2rem !important; }
 
-.text-center, nav ul li a, .page-welcome section.yellow {
+.text-center, nav#top-nav ul li a, .page-welcome section.yellow {
   text-align: center; }
 
 .text-right {
@@ -1072,10 +1074,20 @@ input:invalid, textarea:invalid {
   max-width: 50rem; }
 
 footer {
-  color: #b4c2c7;
+  background: #181e20;
+  color: white;
   font-size: 0.75rem;
   text-align: center;
-  padding: 1rem; }
+  padding: 3rem 1rem; }
+  footer nav {
+    max-width: 34.375rem;
+    margin: 0 auto; }
+    footer nav ul {
+      width: 100%;
+      display: table; }
+      footer nav ul li {
+        padding: 0 1rem;
+        display: table-cell; }
 
 .container-narrow.documentation header {
   padding: 8rem 0; }
@@ -1255,8 +1267,10 @@ footer {
   .page-welcome section#masthead h2 {
     color: #b4c2c7;
     font-size: 1.5rem; }
+  .page-welcome section#masthead small {
+    font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
 .page-welcome section.yellow {
-  padding: 5rem;
+  padding: 5rem 0;
   background: #f3cf3c;
   border-top: 1px solid #f1c40f;
   border-bottom: 1px solid #f1c40f; }
@@ -1265,13 +1279,55 @@ footer {
   .page-welcome section.yellow p {
     max-width: 43.75rem;
     margin: 0 auto 2rem;
+    font-family: "Source Code Pro", Helvetica, Arial, sans-serif;
     font-size: 1.25rem; }
 .page-welcome section#speakers {
-  padding: 5rem; }
-  .page-welcome section#speakers ul > .flex-item img {
-    max-width: 250px;
-    display: block;
-    margin: 0 auto 2rem; }
-  .page-welcome section#speakers ul > .flex-item strong {
-    display: block;
-    font-size: 1.25rem; }
+  padding: 5rem 0; }
+  .page-welcome section#speakers ul {
+    margin-top: 4rem; }
+    .page-welcome section#speakers ul > .flex-item img {
+      max-width: 250px;
+      display: block;
+      margin: 0 auto 2rem; }
+    .page-welcome section#speakers ul > .flex-item strong {
+      display: block;
+      font-size: 1.25rem; }
+    .page-welcome section#speakers ul > .flex-item small {
+      color: #839ba3;
+      font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+.page-welcome section#schedule {
+  padding: 5rem 0;
+  background: #f8f9fa;
+  border-top: 1px solid #eef1f3;
+  border-bottom: 1px solid #eef1f3; }
+  .page-welcome section#schedule article {
+    max-width: 34.375rem;
+    margin: 3rem auto 0; }
+    .page-welcome section#schedule article p {
+      margin: 0;
+      line-height: 1.4;
+      font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+    .page-welcome section#schedule article h4 {
+      color: #1abc9c;
+      font-size: 1.375rem;
+      font-weight: 700; }
+    .page-welcome section#schedule article .bio {
+      zoom: 1; }
+      .page-welcome section#schedule article .bio:before, .page-welcome section#schedule article .bio:after {
+        content: "";
+        display: table; }
+      .page-welcome section#schedule article .bio:after {
+        clear: both; }
+      .page-welcome section#schedule article .bio img {
+        float: left;
+        max-height: 50px; }
+      .page-welcome section#schedule article .bio aside {
+        float: left;
+        padding: 0.5rem 0 0 1rem; }
+        .page-welcome section#schedule article .bio aside strong {
+          display: block;
+          margin-bottom: 0.25rem; }
+        .page-welcome section#schedule article .bio aside small {
+          font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+.page-welcome section#venue {
+  padding: 5rem 0; }
