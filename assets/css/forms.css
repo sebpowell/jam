@@ -163,7 +163,7 @@ input, select, textarea, button, .button, .input {
   transition: all .25s ease-in-out;
   -webkit-appearance: none;
   border: 2px solid #181e20;
-  background: white;
+  background: transparent;
   padding: 0.75rem;
   font-family: Helvetica, Arial, sans-serif !important;
   font-size: 0.875rem;
@@ -319,9 +319,10 @@ input:invalid, textarea:invalid {
   margin: 0 0 1rem; }
 
 .button, button {
-  background: white;
   text-decoration: none;
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem;
+  height: 4rem;
+  line-height: 3.9375rem;
   cursor: pointer; }
   .button:hover, .button:focus, button:hover, button:focus {
     border-color: #181e20;
@@ -356,8 +357,8 @@ input:invalid, textarea:invalid {
       border-color: #b6c332;
       color: #b6c332; }
   .button.yellow, button.yellow {
-    border-color: #FDD835;
-    color: #FDD835; }
+    border-color: #f1c40f;
+    color: #f1c40f; }
     .button.yellow:hover, .button.yellow:focus, button.yellow:hover, button.yellow:focus {
-      border-color: #e1c02f;
-      color: #e1c02f; }
+      border-color: #d6ae0d;
+      color: #d6ae0d; }

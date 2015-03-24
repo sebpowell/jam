@@ -36,11 +36,15 @@
 
 		<nav>
 			<ul class="container-narrow">
-				<li class="active"><a href="#">Conference</a></li>
+				<li><a href="/">JAM</a></li>
+				<li class="active"><a href="#">Story</a></li>
+				<li><a href="#">Speakers</a></li>
+				<li><a href="#">Topics</a></li>
 				<li><a href="#">Resources</a></li>
+				<!--<li><a href="#">Get Involved</a></li>-->
 			</ul>
 
-			<button>Book Tickets</button>
+			<button>Tickets</button>
 		</nav>
 
 		{inc template /inc}

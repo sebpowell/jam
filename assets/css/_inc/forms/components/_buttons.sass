@@ -3,9 +3,10 @@ $colors: blue, yellow, green, red
 .button, button
 	@extend .text-uppercase
 
-	background: white
 	text-decoration: none
-	padding: $base-unit-layout $double-half-unit-layout
+	padding: 0 $double-half-unit-layout
+	height: $quadruple-unit-layout
+	line-height: $quadruple-unit-layout - rem(1px)
 	cursor: pointer
 
 	+hover

@@ -1,46 +1,61 @@
 nav
 	position: fixed
 	width: 100%
-	height: $quadruple-unit-layout + $double-unit-layout
+	height: $quadruple-unit-layout + $triple-unit-layout
 	border-bottom: 1px solid $color-grey-100
-	background: rgba(255,255,255,.975)
+	background:
+		color: rgba(255,255,255,.975)
 
 	button
 		position: absolute
 		right: $base-unit-layout
 		top: 50%
-		margin: -($double-half-unit-layout) 0 0
+		margin: -($quadruple-unit-layout / 2) 0 0
 
 	ul
 		+clearfix
 
+		width: 100%
 		height: 100%
+		margin-bottom: 0
+		display: table
 
 		li
-			display: block
-			width: 50%
+			+transition(background .25s)
+
+			display: table-cell
 			height: 100%
-			float: left
+
+			+hover
+				background-color: $color-grey-50
 
 			&.active
-				background: $color-grey-50
-
 				a
 					color: $color-black
 
 			a
 				@extend .text-center
-				//@extend .text-uppercase
 				+transition(color .25s)
 
 				text-decoration: none
 				color: $color-grey-300
 				display: block
 				height: 100%
-				line-height: $quadruple-unit-layout + $double-unit-layout
+				line-height: $quadruple-unit-layout + $triple-unit-layout
 				font:
 					size: rem(20px)
 					weight: 700
 
 				+hover
 					color: $color-black
+
+			&:first-of-type
+				background:
+					color: transparent
+					position: left center
+					repeat: no-repeat
+					size: $triple-unit-layout
+					image: url("#{$image-base}/logo/glyph.svg")
+
+				a
+					opacity: 0
