@@ -33,14 +33,15 @@
 	</div>
 
 	<ul class="flex-grid-3 unstyled">
+		{? foreach ($template["authors"] as $k => $v) { ?}
 		<li class="flex-item">
-			<img src="/assets/images/team/mathilde-leo.png" alt="Mathilde Leo's Avatar"/>
-			<strong>James Gill</strong>
+			<img src="/assets/images/team/mathilde-leo.png" alt="{?= $k =?}'s Avatar"/>
+			<strong>{?= $k =?}</strong>
 
-			<small>Co-founder & CEO<br/>
-				GoCardless
+			<small>{?= $v["position"] =?}<br/>{?= $v["company"] =?}
 			</small>
 		</li>
+		{? } ?}
 	</ul>
 </section>
 

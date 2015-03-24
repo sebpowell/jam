@@ -33,14 +33,15 @@
 	</div>
 
 	<ul class="flex-grid-3 unstyled">
+		<?php  foreach ($template["authors"] as $k => $v) {  ?>
 		<li class="flex-item">
-			<img src="/assets/images/team/mathilde-leo.png" alt="Mathilde Leo's Avatar"/>
-			<strong>James Gill</strong>
+			<img src="/assets/images/team/mathilde-leo.png" alt="<?php echo( $k ); ?>'s Avatar"/>
+			<strong><?php echo( $k ); ?></strong>
 
-			<small>Co-founder & CEO<br/>
-				GoCardless
+			<small><?php echo( $v["position"] ); ?><br/><?php echo( $v["company"] ); ?>
 			</small>
 		</li>
+		<?php  }  ?>
 	</ul>
 </section>
 
