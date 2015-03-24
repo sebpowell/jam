@@ -1,7 +1,9 @@
 nav
+	$nav-height: $quadruple-unit-layout + $double-unit-layout + $half-unit-layout
+
 	position: fixed
 	width: 100%
-	height: $quadruple-unit-layout + $triple-unit-layout
+	height: $nav-height
 	border-bottom: 1px solid $color-grey-100
 	background:
 		color: rgba(255,255,255,.975)
@@ -32,6 +34,8 @@ nav
 			&.active
 				a
 					color: $color-black
+					font:
+						weight: 700
 
 			a
 				@extend .text-center
@@ -41,15 +45,16 @@ nav
 				color: $color-grey-300
 				display: block
 				height: 100%
-				line-height: $quadruple-unit-layout + $triple-unit-layout
+				line-height: $nav-height
 				font:
 					size: rem(20px)
-					weight: 700
+					//weight: 700
 
 				+hover
 					color: $color-black
 
 			&:first-of-type
+				overflow: hidden
 				background:
 					color: transparent
 					position: left center
@@ -58,4 +63,4 @@ nav
 					image: url("#{$image-base}/logo/glyph.svg")
 
 				a
-					opacity: 0
+					opacity: 0 // @NOTE using opacity in favour of visibility to make it clickable

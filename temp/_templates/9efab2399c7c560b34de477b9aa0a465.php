@@ -13,7 +13,8 @@
 
 		<title><?php echo( $template["app"]["siteName"] ); ?> / <?php echo( $template["page"]["title"] ); ?></title>
 
-		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:700,400" rel="stylesheet" type="text/css">
+		<!--<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:700,400" rel="stylesheet" type="text/css">-->
+		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:300,500,700" rel="stylesheet" type="text/css">
 
 		<link rel="stylesheet" href="/assets/css/litchi.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
