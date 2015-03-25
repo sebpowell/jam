@@ -9,124 +9,124 @@
   padding: 0; }
 
 .padding-top-quarter {
-  padding-top: 0.25rem; }
+  padding-top: 0.25rem !important; }
 
 .padding-top-half {
-  padding-top: 0.5rem; }
+  padding-top: 0.5rem !important; }
 
 .padding-top-base {
-  padding-top: 1rem; }
+  padding-top: 1rem !important; }
 
 .padding-top-double {
-  padding-top: 2rem; }
+  padding-top: 2rem !important; }
 
 .padding-right-quarter {
-  padding-right: 0.25rem; }
+  padding-right: 0.25rem !important; }
 
 .padding-right-half {
-  padding-right: 0.5rem; }
+  padding-right: 0.5rem !important; }
 
 .padding-right-base {
-  padding-right: 1rem; }
+  padding-right: 1rem !important; }
 
 .padding-right-double {
-  padding-right: 2rem; }
+  padding-right: 2rem !important; }
 
 .padding-bottom-quarter {
-  padding-bottom: 0.25rem; }
+  padding-bottom: 0.25rem !important; }
 
 .padding-bottom-half {
-  padding-bottom: 0.5rem; }
+  padding-bottom: 0.5rem !important; }
 
 .padding-bottom-base {
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem !important; }
 
 .padding-bottom-double {
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem !important; }
 
 .padding-left-quarter {
-  padding-left: 0.25rem; }
+  padding-left: 0.25rem !important; }
 
 .padding-left-half {
-  padding-left: 0.5rem; }
+  padding-left: 0.5rem !important; }
 
 .padding-left-base {
-  padding-left: 1rem; }
+  padding-left: 1rem !important; }
 
 .padding-left-double {
-  padding-left: 2rem; }
+  padding-left: 2rem !important; }
 
 .padding-quarter {
-  padding: 0.25rem; }
+  padding: 0.25rem !important; }
 
 .padding-half {
-  padding: 0.5rem; }
+  padding: 0.5rem !important; }
 
 .padding-base {
-  padding: 1rem; }
+  padding: 1rem !important; }
 
 .padding-double {
-  padding: 2rem; }
+  padding: 2rem !important; }
 
 .margin-top-quarter {
-  margin-top: 0.25rem; }
+  margin-top: 0.25rem !important; }
 
 .margin-top-half {
-  margin-top: 0.5rem; }
+  margin-top: 0.5rem !important; }
 
 .margin-top-base {
-  margin-top: 1rem; }
+  margin-top: 1rem !important; }
 
 .margin-top-double {
-  margin-top: 2rem; }
+  margin-top: 2rem !important; }
 
 .margin-right-quarter {
-  margin-right: 0.25rem; }
+  margin-right: 0.25rem !important; }
 
 .margin-right-half {
-  margin-right: 0.5rem; }
+  margin-right: 0.5rem !important; }
 
 .margin-right-base {
-  margin-right: 1rem; }
+  margin-right: 1rem !important; }
 
 .margin-right-double {
-  margin-right: 2rem; }
+  margin-right: 2rem !important; }
 
 .margin-bottom-quarter {
-  margin-bottom: 0.25rem; }
+  margin-bottom: 0.25rem !important; }
 
 .margin-bottom-half {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem !important; }
 
 .margin-bottom-base {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
 
 .margin-bottom-double {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem !important; }
 
 .margin-left-quarter {
-  margin-left: 0.25rem; }
+  margin-left: 0.25rem !important; }
 
 .margin-left-half {
-  margin-left: 0.5rem; }
+  margin-left: 0.5rem !important; }
 
 .margin-left-base {
-  margin-left: 1rem; }
+  margin-left: 1rem !important; }
 
 .margin-left-double {
-  margin-left: 2rem; }
+  margin-left: 2rem !important; }
 
 .margin-quarter {
-  margin: 0.25rem; }
+  margin: 0.25rem !important; }
 
 .margin-half {
-  margin: 0.5rem; }
+  margin: 0.5rem !important; }
 
 .margin-base {
-  margin: 1rem; }
+  margin: 1rem !important; }
 
 .margin-double {
-  margin: 2rem; }
+  margin: 2rem !important; }
 
 .text-center {
   text-align: center; }
@@ -333,6 +333,8 @@ input:invalid, textarea:invalid {
     border-color: #181e20;
     background-color: #181e20;
     color: white; }
+    .button:hover:focus, .button:focus:focus, button:hover:focus, button:focus:focus {
+      border-color: #181e20; }
   .button:disabled, button:disabled {
     background: #f8f9fa;
     border-color: #eef1f3;
@@ -347,29 +349,39 @@ input:invalid, textarea:invalid {
     border-color: #81CFE0;
     color: #81CFE0; }
     .button.blue:hover, .button.blue:focus, button.blue:hover, button.blue:focus {
-      border-color: #72b8c7;
-      color: #72b8c7; }
+      background: #81CFE0;
+      color: white; }
+      .button.blue:hover:focus, .button.blue:focus:focus, button.blue:hover:focus, button.blue:focus:focus {
+        border-color: #72b8c7; }
   .button.red, button.red {
     border-color: #F25641;
     color: #F25641; }
     .button.red:hover, .button.red:focus, button.red:hover, button.red:focus {
-      border-color: #d74c39;
-      color: #d74c39; }
+      background: #F25641;
+      color: white; }
+      .button.red:hover:focus, .button.red:focus:focus, button.red:hover:focus, button.red:focus:focus {
+        border-color: #d74c39; }
   .button.green, button.green {
     border-color: #CDDC39;
     color: #CDDC39; }
     .button.green:hover, .button.green:focus, button.green:hover, button.green:focus {
-      border-color: #b6c332;
-      color: #b6c332; }
+      background: #CDDC39;
+      color: white; }
+      .button.green:hover:focus, .button.green:focus:focus, button.green:hover:focus, button.green:focus:focus {
+        border-color: #b6c332; }
   .button.yellow, button.yellow {
     border-color: #f1c40f;
     color: #f1c40f; }
     .button.yellow:hover, .button.yellow:focus, button.yellow:hover, button.yellow:focus {
-      border-color: #d6ae0d;
-      color: #d6ae0d; }
+      background: #f1c40f;
+      color: white; }
+      .button.yellow:hover:focus, .button.yellow:focus:focus, button.yellow:hover:focus, button.yellow:focus:focus {
+        border-color: #d6ae0d; }
   .button.turquoise, button.turquoise {
     border-color: #1abc9c;
     color: #1abc9c; }
     .button.turquoise:hover, .button.turquoise:focus, button.turquoise:hover, button.turquoise:focus {
       background: #1abc9c;
       color: white; }
+      .button.turquoise:hover:focus, .button.turquoise:focus:focus, button.turquoise:hover:focus, button.turquoise:focus:focus {
+        border-color: #17a78a; }

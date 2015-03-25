@@ -20,6 +20,9 @@ $colors: blue, yellow, green, red
 		background-color: $color-black
 		color: white
 
+		&:focus
+			border-color: $color-black
+
 	&:disabled
 		background: $color-grey-50
 		border-color: $color-grey-100
@@ -37,32 +40,44 @@ $colors: blue, yellow, green, red
 		color: $color-blue
 
 		+hover
-			border-color: $color-blue-600
-			color: $color-blue-600
+			background: $color-blue
+			color: white
+
+			&:focus
+				border-color: $color-blue-600
 
 	&.red
 		border-color: $color-red
 		color: $color-red
 
 		+hover
-			border-color: $color-red-600
-			color: $color-red-600
+			background: $color-red
+			color: white
+
+			&:focus
+				border-color: $color-red-600
 
 	&.green
 		border-color: $color-green
 		color: $color-green
 
 		+hover
-			border-color: $color-green-600
-			color: $color-green-600
+			background: $color-green
+			color: white
+
+			&:focus
+				border-color: $color-green-600
 
 	&.yellow
 		border-color: $color-yellow
 		color: $color-yellow
 
 		+hover
-			border-color: $color-yellow-600
-			color: $color-yellow-600
+			background: $color-yellow
+			color: white
+
+			&:focus
+				border-color: $color-yellow-600
 
 	&.turquoise
 		border-color: $color-turquoise
@@ -71,3 +86,6 @@ $colors: blue, yellow, green, red
 		+hover
 			background: $color-turquoise
 			color: white
+
+			&:focus
+				border-color: $color-turquoise-600

@@ -117,7 +117,45 @@ dl {
     color: #68838c;
     font-size: 0.875rem; }
 
+.modal {
+  z-index: 2;
+  -webkit-transition: opacity .45s;
+  -o-transition: opacity .45s;
+  transition: opacity .45s;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  background: #f1c40f;
+  overflow-y: scroll;
+  position: fixed;
+  opacity: 0; }
+  .modal.show {
+    opacity: 1; }
+  .modal .modal-content {
+    position: relative;
+    cursor: default;
+    max-width: 40.625rem;
+    margin: 6rem auto 4rem; }
+    .modal .modal-content .close-modal {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      cursor: pointer; }
+    .modal .modal-content p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+      .modal .modal-content p a {
+        color: #181e20; }
+      .modal .modal-content p:last-of-type {
+        margin-bottom: 0; }
+      .modal .modal-content p.heading {
+        font-size: 1.5rem;
+        font-weight: 500; }
+
 nav#top-nav {
+  z-index: 1;
   position: fixed;
   width: 100%;
   height: 6.5rem;
@@ -986,6 +1024,8 @@ input:invalid, textarea:invalid {
     border-color: #181e20;
     background-color: #181e20;
     color: white; }
+    .button:hover:focus, .button:focus:focus, button:hover:focus, button:focus:focus {
+      border-color: #181e20; }
   .button:disabled, button:disabled {
     background: #f8f9fa;
     border-color: #eef1f3;
@@ -1000,32 +1040,42 @@ input:invalid, textarea:invalid {
     border-color: #81CFE0;
     color: #81CFE0; }
     .button.blue:hover, .button.blue:focus, button.blue:hover, button.blue:focus {
-      border-color: #72b8c7;
-      color: #72b8c7; }
+      background: #81CFE0;
+      color: white; }
+      .button.blue:hover:focus, .button.blue:focus:focus, button.blue:hover:focus, button.blue:focus:focus {
+        border-color: #72b8c7; }
   .button.red, button.red {
     border-color: #F25641;
     color: #F25641; }
     .button.red:hover, .button.red:focus, button.red:hover, button.red:focus {
-      border-color: #d74c39;
-      color: #d74c39; }
+      background: #F25641;
+      color: white; }
+      .button.red:hover:focus, .button.red:focus:focus, button.red:hover:focus, button.red:focus:focus {
+        border-color: #d74c39; }
   .button.green, button.green {
     border-color: #CDDC39;
     color: #CDDC39; }
     .button.green:hover, .button.green:focus, button.green:hover, button.green:focus {
-      border-color: #b6c332;
-      color: #b6c332; }
+      background: #CDDC39;
+      color: white; }
+      .button.green:hover:focus, .button.green:focus:focus, button.green:hover:focus, button.green:focus:focus {
+        border-color: #b6c332; }
   .button.yellow, button.yellow {
     border-color: #f1c40f;
     color: #f1c40f; }
     .button.yellow:hover, .button.yellow:focus, button.yellow:hover, button.yellow:focus {
-      border-color: #d6ae0d;
-      color: #d6ae0d; }
+      background: #f1c40f;
+      color: white; }
+      .button.yellow:hover:focus, .button.yellow:focus:focus, button.yellow:hover:focus, button.yellow:focus:focus {
+        border-color: #d6ae0d; }
   .button.turquoise, button.turquoise {
     border-color: #1abc9c;
     color: #1abc9c; }
     .button.turquoise:hover, .button.turquoise:focus, button.turquoise:hover, button.turquoise:focus {
       background: #1abc9c;
       color: white; }
+      .button.turquoise:hover:focus, .button.turquoise:focus:focus, button.turquoise:hover:focus, button.turquoise:focus:focus {
+        border-color: #17a78a; }
 
 .label {
   -webkit-border-radius: 3px;
@@ -1303,7 +1353,11 @@ footer {
   border-bottom: 1px solid #eef1f3; }
   .page-welcome section#schedule article {
     max-width: 34.375rem;
-    margin: 3rem auto 0; }
+    margin: 2rem auto 0;
+    padding: 2rem 0 0;
+    border-top: 1px solid #eef1f3; }
+    .page-welcome section#schedule article:first-of-type {
+      border-top: 0; }
     .page-welcome section#schedule article p {
       margin: 0;
       line-height: 1.4;

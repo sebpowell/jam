@@ -117,7 +117,45 @@ dl {
     color: #68838c;
     font-size: 0.875rem; }
 
+.modal {
+  z-index: 2;
+  -webkit-transition: opacity .45s;
+  -o-transition: opacity .45s;
+  transition: opacity .45s;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  background: #f1c40f;
+  overflow-y: scroll;
+  position: fixed;
+  opacity: 0; }
+  .modal.show {
+    opacity: 1; }
+  .modal .modal-content {
+    position: relative;
+    cursor: default;
+    max-width: 40.625rem;
+    margin: 6rem auto 4rem; }
+    .modal .modal-content .close-modal {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      cursor: pointer; }
+    .modal .modal-content p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+      .modal .modal-content p a {
+        color: #181e20; }
+      .modal .modal-content p:last-of-type {
+        margin-bottom: 0; }
+      .modal .modal-content p.heading {
+        font-size: 1.5rem;
+        font-weight: 500; }
+
 nav#top-nav {
+  z-index: 1;
   position: fixed;
   width: 100%;
   height: 6.5rem;

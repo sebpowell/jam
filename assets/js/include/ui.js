@@ -3,6 +3,32 @@ $(document).ready(function () {
 	// Do not remove this bit, as it fixes transition bugs.
 	$("body").removeClass("preload");
 
+	function openModal(timeout) {
+		$(".modal").toggleClass("is-hidden");
+		setTimeout(function() {
+			$(".modal").toggleClass("show");
+		}, timeout);
+	}
+
+	function closeModal(timeout) {
+		$(".modal").toggleClass("show");
+		setTimeout(function() {
+			$(".modal").toggleClass("is-hidden");
+		}, timeout);
+	}
+
+	$("#ourStory").click(function() {
+		openModal(50);
+	});
+
+	$(".modal, .close-modal").click(function() {
+		closeModal(450);
+	});
+
+	$(".modal-content").click(function(e) {
+		e.stopPropagation();
+	});
+
 	$("#mc-embedded-subscribe-form").submit(function (e) {
 		var $this = $(this);
 

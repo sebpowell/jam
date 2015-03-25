@@ -21,7 +21,7 @@
 			successes and failures, experiments, tools and techniques, and anything else that gets
 			great products built.</p>
 
-		<button class="large">Our story</button>
+		<button class="large" id="ourStory">Our story</button>
 	</div>
 </section>
 
@@ -71,4 +71,6 @@
 <section id="venue" class="text-center">
 	<h3>Hosted in the iconic Oval Space, Bethnal Green.<br/>
 		Food & Drink Provided.</h3>
+
+	<button class="turquoise large">Book now!</button>
 </section>
