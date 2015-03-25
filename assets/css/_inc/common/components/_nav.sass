@@ -1,15 +1,39 @@
+=no-bullet
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+$color-brand-secondary: #04F799
+$color-keyline: #E1E5E6 
+
 nav#top-nav
 	$nav-height: $quadruple-unit-layout + $double-unit-layout + $half-unit-layout
 
 	+z-index(nav)
+	+respond-to-size($phone)
+		background: black
+		border-bottom: 0
 
 	position: fixed
 	width: 100%
-	height: $nav-height
-	border-bottom: 1px solid $color-grey-100
-	background:
-		color: rgba(255,255,255,.975)
-	background: $color-grey-50
+	
+	background: white
+	border-bottom: 1px solid $color-keyline
+	.container-narrow
+		height: $nav-height
+		display: flex
+		align-items: center
+	.logo
+		display: block
+		width: 50px
+		height: 50px
+		margin-right: $double-unit-layout
+		background:
+			color: transparent
+			position: center center
+			repeat: no-repeat
+			image: url("#{$image-base}/logo/glyph.svg")
+
 
 	button
 		+transition(opacity .25s)
@@ -25,52 +49,32 @@ nav#top-nav
 
 	ul
 		+clearfix
-
+		+no-bullet
 		width: 100%
 		height: 100%
 		margin-bottom: 0
-		display: table
+		+respond-to-size($phone)
+			display: none
 
 		li
 			+transition(background .25s)
-
-			display: table-cell
 			height: 100%
-
-			+hover
-				color: $color-black
-
-			&.active
-				a
-					background-color: $color-grey-100
-					color: $color-black
-					font:
-						weight: 700
+			display: inline-block
+			&:not(:last-child)
+				margin-right: $double-unit-layout
 
 			a
 				@extend .text-center
-				+transition(color .25s)
 
 				text-decoration: none
-				color: $color-grey-300
+				color: black
 				display: block
 				height: 100%
 				line-height: $nav-height
+				font-weight: 600
 				font:
-					size: rem(20px)
-					//weight: 700
-
+					size: rem(24px)
+				
 				+hover
-					color: $color-black
+					color: $color-brand-secondary
 
-			&:first-of-type
-				overflow: hidden
-				background:
-					color: transparent
-					position: center center
-					repeat: no-repeat
-					size: $triple-unit-layout
-					image: url("#{$image-base}/logo/glyph.svg")
-
-				a
-					opacity: 0 // @NOTE using opacity in favour of visibility to make it clickable

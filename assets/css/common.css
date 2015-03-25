@@ -14,7 +14,7 @@ html, body, div, span, object, iframe, hr, h1, h2, h3, h4, h5, h6, p, blockquote
 html {
   font-size: 16px;
   color: #181e20;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "proxima nova", Helvetica, Arial, sans-serif;
   min-height: 100%; }
 
 article, aside, footer, header, menu, nav, section {
@@ -158,10 +158,33 @@ nav#top-nav {
   z-index: 1;
   position: fixed;
   width: 100%;
-  height: 6.5rem;
-  border-bottom: 1px solid #eef1f3;
-  background-color: rgba(255, 255, 255, 0.975);
-  background: #f8f9fa; }
+  background: white;
+  border-bottom: 1px solid #E1E5E6; }
+  @media all and (max-width: 500px) {
+    nav#top-nav {
+      background: black;
+      border-bottom: 0; } }
+  nav#top-nav .container-narrow {
+    height: 6.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  nav#top-nav .logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../images//logo/glyph.svg"); }
   nav#top-nav button {
     -webkit-transition: opacity .25s;
     -o-transition: opacity .25s;
@@ -175,48 +198,38 @@ nav#top-nav {
       opacity: 1; }
   nav#top-nav ul {
     zoom: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
-    margin-bottom: 0;
-    display: table; }
+    margin-bottom: 0; }
     nav#top-nav ul:before, nav#top-nav ul:after {
       content: "";
       display: table; }
     nav#top-nav ul:after {
       clear: both; }
+    @media all and (max-width: 500px) {
+      nav#top-nav ul {
+        display: none; } }
     nav#top-nav ul li {
       -webkit-transition: background .25s;
       -o-transition: background .25s;
       transition: background .25s;
-      display: table-cell;
-      height: 100%; }
-      nav#top-nav ul li:hover, nav#top-nav ul li:focus {
-        color: #181e20; }
-      nav#top-nav ul li.active a {
-        background-color: #eef1f3;
-        color: #181e20;
-        font-weight: 700; }
+      height: 100%;
+      display: inline-block; }
+      nav#top-nav ul li:not(:last-child) {
+        margin-right: 2rem; }
       nav#top-nav ul li a {
-        -webkit-transition: color .25s;
-        -o-transition: color .25s;
-        transition: color .25s;
         text-decoration: none;
-        color: #b4c2c7;
+        color: black;
         display: block;
         height: 100%;
         line-height: 6.5rem;
-        font-size: 1.25rem; }
+        font-weight: 600;
+        font-size: 1.5rem; }
         nav#top-nav ul li a:hover, nav#top-nav ul li a:focus {
-          color: #181e20; }
-      nav#top-nav ul li:first-of-type {
-        overflow: hidden;
-        background-color: transparent;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 3rem;
-        background-image: url("../images//logo/glyph.svg"); }
-        nav#top-nav ul li:first-of-type a {
-          opacity: 0; }
+          color: #04F799; }
 
 table {
   max-width: 100%; }
@@ -269,7 +282,7 @@ h6 {
   font-size: 1.25rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: "proxima nova", Helvetica, Arial, sans-serif; }
   h1:first-of-type, h2:first-of-type, h3:first-of-type, h4:first-of-type, h5:first-of-type, h6:first-of-type {
     margin-top: 0; }
   h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
@@ -550,15 +563,6 @@ h1, h2, h3, h4, h5, h6 {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-  @media all and (max-width: 500px) {
-    .flex {
-      display: block; }
-      .flex > .flex-1 {
-        -webkit-box-flex: initial;
-        -webkit-flex: initial;
-        -moz-box-flex: initial;
-        -ms-flex: initial;
-        flex: initial; } }
 
 .flex-1 {
   -webkit-box-flex: 1;
@@ -828,21 +832,27 @@ h1, h2, h3, h4, h5, h6 {
     clear: both; }
 
 .container-narrow {
-  width: 80%;
-  max-width: 50rem; }
+  width: 100%;
+  max-width: 62.5rem;
+  padding: 0 1rem; }
 
 footer {
-  background: #181e20;
-  color: white;
-  font-size: 0.75rem;
-  text-align: center;
-  padding: 3rem 1rem; }
-  footer nav {
-    max-width: 37.5rem;
-    margin: 0 auto; }
-    footer nav ul {
-      width: 100%;
-      display: table; }
-      footer nav ul li {
-        padding: 0 1rem;
-        display: table-cell; }
+  background: black;
+  padding: 2rem 0 160px 0; }
+  footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+    footer nav ul li {
+      padding: 0 1rem;
+      display: inline; }
+      footer nav ul li a {
+        font-size: 1.125rem;
+        text-decoration: none;
+        color: white;
+        font-weight: 600; }
+        @media all and (max-width: 500px) {
+          footer nav ul li a {
+            display: block;
+            margin-bottom: 1rem; } }

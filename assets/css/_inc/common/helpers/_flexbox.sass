@@ -42,11 +42,12 @@ $column-width: 100% / $column-numbers
 	&.center-horizontally
 		justify-content: center
 
-	+respond-to-size(500px)
-		display: block
 
-		> .flex-1
-			flex: initial
+	// +respond-to-size(500px)
+	// 	display: block
+
+	// 	> .flex-1
+	// 		flex: initial
 
 @for $i from 1 through $column-numbers
 	.flex-#{$i}

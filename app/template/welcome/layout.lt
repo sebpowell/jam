@@ -6,7 +6,7 @@
 		<h2>London, Saturday 3rd of October 2015. 10am - 6pm.</h2>
 
 		<div class="flex center-vertically">
-			<button class="no-margin turquoise large">Book Tickets</button>
+			<button class="no-margin brand large">Book Tickets</button>
 			<small class="margin-left-base"><strong>20</strong> Early Bird Tickets left...
 			</small>
 		</div>
@@ -27,14 +27,14 @@
 
 <section id="sectionSpeakers" class="text-center">
 	<div class="container-narrow">
-		<h3>Straight from the horses’ mouth.<br/>
-			9 speakers share how they’ve done it.</h3>
+		<h2>Straight from the horses’ mouth.<br/>
+			9 speakers share how they’ve done it.</h2>
 	</div>
 
 	<ul class="flex-grid-3 unstyled">
 		{? foreach ($template["authors"] as $k => $v) { ?}
 		<li class="flex-item">
-			<img src="/assets/images/team/mathilde-leo.png" alt="{?= $k =?}'s Avatar"/>
+			<img src="/assets/images/team/graham-paterson.png" alt="{?= $k =?}'s Avatar"/>
 			<strong>{?= $k =?}</strong>
 
 			<small>{?= $v["position"] =?}<br/>{?= $v["company"] =?}
@@ -46,7 +46,7 @@
 
 <section id="sectionTopics">
 	<div class="container-narrow">
-		<h3 class="text-center no-margin">20 Minute Talks. Lots of Topics.</h3>
+		<h2 class="text-center no-margin">20 Minute Talks. Lots of Topics.</h2>
 
 		{? foreach ($template["schedule"] as $k) { ?}
 		<article>
@@ -69,8 +69,9 @@
 </section>
 
 <section id="sectionVenue" class="text-center">
-	<h3>Hosted in the iconic Oval Space, Bethnal Green.<br/>
-		Food & Drink Provided.</h3>
-
-	<button class="turquoise large">Book now!</button>
+	<div class="container-narrow">
+		<h2>Hosted in the iconic Oval Space, Bethnal Green.<br/>
+			Food & Drink Provided.</h2>
+		<button class="brand large">Book now!</button>
+	</div>
 </section>

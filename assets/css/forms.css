@@ -140,7 +140,7 @@
 .text-justify {
   text-align: justify; }
 
-.text-uppercase, .button, button {
+.text-uppercase {
   text-transform: uppercase;
   letter-spacing: 1px; }
 
@@ -319,11 +319,12 @@ input:invalid, textarea:invalid {
   margin: 0 0 1rem; }
 
 .button, button {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   text-decoration: none;
-  padding: 0 1.5rem;
-  height: 3.4375rem;
-  line-height: 3.375rem;
-  cursor: pointer; }
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 600; }
   .button.large, button.large {
     height: 4.375rem;
     line-height: 4.3125rem;
@@ -377,11 +378,10 @@ input:invalid, textarea:invalid {
       color: white; }
       .button.yellow:hover:focus, .button.yellow:focus:focus, button.yellow:hover:focus, button.yellow:focus:focus {
         border-color: #d6ae0d; }
-  .button.turquoise, button.turquoise {
-    border-color: #1abc9c;
-    color: #1abc9c; }
-    .button.turquoise:hover, .button.turquoise:focus, button.turquoise:hover, button.turquoise:focus {
-      background: #1abc9c;
-      color: white; }
-      .button.turquoise:hover:focus, .button.turquoise:focus:focus, button.turquoise:hover:focus, button.turquoise:focus:focus {
-        border-color: #17a78a; }
+  .button.brand, button.brand {
+    background: black;
+    color: white;
+    border: 2px solid black; }
+    .button.brand:hover, .button.brand:focus, button.brand:hover, button.brand:focus {
+      background: white;
+      color: black; }

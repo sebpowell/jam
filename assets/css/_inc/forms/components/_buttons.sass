@@ -1,13 +1,13 @@
 $colors: blue, yellow, green, red
+$border-radius: 3px
 
 .button, button
-	@extend .text-uppercase
 
+	+border-radius($border-radius)
 	text-decoration: none
-	padding: 0 $double-half-unit-layout
-	height: rem(55px)
-	line-height: rem(54px)
+	padding: $unit-layout
 	cursor: pointer
+	font-weight: 600
 
 	&.large
 		height: rem(70px)
@@ -79,13 +79,11 @@ $colors: blue, yellow, green, red
 			&:focus
 				border-color: $color-yellow-600
 
-	&.turquoise
-		border-color: $color-turquoise
-		color: $color-turquoise
+	&.brand
+		background: black
+		color: white
+		border: 2px solid black
 
 		+hover
-			background: $color-turquoise
-			color: white
-
-			&:focus
-				border-color: $color-turquoise-600
+			background: white
+			color: black

@@ -23,7 +23,7 @@ final class controller extends Controller\baseController
 	{
 
 		return [
-			"James Gill 1" => [ "img" => "james-gill.png" , "position" => "Co-founder &amp; CEO" , "company" => "GoCardless" ] ,
+			"James Gill 1" => [ "img" => "graham-paterson.png" , "position" => "Co-founder &amp; CEO2" , "company" => "GoCardless" ] ,
 			"James Gill 2" => [ "img" => "james-gill.png" , "position" => "Co-founder &amp; CEO" , "company" => "GoCardless" ] ,
 			"James Gill 3" => [ "img" => "james-gill.png" , "position" => "Co-founder &amp; CEO" , "company" => "GoCardless" ]
 		];

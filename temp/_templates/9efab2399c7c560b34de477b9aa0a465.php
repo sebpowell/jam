@@ -43,31 +43,35 @@
 		</div>
 
 		<nav id="top-nav">
-			<ul class="container-narrow">
-				<li><a data-scroll href="#">JAM</a></li>
-				<li id="navItemStory"><a data-scroll href="#sectionStory">Story</a></li>
-				<li id="navItemSpeakers"><a data-scroll href="#sectionSpeakers">Speakers</a></li>
-				<li id="navItemTopics"><a data-scroll href="#sectionTopics">Topics</a></li>
-				<li><a href="/resources">Resources</a></li>
-				<!--<li><a href="#">Get Involved</a></li>-->
-			</ul>
+			<div class="container-narrow">
+				<a class="logo" data-scroll href="#"></a>
+				<ul>
+					<li id="navItemStory"><a data-scroll href="#sectionStory">Story</a></li>
+					<li id="navItemSpeakers"><a data-scroll href="#sectionSpeakers">Speakers</a></li>
+					<li id="navItemTopics"><a data-scroll href="#sectionTopics">Topics</a></li>
+					<li><a href="/resources">Resources</a></li>
+					<!--<li><a href="#">Get Involved</a></li>-->
+				</ul>
 
-			<button class="turquoise" id="bookTickets">Book tickets</button>
+				<button class="turquoise" id="bookTickets">Book tickets</button>
+			</div>
 		</nav>
 
 		<?php Template\Template::getLayout(" template "); ?>
 
 		<footer>
-			<nav>
-				<ul class="unstyled">
-					<li>Story</li>
-					<li>Resources</li>
-					<li>Contact</li>
-					<li>Code of Conduct</li>
-					<li>Privacy Policy</li>
-					<li>Terms &amp; Conditions</li>
-				</ul>
-			</nav>
+			<div class="container-narrow">
+				<nav>
+					<ul class="unstyled">
+						<li><a href="#">Story</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Code of Conduct</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms &amp; Conditions</a></li>
+					</ul>
+				</nav>
+			</div>
 		</footer>
 
 		<script src="/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>

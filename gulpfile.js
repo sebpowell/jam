@@ -17,9 +17,9 @@ var onError = notify.onError({
 
 function compileSass (name, pathToSass) {
 	gulp.src(pathToSass + "/" + name + ".sass")
-		.pipe(plumber({
-			errorHandler: onError
-		}))
+		// .pipe(plumber({
+		// 	errorHandler: onError
+		// }))
 		.pipe(sass({
 			loadPath: process.cwd() + pathToSass,
 			style: "nested",
