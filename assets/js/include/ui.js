@@ -5,11 +5,15 @@ $(document).ready(function () {
 	// Do not remove this bit, as it fixes transition bugs.
 	$("body").removeClass("preload");
 
-	function openModal(timeout) {
-		$(".modal").toggleClass("is-hidden");
-		setTimeout(function () {
-			$(".modal").toggleClass("show");
-		}, timeout);
+	function openModal(timeout, contentUrl) {
+		$.get("/assets/content/modals/" + contentUrl, function (data) {
+			$("#loadModalContent").html(data);
+
+			$(".modal").toggleClass("is-hidden");
+			setTimeout(function () {
+				$(".modal").toggleClass("show");
+			}, timeout);
+		});
 	}
 
 	function closeModal(timeout) {
@@ -20,7 +24,7 @@ $(document).ready(function () {
 	}
 
 	$("#ourStory").click(function () {
-		openModal(50);
+		openModal(50, "manifesto.html");
 	});
 
 	$(".modal, .close-modal").click(function () {
