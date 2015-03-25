@@ -66,10 +66,10 @@
 
 		<nav id="top-nav">
 			<ul class="container-narrow">
-				<li><a href="#">JAM</a></li>
-				<li id="navItemStory"><a href="#sectionStory">Story</a></li>
-				<li id="navItemSpeakers"><a href="#sectionSpeakers">Speakers</a></li>
-				<li id="navItemTopics"><a href="#sectionTopics">Topics</a></li>
+				<li><a data-scroll href="#">JAM</a></li>
+				<li id="navItemStory"><a data-scroll href="#sectionStory">Story</a></li>
+				<li id="navItemSpeakers"><a data-scroll href="#sectionSpeakers">Speakers</a></li>
+				<li id="navItemTopics"><a data-scroll href="#sectionTopics">Topics</a></li>
 				<li><a href="/resources">Resources</a></li>
 				<!--<li><a href="#">Get Involved</a></li>-->
 			</ul>
@@ -93,6 +93,7 @@
 		</footer>
 
 		<script src="/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+		<script src="/assets/js/smooth-scroll.min.js" type="text/javascript"></script>
 		<script src="/assets/js/app.js" type="text/javascript"></script>
 
 		<?php echo( (isset($template["page"]["scripts"]) && is_array($template["page"]["scripts"])) ? Template\jsCompile::compile($template["page"]["scripts"]) : "" ); ?>
