@@ -15,7 +15,7 @@ var gulp =
  */
 gulp.task("start-php", function() {
 	connect.server({
-		port: 8000
+		port: 8001
 	});
 });
 

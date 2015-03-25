@@ -5,27 +5,27 @@ $(document).ready(function () {
 
 	function openModal(timeout) {
 		$(".modal").toggleClass("is-hidden");
-		setTimeout(function() {
+		setTimeout(function () {
 			$(".modal").toggleClass("show");
 		}, timeout);
 	}
 
 	function closeModal(timeout) {
 		$(".modal").toggleClass("show");
-		setTimeout(function() {
+		setTimeout(function () {
 			$(".modal").toggleClass("is-hidden");
 		}, timeout);
 	}
 
-	$("#ourStory").click(function() {
+	$("#ourStory").click(function () {
 		openModal(50);
 	});
 
-	$(".modal, .close-modal").click(function() {
+	$(".modal, .close-modal").click(function () {
 		closeModal(450);
 	});
 
-	$(".modal-content").click(function(e) {
+	$(".modal-content").click(function (e) {
 		e.stopPropagation();
 	});
 
@@ -69,22 +69,57 @@ $(document).ready(function () {
 		});
 	});
 
-	// This function removes or adds the .transparent class to main navigation
-	// depending on its offset from the top of a page.
-	var changeNavMain = function () {
-		var scrollTop = $("#measureScroll").scrollTop();
+	// This function removes or adds the Book Tickets button when scrolling
+	var displayBookTickets = function () {
+		var scrollTop = $("body").scrollTop();
 
 		if (scrollTop > (100)) {
-			$("#glyph").addClass("active");
+			$("#bookTickets").addClass("active");
 		} else {
-			$("#glyph").removeClass("active");
+			$("#bookTickets").removeClass("active");
 		}
 	};
 
-	changeNavMain();
+	displayBookTickets();
 
-	$("#measureScroll").scroll(function () {
-		changeNavMain();
+	var sectionOurStoryOffset = $("#sectionStory").offset().top;
+	var sectionSpeakersOffset = $("#sectionSpeakers").offset().top;
+	var sectionTopicsOffset = $("#sectionTopics").offset().top;
+
+	function activateNavItem(section) {
+		var navItemId = "#navItem" + section;
+
+		$("#top-nav li").removeClass("active");
+		$("#top-nav li" + navItemId).addClass("active");
+	}
+
+	$(document).scroll(function () {
+		displayBookTickets();
+
+		// @TODO The +80 is a small hack, sorry. This whole section is very badly written, but
+		// I don't have time to make it prettier. To revisit.
+		var offset = $(this).scrollTop() + 80;
+
+		if (offset > sectionTopicsOffset) {
+			activateNavItem("Topics");
+			return false;
+		}
+
+		if (offset > sectionSpeakersOffset) {
+			activateNavItem("Speakers");
+			return false;
+		}
+
+		if (offset > sectionOurStoryOffset) {
+			activateNavItem("Story");
+			return false;
+		} else {
+			$("#top-nav li").removeClass("active");
+		}
 	});
+
+	//$("#top-nav li").click(function() {
+	//	$(this).addClass("active");
+	//});
 
 });

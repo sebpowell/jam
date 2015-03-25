@@ -163,10 +163,16 @@ nav#top-nav {
   background-color: rgba(255, 255, 255, 0.975);
   background: #f8f9fa; }
   nav#top-nav button {
+    -webkit-transition: opacity .25s;
+    -o-transition: opacity .25s;
+    transition: opacity .25s;
+    opacity: 0;
     position: absolute;
     right: 1.71875rem;
     top: 50%;
     margin: -1.71875rem 0 0; }
+    nav#top-nav button.active {
+      opacity: 1; }
   nav#top-nav ul {
     zoom: 1;
     width: 100%;
@@ -185,8 +191,9 @@ nav#top-nav {
       display: table-cell;
       height: 100%; }
       nav#top-nav ul li:hover, nav#top-nav ul li:focus {
-        background-color: #eef1f3; }
+        color: #181e20; }
       nav#top-nav ul li.active a {
+        background-color: #eef1f3;
         color: #181e20;
         font-weight: 700; }
       nav#top-nav ul li a {

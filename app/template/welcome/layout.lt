@@ -13,7 +13,7 @@
 	</div>
 </section>
 
-<section class="yellow">
+<section id="sectionStory">
 	<div class="container-narrow">
 		<h2>Why Jam?</h2>
 
@@ -25,7 +25,7 @@
 	</div>
 </section>
 
-<section id="speakers" class="text-center">
+<section id="sectionSpeakers" class="text-center">
 	<div class="container-narrow">
 		<h3>Straight from the horses’ mouth.<br/>
 			9 speakers share how they’ve done it.</h3>
@@ -44,7 +44,7 @@
 	</ul>
 </section>
 
-<section id="schedule">
+<section id="sectionTopics">
 	<div class="container-narrow">
 		<h3 class="text-center no-margin">20 Minute Talks. Lots of Topics.</h3>
 
@@ -68,7 +68,7 @@
 	</div>
 </section>
 
-<section id="venue" class="text-center">
+<section id="sectionVenue" class="text-center">
 	<h3>Hosted in the iconic Oval Space, Bethnal Green.<br/>
 		Food & Drink Provided.</h3>
 

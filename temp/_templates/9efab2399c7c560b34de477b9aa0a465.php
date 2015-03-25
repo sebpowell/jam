@@ -66,15 +66,15 @@
 
 		<nav id="top-nav">
 			<ul class="container-narrow">
-				<li><a href="/">JAM</a></li>
-				<li class="active"><a href="#">Story</a></li>
-				<li><a href="#">Speakers</a></li>
-				<li><a href="#">Topics</a></li>
-				<li><a href="#">Resources</a></li>
+				<li><a href="#">JAM</a></li>
+				<li id="navItemStory"><a href="#sectionStory">Story</a></li>
+				<li id="navItemSpeakers"><a href="#sectionSpeakers">Speakers</a></li>
+				<li id="navItemTopics"><a href="#sectionTopics">Topics</a></li>
+				<li><a href="/resources">Resources</a></li>
 				<!--<li><a href="#">Get Involved</a></li>-->
 			</ul>
 
-			<button class="turquoise">Book tickets</button>
+			<button class="turquoise" id="bookTickets">Book tickets</button>
 		</nav>
 
 		<?php Template\Template::getLayout(" template "); ?>
