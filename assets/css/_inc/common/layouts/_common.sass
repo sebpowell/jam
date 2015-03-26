@@ -1,33 +1,13 @@
-.container-full-screen, .container-narrow
+%container
 	+clearfix
 	@extend .block-center
-
 	width: 100%
+	padding: 0 $double-unit-layout
 
 .container-narrow
-	width: 100%
+	@extend %container
 	max-width: rem(1000px)
-	padding: 0 $unit-layout
 
-
-
-footer
-	background: black
-	padding: $double-unit-layout 0 160px 0
-
-	nav
-		ul
-			+no-bullet
-			width: 100%
-
-			li
-				padding: 0 $base-unit-layout
-				display: inline
-				a
-					font-size: rem(18px)
-					text-decoration: none
-					color: white
-					font-weight: 600
-					+respond-to-size($phone)
-						display: block
-						margin-bottom: $unit-layout
+.container-fluid
+	@extend %container
+	width: 100%

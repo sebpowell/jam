@@ -1,28 +1,21 @@
-=no-bullet
-	list-style-type: none
-	margin: 0
-	padding: 0
-
-$color-brand-secondary: #04F799
-$color-keyline: #E1E5E6 
-
 nav#top-nav
-	$nav-height: $quadruple-unit-layout + $double-unit-layout + $half-unit-layout
-
 	+z-index(nav)
 	+respond-to-size($phone)
 		background: black
 		border-bottom: 0
 
 	position: fixed
+	top: 0
 	width: 100%
-	
+
 	background: white
 	border-bottom: 1px solid $color-keyline
-	.container-narrow
+	
+	> .container-fluid
 		height: $nav-height
 		display: flex
 		align-items: center
+	
 	.logo
 		display: block
 		width: 50px
@@ -48,7 +41,6 @@ nav#top-nav
 			opacity: 1
 
 	ul
-		+clearfix
 		+no-bullet
 		width: 100%
 		height: 100%
@@ -57,7 +49,6 @@ nav#top-nav
 			display: none
 
 		li
-			+transition(background .25s)
 			height: 100%
 			display: inline-block
 			&:not(:last-child)
@@ -65,15 +56,14 @@ nav#top-nav
 
 			a
 				@extend .text-center
-
 				text-decoration: none
 				color: black
 				display: block
 				height: 100%
 				line-height: $nav-height
-				font-weight: 600
 				font:
 					size: rem(24px)
+					weight: 600
 				
 				+hover
 					color: $color-brand-secondary

@@ -25,6 +25,14 @@ html
 	color: $color-black
 	font-family: $font-family-primary
 	min-height: 100%
+	+respond-to-size($phone)
+		font-size: 12px
+
+body
+	padding-top: $nav-height
+
+img
+	width: 100%
 
 article, aside, footer, header, menu, nav, section
 	display: block

@@ -31,17 +31,19 @@
 			9 speakers share how they’ve done it.</h2>
 	</div>
 
-	<ul class="flex-grid-3 unstyled">
-		{? foreach ($template["authors"] as $k => $v) { ?}
-		<li class="flex-item">
-			<img src="/assets/images/team/graham-paterson.png" alt="{?= $k =?}'s Avatar"/>
-			<strong>{?= $k =?}</strong>
+	<div class="container-fluid">
+		<ul class="flex-grid-3">
+			{? foreach ($template["authors"] as $k => $v) { ?}
+			<li class="flex-item">
+				<img src="/assets/images/speakers/graham-paterson.jpg" alt="{?= $k =?}'s Avatar"/>
+				<strong>{?= $k =?}</strong>
 
-			<small>{?= $v["position"] =?}<br/>{?= $v["company"] =?}
-			</small>
-		</li>
-		{? } ?}
-	</ul>
+				<small>{?= $v["position"] =?}<br/>{?= $v["company"] =?}
+				</small>
+			</li>
+			{? } ?}
+		</ul>
+	</div>
 </section>
 
 <section id="sectionTopics">

@@ -15,6 +15,8 @@
 
 		<!--<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:700,400" rel="stylesheet" type="text/css">-->
 		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:300,500,700" rel="stylesheet" type="text/css">
+		<script src="//use.typekit.net/gwv4cfc.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
 
 		<link rel="stylesheet" href="/assets/css/litchi.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -43,8 +45,8 @@
 		</div>
 
 		<nav id="top-nav">
-			<div class="container-narrow">
-				<a class="logo" data-scroll href="#"></a>
+			<div class="container-fluid">
+				<a class="logo" href="/"></a>
 				<ul>
 					<li id="navItemStory"><a data-scroll href="#sectionStory">Story</a></li>
 					<li id="navItemSpeakers"><a data-scroll href="#sectionSpeakers">Speakers</a></li>
