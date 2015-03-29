@@ -24,7 +24,7 @@ body {
   padding-top: 6.5rem; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 article, aside, footer, header, menu, nav, section {
   display: block; }
@@ -159,7 +159,9 @@ dl {
   background: #f1c40f;
   overflow-y: scroll;
   position: fixed;
-  opacity: 0; }
+  opacity: 0;
+  left: 0;
+  top: 0; }
   .modal.show {
     opacity: 1; }
   .modal .modal-content {

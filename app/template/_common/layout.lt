@@ -65,12 +65,12 @@
 			<div class="container-narrow">
 				<nav>
 					<ul class="unstyled">
-						<li><a href="#">Story</a></li>
-						<li><a href="#">Resources</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Code of Conduct</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li><a class="toggle-our-story">Story</a></li>
+						<li><a href="{href array("resources") /href}">Resources</a></li>
+						<li><a href="{href array("contact") /href}">Contact</a></li>
+						<li><a href="{href array("code-of-conduct") /href}">Code of Conduct</a></li>
+						<li><a href="{href array("privacy-policy") /href}">Privacy Policy</a></li>
+						<li><a href="{href array("terms-and-conditions") /href}">Terms &amp; Conditions</a></li>
 					</ul>
 				</nav>
 			</div>

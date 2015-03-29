@@ -21,7 +21,7 @@
 			successes and failures, experiments, tools and techniques, and anything else that gets
 			great products built.</p>
 
-		<button class="large" id="ourStory">Our story</button>
+		<button class="large toggle-our-story">Our story</button>
 	</div>
 </section>
 

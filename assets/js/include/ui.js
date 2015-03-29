@@ -23,7 +23,7 @@ $(document).ready(function () {
 		}, timeout);
 	}
 
-	$("#ourStory").click(function () {
+	$(".toggle-our-story").click(function () {
 		openModal(50, "manifesto.html");
 	});
 

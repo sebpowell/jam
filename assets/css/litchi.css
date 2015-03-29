@@ -24,7 +24,7 @@ body {
   padding-top: 6.5rem; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 article, aside, footer, header, menu, nav, section {
   display: block; }
@@ -159,7 +159,9 @@ dl {
   background: #f1c40f;
   overflow-y: scroll;
   position: fixed;
-  opacity: 0; }
+  opacity: 0;
+  left: 0;
+  top: 0; }
   .modal.show {
     opacity: 1; }
   .modal .modal-content {
@@ -1406,80 +1408,82 @@ input:invalid, textarea:invalid {
         .container-narrow.documentation article aside .color.color-yellow .darker {
           background: #c39e0c; }
 
-.page-welcome h2 {
-  font-size: 3rem;
-  font-weight: 700; }
-.page-welcome section#masthead {
-  height: 100vh; }
-  .page-welcome section#masthead h1 {
-    line-height: 1.5;
-    font-weight: 700;
-    font-size: 3.75rem; }
-  .page-welcome section#masthead h2 {
-    color: #8F8F8F;
-    font-size: 1.5rem; }
-  .page-welcome section#masthead small {
-    font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
-.page-welcome section#sectionStory {
-  padding: 5rem 0;
-  background: #04F799; }
-  .page-welcome section#sectionStory h2 {
+.page-welcome {
+  padding-top: 0; }
+  .page-welcome h2 {
+    font-size: 3rem;
     font-weight: 700; }
-  .page-welcome section#sectionStory p {
-    max-width: 43.75rem;
-    margin: 0 auto 2rem;
-    font-family: "Source Code Pro", Helvetica, Arial, sans-serif;
-    font-size: 1.25rem; }
-.page-welcome section#sectionSpeakers {
-  padding: 5rem 0; }
-  .page-welcome section#sectionSpeakers ul {
-    margin-top: 4rem; }
-    .page-welcome section#sectionSpeakers ul > .flex-item strong {
-      display: block;
-      font-size: 1.25rem; }
-    .page-welcome section#sectionSpeakers ul > .flex-item small {
-      color: #839ba3;
+  .page-welcome section#masthead {
+    height: 100vh; }
+    .page-welcome section#masthead h1 {
+      line-height: 1.5;
+      font-weight: 700;
+      font-size: 3.75rem; }
+    .page-welcome section#masthead h2 {
+      color: #8F8F8F;
+      font-size: 1.5rem; }
+    .page-welcome section#masthead small {
       font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
-.page-welcome section#sectionTopics {
-  padding: 5rem 0;
-  background: #f8f9fa;
-  border-top: 1px solid #eef1f3;
-  border-bottom: 1px solid #eef1f3; }
-  .page-welcome section#sectionTopics article {
-    max-width: 34.375rem;
-    margin: 2rem auto 0;
-    padding: 2rem 0 0;
-    border-top: 1px solid #eef1f3; }
-    .page-welcome section#sectionTopics article:first-of-type {
-      border-top: 0; }
-    .page-welcome section#sectionTopics article p {
-      margin: 0;
-      line-height: 1.4;
-      font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
-    .page-welcome section#sectionTopics article h4 {
-      color: #1abc9c;
-      font-size: 1.375rem;
+  .page-welcome section#sectionStory {
+    padding: 5rem 0;
+    background: #04F799; }
+    .page-welcome section#sectionStory h2 {
       font-weight: 700; }
-    .page-welcome section#sectionTopics article .bio {
-      zoom: 1; }
-      .page-welcome section#sectionTopics article .bio:before, .page-welcome section#sectionTopics article .bio:after {
-        content: "";
-        display: table; }
-      .page-welcome section#sectionTopics article .bio:after {
-        clear: both; }
-      .page-welcome section#sectionTopics article .bio img {
-        float: left;
-        max-height: 50px; }
-      .page-welcome section#sectionTopics article .bio aside {
-        float: left;
-        padding: 0.5rem 0 0 1rem; }
-        .page-welcome section#sectionTopics article .bio aside strong {
-          display: block;
-          margin-bottom: 0.25rem; }
-        .page-welcome section#sectionTopics article .bio aside small {
-          font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
-.page-welcome section#sectionVenue {
-  padding: 5rem 0; }
+    .page-welcome section#sectionStory p {
+      max-width: 43.75rem;
+      margin: 0 auto 2rem;
+      font-family: "Source Code Pro", Helvetica, Arial, sans-serif;
+      font-size: 1.25rem; }
+  .page-welcome section#sectionSpeakers {
+    padding: 5rem 0; }
+    .page-welcome section#sectionSpeakers ul {
+      margin-top: 4rem; }
+      .page-welcome section#sectionSpeakers ul > .flex-item strong {
+        display: block;
+        font-size: 1.25rem; }
+      .page-welcome section#sectionSpeakers ul > .flex-item small {
+        color: #839ba3;
+        font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+  .page-welcome section#sectionTopics {
+    padding: 5rem 0;
+    background: #f8f9fa;
+    border-top: 1px solid #eef1f3;
+    border-bottom: 1px solid #eef1f3; }
+    .page-welcome section#sectionTopics article {
+      max-width: 34.375rem;
+      margin: 2rem auto 0;
+      padding: 2rem 0 0;
+      border-top: 1px solid #eef1f3; }
+      .page-welcome section#sectionTopics article:first-of-type {
+        border-top: 0; }
+      .page-welcome section#sectionTopics article p {
+        margin: 0;
+        line-height: 1.4;
+        font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+      .page-welcome section#sectionTopics article h4 {
+        color: #1abc9c;
+        font-size: 1.375rem;
+        font-weight: 700; }
+      .page-welcome section#sectionTopics article .bio {
+        zoom: 1; }
+        .page-welcome section#sectionTopics article .bio:before, .page-welcome section#sectionTopics article .bio:after {
+          content: "";
+          display: table; }
+        .page-welcome section#sectionTopics article .bio:after {
+          clear: both; }
+        .page-welcome section#sectionTopics article .bio img {
+          float: left;
+          max-height: 50px; }
+        .page-welcome section#sectionTopics article .bio aside {
+          float: left;
+          padding: 0.25rem 0 0 1rem; }
+          .page-welcome section#sectionTopics article .bio aside strong {
+            display: block;
+            margin-bottom: 0.25rem; }
+          .page-welcome section#sectionTopics article .bio aside small {
+            font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+  .page-welcome section#sectionVenue {
+    padding: 5rem 0; }
 
 .resources article {
   border-bottom: 1px solid #E1E5E6;
