@@ -35,7 +35,7 @@
 		<ul class="flex-grid-3">
 			{? foreach ($template["authors"] as $k => $v) { ?}
 			<li class="flex-item">
-				<img src="/assets/images/speakers/graham-paterson.jpg" alt="{?= $k =?}'s Avatar"/>
+				<div class="img" style="background-image: url('/assets/images/speakers/{?= $v["img"] =?}')"></div>
 				<strong>{?= $k =?}</strong>
 
 				<small>{?= $v["position"] =?}<br/>{?= $v["company"] =?}
@@ -58,8 +58,7 @@
 			{? $author = $template["authors"][$k["author"]]; ?}
 
 			<div class="bio">
-				<img src="/assets/images/team/mathilde-leo.png" alt="{?= $k[" author"] =?}'s
-				Avatar"/>
+				<img src="/assets/images/speakers/{?= $author["img"] =?}" alt="{?= $k[" author"] =?}'s Avatar"/>
 				<aside>
 					<strong>{?= $k["author"] =?}</strong>
 					<small>{?= $author["position"] =?}, {?= $author["company"] =?}</small>

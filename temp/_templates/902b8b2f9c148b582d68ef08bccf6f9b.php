@@ -35,7 +35,7 @@
 		<ul class="flex-grid-3">
 			<?php  foreach ($template["authors"] as $k => $v) {  ?>
 			<li class="flex-item">
-				<img src="/assets/images/speakers/graham-paterson.jpg" alt="<?php echo( $k ); ?>'s Avatar"/>
+				<div class="img" style="background-image: url('/assets/images/speakers/<?php echo( $v["img"] ); ?>')"></div>
 				<strong><?php echo( $k ); ?></strong>
 
 				<small><?php echo( $v["position"] ); ?><br/><?php echo( $v["company"] ); ?>
@@ -58,8 +58,7 @@
 			<?php  $author = $template["authors"][$k["author"]];  ?>
 
 			<div class="bio">
-				<img src="/assets/images/team/mathilde-leo.png" alt="<?php echo( $k[" author"] ); ?>'s
-				Avatar"/>
+				<img src="/assets/images/speakers/<?php echo( $author["img"] ); ?>" alt="<?php echo( $k[" author"] ); ?>'s Avatar"/>
 				<aside>
 					<strong><?php echo( $k["author"] ); ?></strong>
 					<small><?php echo( $author["position"] ); ?>, <?php echo( $author["company"] ); ?></small>

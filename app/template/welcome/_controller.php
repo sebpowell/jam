@@ -16,16 +16,18 @@ final class controller extends Controller\baseController
 		$this->template->page[ "act" ] = 1;
 
 		$this->template->authors = self::generateAuthors ();
-		$this->template->schedule = self::generateSchedule();
+		$this->template->schedule = self::generateSchedule ();
 	}
 
 	private static function generateAuthors ()
 	{
 
 		return [
-			"James Gill 1" => [ "img" => "graham-paterson.png" , "position" => "Co-founder &amp; CEO2" , "company" => "GoCardless" ] ,
-			"James Gill 2" => [ "img" => "james-gill.png" , "position" => "Co-founder &amp; CEO" , "company" => "GoCardless" ] ,
-			"James Gill 3" => [ "img" => "james-gill.png" , "position" => "Co-founder &amp; CEO" , "company" => "GoCardless" ]
+			"James Gill"      => [ "img" => "james-gill.jpg" , "position" => "CEO" , "company" => "GoSquared" ] ,
+			"Scott Weiss"     => [ "img" => "scott-weiss.jpg" , "position" => "VP Design" , "company" => "SwiftKey" ] ,
+			"Martin Willers"  => [ "img" => "martin-willers.jpg" , "position" => "Founder" , "company" => "PeoplePeople" ] ,
+			"Tim Davey"       => [ "img" => "tim-davey.jpg" , "position" => "Co-Founder &amp; VP Product" , "company" => "OneFineStay" ] ,
+			"Graham Paterson" => [ "img" => "graham-paterson.jpg" , "position" => "Product Manager" , "company" => "Transferwise" ]
 		];
 	}
 
@@ -33,9 +35,11 @@ final class controller extends Controller\baseController
 	{
 
 		return [
-			[ "title" => "Making Products More Human" , "time" => "9.30 - 10.30 am" , "author" => "James Gill 1" ] ,
-			[ "title" => "Making Products More Human" , "time" => "9.30 - 10.30 am" , "author" => "James Gill 2" ] ,
-			[ "title" => "Making Products More Human" , "time" => "9.30 - 10.30 am" , "author" => "James Gill 3" ]
+			[ "title" => "Making Products More Human" , "time" => "9.30 - 10.30 am" , "author" => "James Gill" ] ,
+			[ "title" => "Making Products More Human" , "time" => "9.30 - 10.30 am" , "author" => "Scott Weiss" ] ,
+			[ "title" => "Making Products More Human" , "time" => "9.30 - 10.30 am" , "author" => "Martin Willers" ] ,
+			[ "title" => "Making Products More Human" , "time" => "9.30 - 10.30 am" , "author" => "Tim Davey" ] ,
+			[ "title" => "Making Products More Human" , "time" => "9.30 - 10.30 am" , "author" => "Graham Paterson" ]
 		];
 	}
 
