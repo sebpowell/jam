@@ -68,8 +68,8 @@
 						<li><a href="{href array("resources") /href}">Resources</a></li>
 						<li><a href="{href array("contact") /href}">Contact</a></li>
 						<li><a href="{href array("code-of-conduct") /href}">Code of Conduct</a></li>
-						<li><a href="{href array("privacy-policy") /href}">Privacy Policy</a></li>
-						<li><a href="{href array("terms-and-conditions") /href}">Terms &amp; Conditions</a></li>
+<!-- 						<li><a href="{href array("privacy-policy") /href}">Privacy Policy</a></li> -->
+<!-- 						<li><a href="{href array("terms-and-conditions") /href}">Terms &amp; Conditions</a></li> -->
 					</ul>
 				</nav>
 			</div>

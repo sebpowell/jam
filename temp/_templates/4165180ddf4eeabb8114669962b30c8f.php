@@ -27,7 +27,8 @@
 				<article>
 					<div class="container-narrow">
 						<h3><a href="<?php echo( $k["link"] ); ?>" target="_blank"><?php echo( $k["title"] ); ?></a></h3>
-						<small><strong><?php echo( $k["date"] ); ?></strong> by <strong><?php echo( $k["author"] ); ?></strong></small>
+						<small><strong><?php echo( $k["date"] ); ?></strong></small>
+						<!-- <strong><?php echo( $k["author"] ); ?></strong> -->
 						<p class="description"><?php echo( $k["desc"] ); ?></p>
 						<div class="tags flex">
 							<?php  foreach ($k["tags"] as $tag) {  ?>

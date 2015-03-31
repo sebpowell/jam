@@ -1,3 +1,6 @@
+.page-content
+	padding: $double-unit-layout 0
+
 %container
 	+clearfix
 	@extend .block-center
@@ -5,6 +8,10 @@
 	padding: 0 $double-unit-layout
 
 .container-narrow
+	@extend %container
+	max-width: rem(600px)
+
+.container-wide
 	@extend %container
 	max-width: rem(1000px)
 

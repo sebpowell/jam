@@ -68,8 +68,8 @@
 						<li><a href="<?php echo Template\Url::href( array("resources") ); ?>">Resources</a></li>
 						<li><a href="<?php echo Template\Url::href( array("contact") ); ?>">Contact</a></li>
 						<li><a href="<?php echo Template\Url::href( array("code-of-conduct") ); ?>">Code of Conduct</a></li>
-						<li><a href="<?php echo Template\Url::href( array("privacy-policy") ); ?>">Privacy Policy</a></li>
-						<li><a href="<?php echo Template\Url::href( array("terms-and-conditions") ); ?>">Terms &amp; Conditions</a></li>
+<!-- 						<li><a href="<?php echo Template\Url::href( array("privacy-policy") ); ?>">Privacy Policy</a></li> -->
+<!-- 						<li><a href="<?php echo Template\Url::href( array("terms-and-conditions") ); ?>">Terms &amp; Conditions</a></li> -->
 					</ul>
 				</nav>
 			</div>
