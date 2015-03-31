@@ -54,7 +54,7 @@
 					<!--<li><a href="#">Get Involved</a></li>-->
 				</ul>
 
-				<button class="turquoise" id="bookTickets">Book tickets</button>
+				<button class="turquoise" id="bookTickets">Book Tickets</button>
 			</div>
 		</nav>
 
@@ -62,16 +62,18 @@
 
 		<footer>
 			<div class="container-narrow">
-				<nav>
-					<ul class="unstyled">
-						<li><a class="toggle-our-story">Story</a></li>
-						<li><a href="<?php echo Template\Url::href( array("resources") ); ?>">Resources</a></li>
-						<li><a href="<?php echo Template\Url::href( array("contact") ); ?>">Contact</a></li>
-						<li><a href="<?php echo Template\Url::href( array("code-of-conduct") ); ?>">Code of Conduct</a></li>
+				<ul class="site-links">
+					<li><a class="toggle-our-story">Story</a></li>
+					<li><a href="<?php echo Template\Url::href( array("resources") ); ?>">Resources</a></li>
+					<li><a href="<?php echo Template\Url::href( array("contact") ); ?>">Contact</a></li>
+					<li><a href="<?php echo Template\Url::href( array("code-of-conduct") ); ?>">Code of Conduct</a></li>
 <!-- 						<li><a href="<?php echo Template\Url::href( array("privacy-policy") ); ?>">Privacy Policy</a></li> -->
 <!-- 						<li><a href="<?php echo Template\Url::href( array("terms-and-conditions") ); ?>">Terms &amp; Conditions</a></li> -->
-					</ul>
-				</nav>
+				</ul>
+				<ul class="social-links">
+					<li><a href="https://www.facebook.com/makingjam" class="facebook" target="_blank"></a></li>
+					<li><a href="https://twitter.com/JamLondon2015" class="twitter" target="_blank"></a></li>
+				</ul>
 			</div>
 		</footer>
 

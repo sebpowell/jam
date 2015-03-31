@@ -89,27 +89,59 @@ blockquote {
 footer {
   background: black;
   padding: 2rem 0 160px 0; }
-  footer nav ul {
+  footer .site-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: center;
+    margin-bottom: 2rem;
     width: 100%; }
-    footer nav ul li {
+    footer .site-links li {
       padding: 0 1rem;
       display: inline; }
-      footer nav ul li a {
+      footer .site-links li a {
         font-size: 1.125rem;
         text-decoration: none;
         color: white;
         font-weight: 600; }
         @media all and (max-width: 500px) {
-          footer nav ul li a {
+          footer .site-links li a {
             display: block;
             margin-bottom: 1rem; } }
+  footer .social-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+    text-align: center; }
+    footer .social-links:before, footer .social-links:after {
+      content: "";
+      display: table; }
+    footer .social-links:after {
+      clear: both; }
+    footer .social-links li {
+      display: inline-block; }
+      footer .social-links li:not(:first-child) {
+        margin-left: -4px; }
+      footer .social-links li:not(:last-child) {
+        margin-right: 1rem; }
+      footer .social-links li a {
+        -webkit-border-radius: 42px;
+        border-radius: 42px;
+        display: block;
+        width: 42px;
+        height: 42px;
+        border: 2px solid white;
+        background-repeat: no-repeat;
+        background-position: center center; }
+        footer .social-links li a.facebook {
+          background-image: url("../images//icons/white/icon-facebook.svg"); }
+        footer .social-links li a.twitter {
+          background-image: url("../images//icons/white/icon-twitter.svg"); }
 
 a, .link {
   cursor: pointer;
-  color: #1abc9c;
+  color: #04F799;
   text-decoration: underline; }
   a:hover, a:focus, .link:hover, .link:focus {
     text-decoration: none; }
@@ -177,7 +209,7 @@ dl {
     .modal .modal-content p {
       line-height: 1.8;
       margin-bottom: 1.5rem;
-      font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+      font-family: "Georgia", Times, serif; }
       .modal .modal-content p a {
         color: #181e20; }
       .modal .modal-content p:last-of-type {
@@ -1124,8 +1156,8 @@ input:invalid, textarea:invalid {
   cursor: pointer;
   font-weight: 600; }
   .button.large, button.large {
-    height: 4.375rem;
-    line-height: 4.3125rem;
+    height: 3rem;
+    line-height: 3rem;
     font-size: 1rem;
     padding: 0 2rem; }
   .button:hover, .button:focus, button:hover, button:focus {
@@ -1429,7 +1461,7 @@ input:invalid, textarea:invalid {
       color: #8F8F8F;
       font-size: 1.5rem; }
     .page-welcome section#masthead small {
-      font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+      font-family: "Georgia", Times, serif; }
   .page-welcome section#sectionStory {
     padding: 5rem 0;
     background: #04F799; }
@@ -1438,12 +1470,13 @@ input:invalid, textarea:invalid {
     .page-welcome section#sectionStory p {
       max-width: 43.75rem;
       margin: 0 auto 2rem;
-      font-family: "Source Code Pro", Helvetica, Arial, sans-serif;
+      font-family: "Georgia", Times, serif;
       font-size: 1.25rem; }
   .page-welcome section#sectionSpeakers {
     padding: 5rem 0; }
     .page-welcome section#sectionSpeakers ul {
       margin-top: 4rem; }
+<<<<<<< HEAD
       .page-welcome section#sectionSpeakers ul > .flex-item {
         cursor: pointer; }
         .page-welcome section#sectionSpeakers ul > .flex-item .img {
@@ -1457,6 +1490,19 @@ input:invalid, textarea:invalid {
         .page-welcome section#sectionSpeakers ul > .flex-item small {
           color: #839ba3;
           font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+=======
+      .page-welcome section#sectionSpeakers ul > .flex-item .img {
+        height: 15.625rem;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+      .page-welcome section#sectionSpeakers ul > .flex-item strong {
+        display: block;
+        font-size: 1.25rem; }
+      .page-welcome section#sectionSpeakers ul > .flex-item small {
+        color: #839ba3;
+        font-family: "Georgia", Times, serif; }
+>>>>>>> Added social links to footer
   .page-welcome section#sectionTopics {
     padding: 5rem 0;
     background: #f8f9fa;
@@ -1472,9 +1518,9 @@ input:invalid, textarea:invalid {
       .page-welcome section#sectionTopics article p {
         margin: 0;
         line-height: 1.4;
-        font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+        font-family: "Georgia", Times, serif; }
       .page-welcome section#sectionTopics article h4 {
-        color: #1abc9c;
+        color: #04F799;
         font-size: 1.375rem;
         font-weight: 700; }
       .page-welcome section#sectionTopics article .bio {
@@ -1494,7 +1540,7 @@ input:invalid, textarea:invalid {
             display: block;
             margin-bottom: 0.25rem; }
           .page-welcome section#sectionTopics article .bio aside small {
-            font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+            font-family: "Georgia", Times, serif; }
   .page-welcome section#sectionVenue {
     padding: 5rem 0; }
 

@@ -73,6 +73,6 @@
 	<div class="container-wide">
 		<h2>Hosted in the iconic Oval Space, Bethnal Green.<br/>
 			Food & Drink Provided.</h2>
-		<button class="brand large">Book now!</button>
+		<button class="brand large">Book Tickets</button>
 	</div>
 </section>

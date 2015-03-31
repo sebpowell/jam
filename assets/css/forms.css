@@ -165,7 +165,7 @@ input, select, textarea, button, .button, .input {
   border: 2px solid #181e20;
   background: transparent;
   padding: 0.75rem;
-  font-family: Helvetica, Arial, sans-serif !important;
+  font-family: "proxima nova", Helvetica, Arial, sans-serif !important;
   font-size: 0.875rem;
   outline: none;
   color: #181e20;
@@ -326,8 +326,8 @@ input:invalid, textarea:invalid {
   cursor: pointer;
   font-weight: 600; }
   .button.large, button.large {
-    height: 4.375rem;
-    line-height: 4.3125rem;
+    height: 3rem;
+    line-height: 3rem;
     font-size: 1rem;
     padding: 0 2rem; }
   .button:hover, .button:focus, button:hover, button:focus {
