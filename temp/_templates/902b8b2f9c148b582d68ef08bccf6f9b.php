@@ -34,7 +34,7 @@
 	<div class="container-fluid">
 		<ul class="flex-grid-3">
 			<?php  foreach ($template["authors"] as $k => $v) {  ?>
-			<li class="flex-item">
+			<li class="flex-item toggle-speaker-bio" id="<?php echo( Utilities\String::sanUrl($k) ); ?>">
 				<div class="img" style="background-image: url('/assets/images/speakers/<?php echo( $v["img"] ); ?>')"></div>
 				<strong><?php echo( $k ); ?></strong>
 

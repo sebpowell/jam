@@ -23,6 +23,12 @@ $(document).ready(function () {
 		}, timeout);
 	}
 
+	$(".toggle-speaker-bio").click(function() {
+		var filename = $(this).attr("id") + ".html";
+
+		openModal(50, filename);
+	});
+
 	$(".toggle-our-story").click(function () {
 		openModal(50, "manifesto.html");
 	});

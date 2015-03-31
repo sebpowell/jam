@@ -1438,17 +1438,19 @@ input:invalid, textarea:invalid {
     padding: 5rem 0; }
     .page-welcome section#sectionSpeakers ul {
       margin-top: 4rem; }
-      .page-welcome section#sectionSpeakers ul > .flex-item .img {
-        height: 15.625rem;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat; }
-      .page-welcome section#sectionSpeakers ul > .flex-item strong {
-        display: block;
-        font-size: 1.25rem; }
-      .page-welcome section#sectionSpeakers ul > .flex-item small {
-        color: #839ba3;
-        font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
+      .page-welcome section#sectionSpeakers ul > .flex-item {
+        cursor: pointer; }
+        .page-welcome section#sectionSpeakers ul > .flex-item .img {
+          height: 15.625rem;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+        .page-welcome section#sectionSpeakers ul > .flex-item strong {
+          display: block;
+          font-size: 1.25rem; }
+        .page-welcome section#sectionSpeakers ul > .flex-item small {
+          color: #839ba3;
+          font-family: "Source Code Pro", Helvetica, Arial, sans-serif; }
   .page-welcome section#sectionTopics {
     padding: 5rem 0;
     background: #f8f9fa;

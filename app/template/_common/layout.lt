@@ -13,7 +13,6 @@
 
 		<title>{{ app.siteName }} / {{ page.title }}</title>
 
-		<!--<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:700,400" rel="stylesheet" type="text/css">-->
 		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:300,500,700" rel="stylesheet" type="text/css">
 		<script src="//use.typekit.net/gwv4cfc.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
