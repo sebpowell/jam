@@ -1,5 +1,5 @@
 <section id="masthead" class="flex center-vertically">
-	<div class="container-narrow">
+	<div class="container-wide">
 		<h1>Sharing the stories behind great products.<br/>
 			1 day. 9 speakers. Great coffee.</h1>
 
@@ -7,14 +7,14 @@
 
 		<div class="flex center-vertically">
 			<button class="no-margin brand large">Book Tickets</button>
-			<small class="margin-left-base"><strong>20</strong> Early Bird Tickets left...
+			<small class="margin-left-base">Early Bird Tickets Available!
 			</small>
 		</div>
 	</div>
 </section>
 
 <section id="sectionStory">
-	<div class="container-narrow">
+	<div class="container-wide">
 		<h2>Why Jam?</h2>
 
 		<p>We stared JAM to create a place where people, across all disciplines can discuss their
@@ -26,7 +26,7 @@
 </section>
 
 <section id="sectionSpeakers" class="text-center">
-	<div class="container-narrow">
+	<div class="container-wide">
 		<h2>Straight from the horses’ mouth.<br/>
 			9 speakers share how they’ve done it.</h2>
 	</div>
@@ -47,7 +47,7 @@
 </section>
 
 <section id="sectionTopics">
-	<div class="container-narrow">
+	<div class="container-wide">
 		<h2 class="text-center no-margin">20 Minute Talks. Lots of Topics.</h2>
 
 		{? foreach ($template["schedule"] as $k) { ?}
@@ -70,7 +70,7 @@
 </section>
 
 <section id="sectionVenue" class="text-center">
-	<div class="container-narrow">
+	<div class="container-wide">
 		<h2>Hosted in the iconic Oval Space, Bethnal Green.<br/>
 			Food & Drink Provided.</h2>
 		<button class="brand large">Book now!</button>

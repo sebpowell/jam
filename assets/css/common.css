@@ -278,7 +278,7 @@ p {
 
 h1, h2, h3 {
   margin: 2rem 0 1rem;
-  font-weight: 500; }
+  font-weight: 700; }
 
 h3 {
   font-weight: 700; }
@@ -748,7 +748,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
 
-.block-center, .container-narrow, .container-fluid {
+.block-center, .container-narrow, .container-wide, .container-fluid {
   margin-left: auto;
   margin-right: auto; }
 
@@ -918,17 +918,23 @@ h1, h2, h3, h4, h5, h6 {
 .description {
   color: #b4c2c7; }
 
-.container-narrow, .container-fluid {
+.page-content {
+  padding: 2rem 0; }
+
+.container-narrow, .container-wide, .container-fluid {
   zoom: 1;
   width: 100%;
   padding: 0 2rem; }
-  .container-narrow:before, .container-fluid:before, .container-narrow:after, .container-fluid:after {
+  .container-narrow:before, .container-wide:before, .container-fluid:before, .container-narrow:after, .container-wide:after, .container-fluid:after {
     content: "";
     display: table; }
-  .container-narrow:after, .container-fluid:after {
+  .container-narrow:after, .container-wide:after, .container-fluid:after {
     clear: both; }
 
 .container-narrow {
+  max-width: 37.5rem; }
+
+.container-wide {
   max-width: 62.5rem; }
 
 .container-fluid {

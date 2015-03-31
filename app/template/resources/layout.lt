@@ -27,7 +27,8 @@
 				<article>
 					<div class="container-narrow">
 						<h3><a href="{?= $k["link"] =?}" target="_blank">{?= $k["title"] =?}</a></h3>
-						<small><strong>{?= $k["date"] =?}</strong> by <strong>{?= $k["author"] =?}</strong></small>
+						<small><strong>{?= $k["date"] =?}</strong></small>
+						<!-- <strong>{?= $k["author"] =?}</strong> -->
 						<p class="description">{?= $k["desc"] =?}</p>
 						<div class="tags flex">
 							{? foreach ($k["tags"] as $tag) { ?}
