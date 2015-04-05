@@ -1,14 +1,20 @@
+small
+	font-family: $font-family-secondary
+
 .page-welcome
 	padding-top: 0
 
-	small
+	.small-heading
+		font-size: rem(14px)
 		text-transform: uppercase
 		letter-spacing: 2px
 		font-weight: 600
+		margin: 0
 
 	h2
 		font-size: rem(48px)
 		font-weight: 700
+	
 	section
 		&#masthead
 			height: 100vh
@@ -25,8 +31,7 @@
 				font:
 					size: rem(24px)
 
-			small
-				font-family: $font-family-custom
+			
 
 		&#sectionStory
 			@extend .text-center
@@ -56,11 +61,13 @@
 
 				> .flex-item
 					cursor: pointer
+					&:nth-child(2), &:nth-child(5), &:nth-child(8)
+						padding-top: 60px
 
 					img
 						+transition(all .15s)
 						width: 100%
-						max-width: rem(120px)
+						max-width: rem(140px)
 						border-radius: 100%
 						margin: 0 auto $unit-layout
 						background:

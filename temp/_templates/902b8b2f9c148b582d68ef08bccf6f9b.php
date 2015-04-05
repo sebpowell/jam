@@ -14,7 +14,7 @@
 
 <section id="sectionStory">
 	<div class="container-wide">
-		<small>Story</small>
+		<h3 class="small-heading">Story</h3>
 		<h2>Why Jam?</h2>
 		<p>We started JAM to help people build better products. As product makers ourselves, we’ve often asked ourselves - what’s happening backstage? How do others do it? What tools do they use? How do they organise their teams?</p>
 		
@@ -25,7 +25,7 @@
 
 <section id="sectionSpeakers" class="text-center border-bottom">
 	<div class="container-wide">
-		<small>Speakers</small>
+		<h3 class="small-heading">Speakers</h3>
 		<h2>Hear it straight from the horses’ mouth. </br>
 		9 speakers share their experiences.</h2>
 
@@ -45,15 +45,15 @@
 
 <section id="sectionTopics">
 		<!-- <h2 class="text-center no-margin">20 Minute Talks, 6 Topics.</h2> -->
-		<small>Schedule</small>
+		<h3 class="small-heading">Schedule</h3>
 		<?php  foreach ($template["schedule"] as $k) {  ?>
 		<article>
 			<div class="container-wide">
-			<p><?php echo( $k["time"] ); ?></p>
+			<small><?php echo( $k["time"] ); ?></small>
 			<h3><?php echo( $k["title"] ); ?></h3>
 
 			<?php  $author = $template["authors"][$k["author"]];  ?>
-			<strong><?php echo( $k["author"] ); ?></strong>
+			<strong><?php echo( $k["author"] ); ?></strong></br>
 			<small><?php echo( $author["position"] ); ?>, <?php echo( $author["company"] ); ?></small>
 			</div>
 		</article>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="<?php echo( $template["app"]["lang"] ); ?>">
 	<head>
-
 		<meta charset="<?php echo( $template["app"]["encoding"] ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,11 +19,9 @@
 		<link rel="stylesheet" href="/assets/css/litchi.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" href="/screen-icon.png">
-
 	</head>
 
 	<body class="preload page-<?php echo( $template["page"]["url"]["template"] ); ?> <?php echo( $template["app"]["lang"] ); ?>">
-
 		<noscript>
 			<div id="warning">
 				To be able to experience <?php echo( $template["app"]["siteName"] ); ?> with all its features, you need a browser that supports JavaScript, and it <strong>needs to be enabled.</strong>
@@ -37,55 +34,60 @@
 		<!--<div class="alert flex center-horizontally center-vertically success">This is a success message</div>-->
 
 		<div class="modal-backdrop"></div>
-
 		<div class="modal is-hidden">
-			<div class="container-wide">
+			<div class="modal-content">
 				<div class="close-modal">&times;</div>
 				<article id="loadModalContent"></article>
 			</div>
 		</div>
 
-
-	<ul class="mobile-navigation-toggle">
-					<li></li>
-				</ul>
-		<nav id="top-nav">
+		<!-- Navigation !-->
+		<ul class="navigation-toggle">
+			<li></li>
+		</ul>
+		
+		<header id="top-nav">
 			<div class="container-fluid">
-				
 				<a class="logo" href="/"></a>
 				<button  id="bookTickets">Book Tickets</button>
-
-				</ul> 
 			</div>
-		</nav>
+		</header>
 
 		<nav class="nav-links">
-				 	<li><a href="/">Home</a></li>
-					<li><a href="about">Story</a></li>
-					<li><a href="/resources">Resources</a></li>
-					<li><a href="/get-involved">Get Involved</a></li>
-					<a class="button white block">Book Tickets</a>
-				</nav>
+		 	<li><a href="/">Home</a></li>
+			<li><a href="about">Story</a></li>
+			<li><a href="/resources">Resources</a></li>
+			<li><a href="/get-involved">Get Involved</a></li>
+			<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button white block">Book Tickets</a>
+		</nav>
+		<!-- / Navigation !-->
+
+		<div class="promotion">
+			<div class="container-wide">
+				<p>Tell the world about JAM, and get £5 off your ticket</p>
+				<button class="">Share</button>
+			</div>
+		</div>
 
 		<?php Template\Template::getLayout(" template "); ?>
 
 		<footer>
-			<div class="container-narrow">
+			<div class="container-wide">
 				<ul class="site-links">
 					<li><a class="toggle-our-story">Story</a></li>
 					<li><a href="<?php echo Template\Url::href( array("resources") ); ?>">Resources</a></li>
 					<li><a href="<?php echo Template\Url::href( array("contact") ); ?>">Contact</a></li>
-					<li><a href="<?php echo Template\Url::href( array("code-of-conduct") ); ?>">GEt Involved/a></li>
+					<li><a href="<?php echo Template\Url::href( array("code-of-conduct") ); ?>">Get Involved</a></li>
 					<li><a href="<?php echo Template\Url::href( array("code-of-conduct") ); ?>">Code of Conduct</a></li>
-<!-- 						<li><a href="<?php echo Template\Url::href( array("privacy-policy") ); ?>">Privacy Policy</a></li> -->
-<!-- 						<li><a href="<?php echo Template\Url::href( array("terms-and-conditions") ); ?>">Terms &amp; Conditions</a></li> -->
 				</ul>
 				<ul class="social-links">
 					<li><a href="https://www.facebook.com/makingjam" class="facebook" target="_blank"></a></li>
 					<li><a href="https://twitter.com/JamLondon2015" class="twitter" target="_blank"></a></li>
 				</ul>
-				Made In London. 
-				JAM is a company registered in England & Wales, company number 789798.
+				<div class="copyright">
+					<h6>Made In London</h6>
+					<small>JAM is a company registered in England & Wales, company number 789798.</small>
+				</div>
 			</div>
 		</footer>
 
@@ -107,8 +109,3 @@
 	
 	</body>
 </html>
-
-
-
-
-			
