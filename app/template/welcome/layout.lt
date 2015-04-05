@@ -1,41 +1,38 @@
 <section id="masthead" class="flex center-vertically">
 	<div class="container-wide">
-		<h1>Sharing the stories behind great products.<br/>
-			1 day. 9 speakers. Great coffee.</h1>
-
+		<h1>Sharing the stories behind </br> great products.</h1>
+		<h3>1 day. 9 speakers. Great coffee.</h3>
 		<h2>London, Saturday 3rd of October 2015. 10am - 6pm.</h2>
+		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="no-margin button brand large">Book Tickets</a>
+			<!-- <small class="margin-left-base">Early Bird Tickets Available!
+			</small> -->
 
 		<div class="flex center-vertically">
-			<button class="no-margin brand large">Book Tickets</button>
-			<small class="margin-left-base">Early Bird Tickets Available!
-			</small>
 		</div>
 	</div>
 </section>
 
 <section id="sectionStory">
 	<div class="container-wide">
+		<small>Story</small>
 		<h2>Why Jam?</h2>
-
-		<p>We stared JAM to create a place where people, across all disciplines can discuss their
-			successes and failures, experiments, tools and techniques, and anything else that gets
-			great products built.</p>
-
-		<button class="large toggle-our-story">Our story</button>
+		<p>We started JAM to help people build better products. As product makers ourselves, we’ve often asked ourselves - what’s happening backstage? How do others do it? What tools do they use? How do they organise their teams?</p>
+		
+		<p>We wanted to know more, and thought others would too.</p>
+		<button class="large toggle-our-story">Read More</button>
 	</div>
 </section>
 
-<section id="sectionSpeakers" class="text-center">
+<section id="sectionSpeakers" class="text-center border-bottom">
 	<div class="container-wide">
-		<h2>Straight from the horses’ mouth.<br/>
-			9 speakers share how they’ve done it.</h2>
-	</div>
+		<small>Speakers</small>
+		<h2>Hear it straight from the horses’ mouth. </br>
+		9 speakers share their experiences.</h2>
 
-	<div class="container-fluid">
 		<ul class="flex-grid-3">
 			{? foreach ($template["authors"] as $k => $v) { ?}
 			<li class="flex-item toggle-speaker-bio" id="{?= Utilities\String::sanUrl($k) =?}">
-				<div class="img" style="background-image: url('/assets/images/speakers/{?= $v["img"] =?}')"></div>
+				<img src="/assets/images/speakers/{?= $v["img"] =?}">
 				<strong>{?= $k =?}</strong>
 
 				<small>{?= $v["position"] =?}<br/>{?= $v["company"] =?}
@@ -47,26 +44,20 @@
 </section>
 
 <section id="sectionTopics">
-	<div class="container-wide">
-		<h2 class="text-center no-margin">20 Minute Talks. Lots of Topics.</h2>
-
+		<!-- <h2 class="text-center no-margin">20 Minute Talks, 6 Topics.</h2> -->
+		<small>Schedule</small>
 		{? foreach ($template["schedule"] as $k) { ?}
 		<article>
+			<div class="container-wide">
 			<p>{?= $k["time"] =?}</p>
-			<h4>{?= $k["title"] =?}</h4>
+			<h3>{?= $k["title"] =?}</h3>
 
 			{? $author = $template["authors"][$k["author"]]; ?}
-
-			<div class="bio">
-				<img src="/assets/images/speakers/{?= $author["img"] =?}" alt="{?= $k[" author"] =?}'s Avatar"/>
-				<aside>
-					<strong>{?= $k["author"] =?}</strong>
-					<small>{?= $author["position"] =?}, {?= $author["company"] =?}</small>
-				</aside>
+			<strong>{?= $k["author"] =?}</strong>
+			<small>{?= $author["position"] =?}, {?= $author["company"] =?}</small>
 			</div>
 		</article>
 		{? } ?}
-	</div>
 </section>
 
 <section id="sectionVenue" class="text-center">

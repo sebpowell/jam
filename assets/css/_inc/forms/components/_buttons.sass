@@ -1,4 +1,3 @@
-$colors: blue, yellow, green, red
 $border-radius: 3px
 
 .button, button
@@ -7,83 +6,23 @@ $border-radius: 3px
 	text-decoration: none
 	padding: $unit-layout
 	cursor: pointer
-	font-weight: 600
+	background: black
+	color: white
+	font:
+		weight: 600
+		family: $font-family-primary
+	text: 
+		align: center
+		transform: capitalize
 
 	&.large
-		height: rem(48px)
-		line-height: rem(48px)
-		font-size: rem(16px)
-		padding: 0 $double-unit-layout
-
-	+hover
-		border-color: $color-black
-		background-color: $color-black
-		color: white
-
-		&:focus
-			border-color: $color-black
-
-	&:disabled
-		background: $color-grey-50
-		border-color: $color-grey-100
-		color: $color-grey-200
-		cursor: not-allowed
-
-		&:hover, &:focus, &:active
-			+box-shadow(none)
-
-			border-color: $color-grey-100
-			color: $color-grey-200
-
-	&.blue
-		border-color: $color-blue
-		color: $color-blue
-
-		+hover
-			background: $color-blue
-			color: white
-
-			&:focus
-				border-color: $color-blue-600
-
-	&.red
-		border-color: $color-red
-		color: $color-red
-
-		+hover
-			background: $color-red
-			color: white
-
-			&:focus
-				border-color: $color-red-600
-
-	&.green
-		border-color: $color-green
-		color: $color-green
-
-		+hover
-			background: $color-green
-			color: white
-
-			&:focus
-				border-color: $color-green-600
-
-	&.yellow
-		border-color: $color-yellow
-		color: $color-yellow
-
-		+hover
-			background: $color-yellow
-			color: white
-
-			&:focus
-				border-color: $color-yellow-600
+		font-size: rem(18px)
+		padding: $unit-layout $double-unit-layout
 
 	&.brand
-		background: black
-		color: white
-		border: 2px solid black
-
-		+hover
-			background: white
-			color: black
+		
+	&.brand-secondary
+	
+	&.white
+		background: white
+		color: black

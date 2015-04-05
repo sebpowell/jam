@@ -5,6 +5,13 @@ $(document).ready(function () {
 	// Do not remove this bit, as it fixes transition bugs.
 	$("body").removeClass("preload");
 
+	$(".mobile-navigation-toggle").click(function() {
+		$(this).toggleClass("close-navigation");
+		$(".nav-links").toggleClass("show");
+		$("body").toggleClass("show-nav");
+		$(".modal-backdrop").toggleClass("is-visible");
+	});
+
 	function openModal(timeout, contentUrl) {
 		$.get("/assets/content/modals/" + contentUrl, function (data) {
 			$("#loadModalContent").html(data);

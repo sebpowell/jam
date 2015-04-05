@@ -153,7 +153,7 @@
 .description {
   color: #b4c2c7; }
 
-input, select, textarea, button, .button, .input {
+input, select, textarea, .input {
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-border-radius: 0;
@@ -165,27 +165,27 @@ input, select, textarea, button, .button, .input {
   border: 2px solid #181e20;
   background: transparent;
   padding: 0.75rem;
-  font-family: "proxima nova", Helvetica, Arial, sans-serif !important;
+  font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif !important;
   font-size: 0.875rem;
   outline: none;
   color: #181e20;
   margin: 0 0 1rem;
   text-decoration: none; }
-  input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder, button::-webkit-input-placeholder, .button::-webkit-input-placeholder, .input::-webkit-input-placeholder {
+  input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder, .input::-webkit-input-placeholder {
     color: #d1dadd; }
-  input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder, button::-moz-placeholder, .button::-moz-placeholder, .input::-moz-placeholder {
+  input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder, .input::-moz-placeholder {
     color: #d1dadd; }
-  input:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder, button:-moz-placeholder, .button:-moz-placeholder, .input:-moz-placeholder {
+  input:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder, .input:-moz-placeholder {
     color: #d1dadd; }
-  input:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder, button:-ms-input-placeholder, .button:-ms-input-placeholder, .input:-ms-input-placeholder {
+  input:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder, .input:-ms-input-placeholder {
     color: #d1dadd; }
-  input:last-child, select:last-child, textarea:last-child, button:last-child, .button:last-child, .input:last-child {
+  input:last-child, select:last-child, textarea:last-child, .input:last-child {
     margin-bottom: 0; }
-  input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus, button:hover, button:focus, .button:hover, .button:focus, .input:hover, .input:focus {
+  input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus, .input:hover, .input:focus {
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.075);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.075);
     border-color: #b4c2c7; }
-    input:hover:focus, input:focus:focus, select:hover:focus, select:focus:focus, textarea:hover:focus, textarea:focus:focus, button:hover:focus, button:focus:focus, .button:hover:focus, .button:focus:focus, .input:hover:focus, .input:focus:focus {
+    input:hover:focus, input:focus:focus, select:hover:focus, select:focus:focus, textarea:hover:focus, textarea:focus:focus, .input:hover:focus, .input:focus:focus {
       border-color: #839ba3; }
 
 select {
@@ -324,64 +324,15 @@ input:invalid, textarea:invalid {
   text-decoration: none;
   padding: 1rem;
   cursor: pointer;
-  font-weight: 600; }
+  background: black;
+  color: white;
+  font-weight: 600;
+  font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: capitalize; }
   .button.large, button.large {
-    height: 3rem;
-    line-height: 3rem;
-    font-size: 1rem;
-    padding: 0 2rem; }
-  .button:hover, .button:focus, button:hover, button:focus {
-    border-color: #181e20;
-    background-color: #181e20;
-    color: white; }
-    .button:hover:focus, .button:focus:focus, button:hover:focus, button:focus:focus {
-      border-color: #181e20; }
-  .button:disabled, button:disabled {
-    background: #f8f9fa;
-    border-color: #eef1f3;
-    color: #d1dadd;
-    cursor: not-allowed; }
-    .button:disabled:hover, .button:disabled:focus, .button:disabled:active, button:disabled:hover, button:disabled:focus, button:disabled:active {
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      border-color: #eef1f3;
-      color: #d1dadd; }
-  .button.blue, button.blue {
-    border-color: #81CFE0;
-    color: #81CFE0; }
-    .button.blue:hover, .button.blue:focus, button.blue:hover, button.blue:focus {
-      background: #81CFE0;
-      color: white; }
-      .button.blue:hover:focus, .button.blue:focus:focus, button.blue:hover:focus, button.blue:focus:focus {
-        border-color: #72b8c7; }
-  .button.red, button.red {
-    border-color: #F25641;
-    color: #F25641; }
-    .button.red:hover, .button.red:focus, button.red:hover, button.red:focus {
-      background: #F25641;
-      color: white; }
-      .button.red:hover:focus, .button.red:focus:focus, button.red:hover:focus, button.red:focus:focus {
-        border-color: #d74c39; }
-  .button.green, button.green {
-    border-color: #CDDC39;
-    color: #CDDC39; }
-    .button.green:hover, .button.green:focus, button.green:hover, button.green:focus {
-      background: #CDDC39;
-      color: white; }
-      .button.green:hover:focus, .button.green:focus:focus, button.green:hover:focus, button.green:focus:focus {
-        border-color: #b6c332; }
-  .button.yellow, button.yellow {
-    border-color: #f1c40f;
-    color: #f1c40f; }
-    .button.yellow:hover, .button.yellow:focus, button.yellow:hover, button.yellow:focus {
-      background: #f1c40f;
-      color: white; }
-      .button.yellow:hover:focus, .button.yellow:focus:focus, button.yellow:hover:focus, button.yellow:focus:focus {
-        border-color: #d6ae0d; }
-  .button.brand, button.brand {
-    background: black;
-    color: white;
-    border: 2px solid black; }
-    .button.brand:hover, .button.brand:focus, button.brand:hover, button.brand:focus {
-      background: white;
-      color: black; }
+    font-size: 1.125rem;
+    padding: 1rem 2rem; }
+  .button.white, button.white {
+    background: white;
+    color: black; }

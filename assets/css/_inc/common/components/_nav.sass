@@ -1,8 +1,109 @@
+.show-nav
+	margin-left: 400px
+
+.nav-links
+	+z-index(navigation)
+	+no-bullet
+	+transition(all .5s)
+	position: fixed
+	background: black
+	left: -400px
+	height: 100%
+
+	width: 400px
+	padding: $triple-unit-layout
+	padding-top: rem(80px)
+
+	.button
+		background: white
+		font-size: rem(40px)
+		border: 0
+	&.show
+		left: 0
+	li
+		overflow: hidden
+		&:not(:last-child)
+			margin-bottom: $double-unit-layout
+		a
+			position: relative
+			font:
+				size: rem(48px)
+				weight: 600
+			color: white
+			text-decoration: none
+			
+			&:after
+				+transition(all 250ms)
+				position: absolute
+				left: 0
+				bottom: 0
+				margin-top: -2px
+				content: ""
+				background: white
+				width: 0
+				height: 8px
+			&:hover
+				// color: $color-brand-secondary
+				&:after
+					width: 100%
+
+
+.mobile-navigation-toggle
+	
+	+no-bullet
+	position: fixed
+	left: $double-unit-layout
+	top: rem(45px)
+	width: 18px
+	height: 12px
+	display: block
+	flex-direction: column
+	justify-content: center
+	z-index: 9999
+	cursor: pointer
+
+	li
+		+transition(all 1s)
+		left: 0
+		top: 50%
+		margin-top: -2px
+		position: absolute
+		width: 100%
+		height: 2px
+		background: black
+		&:before, &:after
+			+transition(all 1s)
+			content: ""
+			position: absolute
+			width: 100%
+			height: 2px
+			background: black
+		&:before
+			top: -6px
+		&:after
+			top: 6px
+	&.close-navigation
+		// position: absolute
+		// right: 0
+		// margin-right: 0
+		z-index: 9999
+		li
+			background: black
+			&:before, &:after
+				background: white
+			&:before
+				top: 0
+				+transform(rotate(45deg))
+			&:after
+				top: 0
+				+transform(rotate(-45deg))
+
+
+
+
 nav#top-nav
 	+z-index(nav)
 	+respond-to-size($phone)
-		background: black
-		border-bottom: 0
 
 	position: fixed
 	top: 0
@@ -11,7 +112,7 @@ nav#top-nav
 	background: white
 	border-bottom: 1px solid $color-keyline
 	
-	> .container-fluid
+	> .container-wide, .container-fluid
 		height: $nav-height
 		display: flex
 		align-items: center
@@ -19,13 +120,15 @@ nav#top-nav
 	.logo
 		display: block
 		width: 50px
+		margin: auto
 		height: 50px
-		margin-right: $double-unit-layout
 		background:
 			color: transparent
 			position: center center
 			repeat: no-repeat
-			image: url("#{$image-base}/logo/glyph.svg")
+			size: 50px 50px
+			image: url("#{$image-base}/logo/logo-glyph.svg")
+
 
 
 	button
@@ -40,31 +143,31 @@ nav#top-nav
 		&.active
 			opacity: 1
 
-	ul
-		+no-bullet
-		width: 100%
-		height: 100%
-		margin-bottom: 0
-		+respond-to-size($phone)
-			display: none
+	// ul
+	// 	+no-bullet
+	// 	width: 100%
+	// 	height: 100%
+	// 	margin-bottom: 0
+	// 	+respond-to-size($phone)
+	// 		display: none
 
-		li
-			height: 100%
-			display: inline-block
-			&:not(:last-child)
-				margin-right: $double-unit-layout
+	// 	li
+	// 		height: 100%
+	// 		display: inline-block
+	// 		&:not(:last-child)
+	// 			margin-right: $double-unit-layout
 
-			a
-				@extend .text-center
-				text-decoration: none
-				color: black
-				display: block
-				height: 100%
-				line-height: $nav-height
-				font:
-					size: rem(24px)
-					weight: 600
+	// 		a
+	// 			@extend .text-center
+	// 			text-decoration: none
+	// 			color: black
+	// 			display: block
+	// 			height: 100%
+	// 			line-height: $nav-height
+	// 			font:
+	// 				size: rem(24px)
+	// 				weight: 600
 				
-				+hover
-					color: $color-brand-secondary
+	// 			+hover
+	// 				color: $color-brand-secondary
 

@@ -1,12 +1,18 @@
 .page-welcome
 	padding-top: 0
 
+	small
+		text-transform: uppercase
+		letter-spacing: 2px
+		font-weight: 600
+
 	h2
 		font-size: rem(48px)
 		font-weight: 700
 	section
 		&#masthead
 			height: 100vh
+			text-align: center
 
 			h1
 				line-height: 1.5
@@ -27,7 +33,9 @@
 
 			padding: ($quadruple-unit-layout + $base-unit-layout) 0
 			background: $color-brand-secondary
-
+			button
+				background: #09BB76
+				color: white
 
 			h2
 				font:
@@ -49,12 +57,18 @@
 				> .flex-item
 					cursor: pointer
 
-					.img
-						height: rem(250px)
+					img
+						+transition(all .15s)
+						width: 100%
+						max-width: rem(120px)
+						border-radius: 100%
+						margin: 0 auto $unit-layout
 						background:
 							position: center center
 							size: cover
 							repeat: no-repeat
+						&:hover
+							+transform(scale(1.1, 1.1))
 
 					strong
 						display: block
@@ -66,18 +80,22 @@
 
 		&#sectionTopics
 			padding: ($quadruple-unit-layout + $base-unit-layout) 0
-			background: $color-grey-50
-			border-top: 1px solid $color-grey-100
-			border-bottom: 1px solid $color-grey-100
+			border-bottom: 1px solid $color-keyline
+			text-align: center
 
 			article
-				max-width: rem(550px)
-				margin: $double-unit-layout auto 0
-				padding: $double-unit-layout 0 0
-				border-top: 1px solid $color-grey-100
-
-				&:first-of-type
-					border-top: 0
+				// max-width: rem(550px)
+				// margin: $double-unit-layout auto 0
+				
+				text-align: center
+				&:not(:last-child)
+					&:after
+						display: block
+						margin: $double-unit-layout auto
+						background: #e5e5e5
+						width: 100px
+						height: 5px
+						content: ""
 
 				p
 					margin: 0
@@ -111,3 +129,7 @@
 
 		&#sectionVenue
 			padding: ($quadruple-unit-layout + $base-unit-layout) 0
+			background:
+				image: url("#{$image-base}/background/bg-venue.jpg")
+				size: cover
+				position: center center

@@ -2,6 +2,21 @@ $column-numbers: 12
 $column-width: 100% / $column-numbers
 $gutter: $unit-layout
 
+
+.flex-row
+	display: flex
+
+// Generates classes for columns 1 - 12.
+@for $i from 1 through $column-numbers
+	.columns-#{$i}
+		width: $i * $column-width
+		padding: 0 $unit-layout
+		float: left
+		// +respond-to-size($tablet)
+		// 	width: 100%
+		// 	margin-bottom: $double-unit-layout
+
+
 @for $i from 1 through $column-numbers
 	.flex-grid-#{$i}
 		+no-bullet
@@ -16,12 +31,11 @@ $gutter: $unit-layout
 			// This doesn't work, because it rounds numbers down, so items don't take up the full width of the container 
 			// (for exapmple, flex-grid-3 was giving me widths of 33%, rather than 33.33%)
 			// width: floor(100% / $i)
-			margin-bottom: $base-unit-layout
+			margin-bottom: $double-unit-layout
 			padding: 0 $gutter
 
 			+respond-to-size(800px)
 				width: 100%
-				margin-bottom: $double-unit-layout
 
 				&:last-of-type
 					margin-bottom: 0

@@ -1,3 +1,19 @@
+
+.modal-backdrop
+	+transition(all 1s)
+	+z-index(modal-backdrop)
+	position: fixed
+	display: none
+	top: 0
+	left: 0
+	background: rgba(00,00,00,0.4)
+	width: 100%
+	height: 100%
+	&.is-visible
+		display: block
+
+
+	
 .modal
 	+z-index(modal)
 	+transition(opacity .45s)
@@ -6,12 +22,12 @@
 	width: 100%
 	height: 100%
 	background: rgba(0,0,0,.8)
-	background: $color-yellow
 	overflow-y: scroll
 	position: fixed
 	opacity: 0
 	left: 0
 	top: 0
+	color: white
 
 	&.show
 		opacity: 1
@@ -34,6 +50,7 @@
 			right: 0
 			top: $base-unit-layout
 			cursor: pointer
+			font-size: rem(24px)
 			//font:
 			//	weight: 500
 

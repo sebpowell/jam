@@ -36,27 +36,36 @@
 		<!--<div class="alert flex center-horizontally center-vertically error">This is an error message</div>-->
 		<!--<div class="alert flex center-horizontally center-vertically success">This is a success message</div>-->
 
+		<div class="modal-backdrop"></div>
+
 		<div class="modal is-hidden">
-			<div class="modal-content">
+			<div class="container-wide">
 				<div class="close-modal">&times;</div>
 				<article id="loadModalContent"></article>
 			</div>
 		</div>
 
+
+	<ul class="mobile-navigation-toggle">
+					<li></li>
+				</ul>
 		<nav id="top-nav">
 			<div class="container-fluid">
+				
 				<a class="logo" href="/"></a>
-				<ul>
-					<li id="navItemStory"><a data-scroll href="#sectionStory">Story</a></li>
-					<li id="navItemSpeakers"><a data-scroll href="#sectionSpeakers">Speakers</a></li>
-					<li id="navItemTopics"><a data-scroll href="#sectionTopics">Topics</a></li>
-					<li><a href="/resources">Resources</a></li>
-					<!--<li><a href="#">Get Involved</a></li>-->
-				</ul>
+				<button  id="bookTickets">Book Tickets</button>
 
-				<button class="turquoise" id="bookTickets">Book Tickets</button>
+				</ul> 
 			</div>
 		</nav>
+
+		<nav class="nav-links">
+				 	<li><a href="/">Home</a></li>
+					<li><a href="about">Story</a></li>
+					<li><a href="/resources">Resources</a></li>
+					<li><a href="/get-involved">Get Involved</a></li>
+					<a class="button white block">Book Tickets</a>
+				</nav>
 
 		<?php Template\Template::getLayout(" template "); ?>
 
@@ -66,6 +75,7 @@
 					<li><a class="toggle-our-story">Story</a></li>
 					<li><a href="<?php echo Template\Url::href( array("resources") ); ?>">Resources</a></li>
 					<li><a href="<?php echo Template\Url::href( array("contact") ); ?>">Contact</a></li>
+					<li><a href="<?php echo Template\Url::href( array("code-of-conduct") ); ?>">GEt Involved/a></li>
 					<li><a href="<?php echo Template\Url::href( array("code-of-conduct") ); ?>">Code of Conduct</a></li>
 <!-- 						<li><a href="<?php echo Template\Url::href( array("privacy-policy") ); ?>">Privacy Policy</a></li> -->
 <!-- 						<li><a href="<?php echo Template\Url::href( array("terms-and-conditions") ); ?>">Terms &amp; Conditions</a></li> -->
@@ -74,6 +84,8 @@
 					<li><a href="https://www.facebook.com/makingjam" class="facebook" target="_blank"></a></li>
 					<li><a href="https://twitter.com/JamLondon2015" class="twitter" target="_blank"></a></li>
 				</ul>
+				Made In London. 
+				JAM is a company registered in England & Wales, company number 789798.
 			</div>
 		</footer>
 
@@ -92,6 +104,11 @@
 			ga('create', 'UA-56807522-1', 'auto');
 			ga('send', 'pageview');
 		</script>
-
+	
 	</body>
 </html>
+
+
+
+
+			
