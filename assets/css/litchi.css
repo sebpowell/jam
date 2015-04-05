@@ -19,13 +19,17 @@ html {
     html {
       font-size: 12px; } }
 
+#wrapper {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  position: relative;
+  left: 0; }
+  #wrapper.show-nav {
+    left: 400px; }
+
 body {
-  padding-top: 6.25rem;
-  -webkit-transition: margin .5s;
-  -o-transition: margin .5s;
-  transition: margin .5s; }
-  body.show-nav {
-    margin-left: 400px; }
+  padding-top: 6.25rem; }
 
 img {
   max-width: 100%; }

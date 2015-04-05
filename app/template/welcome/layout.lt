@@ -4,8 +4,8 @@
 		<h3>1 day. 9 speakers. Great coffee.</h3>
 		<h2>London, Saturday 3rd of October 2015. 10am - 6pm.</h2>
 		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="no-margin button brand large">Book Tickets</a>
-			<!-- <small class="margin-left-base">Early Bird Tickets Available!
-			</small> -->
+			<small class="margin-left-base">Early Bird Tickets Available!
+			</small>
 
 		<div class="flex center-vertically">
 		</div>

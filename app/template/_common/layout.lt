@@ -22,6 +22,7 @@
 	</head>
 
 	<body class="preload page-{{ page.url.template|lower }} {{ app.lang }}">
+		<div id="wrapper">
 		<noscript>
 			<div id="warning">
 				To be able to experience {{ app.siteName }} with all its features, you need a browser that supports JavaScript, and it <strong>needs to be enabled.</strong>
@@ -106,6 +107,6 @@
 			ga('create', 'UA-56807522-1', 'auto');
 			ga('send', 'pageview');
 		</script>
-	
+		</div>
 	</body>
 </html>
