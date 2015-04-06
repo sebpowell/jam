@@ -66,7 +66,7 @@
 <section id="sectionVenue" class="text-center">
 	<div class="container-wide">
 		<h2>Hosted in the iconic Oval Space, East London.<br/>
-			Food & Drink Provided.</h2>
-		<button class="brand large">Book Tickets</button>
+			Food & Drink included</h2>
+		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button brand large">Book Tickets</a>
 	</div>
 </section>

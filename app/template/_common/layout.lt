@@ -50,7 +50,7 @@
 		<header id="top-nav">
 			<div class="container-fluid">
 				<a class="logo" href="/"></a>
-				<button  id="bookTickets">Book Tickets</button>
+				<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button" id="bookTickets">Book Tickets</a>
 			</div>
 		</header>
 

@@ -11,7 +11,7 @@
 					<h3 class="title">
 						<small><strong>{{ resourceDetails.date }}</strong> by <strong>{{ resourceDetails.author }}</strong></small>
 					</p>
-					<p class="description">{{ resourceDetails.desc }}</p>
+					<p>{{ resourceDetails.desc }}</p>
 					<div class="tags flex">
 						{? foreach ($template["resourceDetails"]["tags"] as $tag) { ?}
 						<span class="label {?= $tag =?}">{?= $tag =?}</span>
@@ -29,7 +29,7 @@
 						<h3><a href="{?= $k["link"] =?}" target="_blank">{?= $k["title"] =?}</a></h3>
 						<small><strong>{?= $k["date"] =?}</strong></small>
 						<!-- <strong>{?= $k["author"] =?}</strong> -->
-						<p class="description">{?= $k["desc"] =?}</p>
+						<p>{?= $k["desc"] =?}</p>
 						<div class="tags flex">
 							{? foreach ($k["tags"] as $tag) { ?}
 							<span class="label {?= $tag =?}">{?= $tag =?}</span>
