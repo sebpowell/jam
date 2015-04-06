@@ -1,3 +1,29 @@
+.page-resources
+	#mc-embedded-subscribe-form
+		@extend .flex
+
+		position: absolute
+		top: $base-unit-layout + $half-unit-layout
+		right: $double-unit-layout
+
+		input
+			margin: 0
+			min-width: rem(300px)
+
+			+hover
+				border-color: $color-black
+
+		button
+			+border-radius(0 $border-radius $border-radius 0)
+
+			padding-left: $double-unit-layout
+			padding-right: $double-unit-layout
+			font:
+				size: rem(15px)
+
+	#bookTickets
+		display: none
+
 .resources
 	.container-narrow
 		max-width: rem(700px)

@@ -835,13 +835,13 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 .align-left {
   margin-right: auto !important; }
 
-.flex, .checkbox-holder .checkbox, .checkbox-holder .radio-button, .radio-button-holder .checkbox, .radio-button-holder .radio-button {
+.flex, .checkbox-holder .checkbox, .checkbox-holder .radio-button, .radio-button-holder .checkbox, .radio-button-holder .radio-button, .page-resources #mc-embedded-subscribe-form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex; }
-  .flex.column, .checkbox-holder .column.checkbox, .checkbox-holder .column.radio-button, .radio-button-holder .column.checkbox, .radio-button-holder .column.radio-button {
+  .flex.column, .checkbox-holder .column.checkbox, .checkbox-holder .column.radio-button, .radio-button-holder .column.checkbox, .radio-button-holder .column.radio-button, .page-resources .column#mc-embedded-subscribe-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -849,7 +849,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
     -moz-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .flex.row, .checkbox-holder .row.checkbox, .checkbox-holder .row.radio-button, .radio-button-holder .row.checkbox, .radio-button-holder .row.radio-button {
+  .flex.row, .checkbox-holder .row.checkbox, .checkbox-holder .row.radio-button, .radio-button-holder .row.checkbox, .radio-button-holder .row.radio-button, .page-resources .row#mc-embedded-subscribe-form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -857,13 +857,13 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
     -moz-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row; }
-  .flex.center-vertically, .checkbox-holder .center-vertically.checkbox, .checkbox-holder .center-vertically.radio-button, .radio-button-holder .center-vertically.checkbox, .radio-button-holder .center-vertically.radio-button {
+  .flex.center-vertically, .checkbox-holder .center-vertically.checkbox, .checkbox-holder .center-vertically.radio-button, .radio-button-holder .center-vertically.checkbox, .radio-button-holder .center-vertically.radio-button, .page-resources .center-vertically#mc-embedded-subscribe-form {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .flex.center-horizontally, .checkbox-holder .center-horizontally.checkbox, .checkbox-holder .center-horizontally.radio-button, .radio-button-holder .center-horizontally.checkbox, .radio-button-holder .center-horizontally.radio-button {
+  .flex.center-horizontally, .checkbox-holder .center-horizontally.checkbox, .checkbox-holder .center-horizontally.radio-button, .radio-button-holder .center-horizontally.checkbox, .radio-button-holder .center-horizontally.radio-button, .page-resources .center-horizontally#mc-embedded-subscribe-form {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -moz-box-pack: center;
@@ -1378,6 +1378,9 @@ input:invalid, textarea:invalid {
     color: white;
     background: #FF4040; }
 
+#mc-embedded-subscribe-form {
+  display: none; }
+
 .page-content {
   padding: 2rem 0; }
 
@@ -1560,6 +1563,24 @@ section {
 .background-black {
   background: black;
   color: white; }
+
+.page-resources #mc-embedded-subscribe-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem; }
+  .page-resources #mc-embedded-subscribe-form input {
+    margin: 0;
+    min-width: 18.75rem; }
+    .page-resources #mc-embedded-subscribe-form input:hover, .page-resources #mc-embedded-subscribe-form input:focus {
+      border-color: #181e20; }
+  .page-resources #mc-embedded-subscribe-form button {
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.9375rem; }
+.page-resources #bookTickets {
+  display: none; }
 
 .resources .container-narrow, .resources .page-add form, .page-add .resources form {
   max-width: 43.75rem; }

@@ -51,6 +51,11 @@
 			<div class="container-fluid">
 				<a class="logo" href="/"></a>
 				<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button" id="bookTickets" target="_blank">Book Tickets</a>
+				<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+					<input style="display: none" type="text" name="b_7f799244738e8b8558a646378_6c81011ad7" tabindex="-1" value="">
+					<input autofocus="" class="flex-8" type="email" name="EMAIL" placeholder="Get curated tools &amp; food for thought weekly" required="">
+					<button class="flex-4 primary" name="subscribe">Sign up</button>
+				</form>
 			</div>
 		</header>
 
