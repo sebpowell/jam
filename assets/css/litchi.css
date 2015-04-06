@@ -19,17 +19,19 @@ html {
     html {
       font-size: 12px; } }
 
+.show-nav {
+  left: 400px !important; }
+
 #wrapper {
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
   position: relative;
   left: 0; }
-  #wrapper.show-nav {
-    left: 400px; }
 
 body {
-  padding-top: 6.25rem; }
+  padding-top: 6.25rem;
+  overflow-x: hidden; }
 
 img {
   max-width: 100%; }
@@ -95,7 +97,7 @@ blockquote {
     font-size: 1rem; }
 
 footer {
-  background: black;
+  background: white;
   padding: 2rem 0 160px 0;
   color: white;
   text-align: center; }
@@ -123,7 +125,7 @@ footer {
       footer .site-links li a {
         font-size: 1.125rem;
         text-decoration: none;
-        color: white;
+        color: black;
         font-weight: 600; }
         @media all and (max-width: 500px) {
           footer .site-links li a {
@@ -152,7 +154,7 @@ footer {
         display: block;
         width: 42px;
         height: 42px;
-        border: 2px solid white;
+        border: 2px solid black;
         background-repeat: no-repeat;
         background-position: center center; }
         footer .social-links li a.facebook {
@@ -162,7 +164,7 @@ footer {
 
 a, .link {
   cursor: pointer;
-  color: #04F799;
+  color: #09E791;
   text-decoration: underline; }
   a:hover, a:focus, .link:hover, .link:focus {
     text-decoration: none; }
@@ -247,7 +249,7 @@ dl {
     .modal .modal-content p {
       line-height: 1.8;
       margin-bottom: 1.5rem;
-      font-family: "Georgia", Times, serif; }
+      font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif; }
       .modal .modal-content p a {
         color: #181e20; }
       .modal .modal-content p:last-of-type {
@@ -258,8 +260,12 @@ dl {
 
 header#top-nav {
   z-index: 1;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: white;
   border-bottom: 1px solid #E1E5E6; }
@@ -419,7 +425,6 @@ p, h1, h2, h3, h4, h5, h6 {
   line-height: 1.6; }
 
 p {
-  font-family: "palatino", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 1rem 0; }
   p:last-child {
@@ -1336,6 +1341,10 @@ input:invalid, textarea:invalid {
   .button.large, button.large {
     font-size: 1.125rem;
     padding: 1rem 2rem; }
+  .button.brand, button.brand {
+    background: #09E791; }
+    .button.brand:hover, button.brand:hover {
+      background: #08ce82; }
   .button.white, button.white {
     background: white;
     color: black; }
@@ -1400,13 +1409,28 @@ input:invalid, textarea:invalid {
 .container-fluid {
   width: 100%; }
 
-small {
-  font-family: "palatino", Helvetica, Arial, sans-serif; }
+.masthead {
+  text-align: center;
+  padding: 40px 0; }
+
+.columns {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2; }
+
+.quote {
+  background: #e5e5e5;
+  text-align: center; }
+
+.description {
+  color: #B3B3B3;
+  font-size: 0.875rem;
+  font-weight: 600; }
 
 .page-welcome {
   padding-top: 0; }
   .page-welcome .small-heading {
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
@@ -1426,48 +1450,51 @@ small {
       font-size: 1.5rem; }
   .page-welcome section#sectionStory {
     padding: 5rem 0;
-    background: #04F799; }
+    background: #09E791; }
     .page-welcome section#sectionStory button {
-      background: #09BB76;
+      background: #0DA96D;
       color: white; }
     .page-welcome section#sectionStory h2 {
       font-weight: 700; }
     .page-welcome section#sectionStory p {
       max-width: 43.75rem;
       margin: 0 auto 2rem;
-      font-family: "Georgia", Times, serif;
+      font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif;
       font-size: 1.25rem; }
   .page-welcome section#sectionSpeakers {
     padding: 5rem 0; }
     .page-welcome section#sectionSpeakers ul {
       margin-top: 4rem; }
-      .page-welcome section#sectionSpeakers ul > .flex-item {
-        cursor: pointer; }
-        .page-welcome section#sectionSpeakers ul > .flex-item:nth-child(2), .page-welcome section#sectionSpeakers ul > .flex-item:nth-child(5), .page-welcome section#sectionSpeakers ul > .flex-item:nth-child(8) {
-          padding-top: 60px; }
-        .page-welcome section#sectionSpeakers ul > .flex-item img {
-          -webkit-transition: all .15s;
-          -o-transition: all .15s;
-          transition: all .15s;
-          width: 100%;
-          max-width: 8.75rem;
-          -webkit-border-radius: 100%;
-          border-radius: 100%;
-          margin: 0 auto 1rem;
-          background-position: center center;
-          background-size: cover;
-          background-repeat: no-repeat; }
-          .page-welcome section#sectionSpeakers ul > .flex-item img:hover {
-            -webkit-transform: scale(1.1, 1.1);
-            -ms-transform: scale(1.1, 1.1);
-            -o-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1); }
-        .page-welcome section#sectionSpeakers ul > .flex-item strong {
-          display: block;
-          font-size: 1.25rem; }
-        .page-welcome section#sectionSpeakers ul > .flex-item small {
-          color: #839ba3;
-          font-family: "Georgia", Times, serif; }
+      @media all and (max-width: 500px) {
+        .page-welcome section#sectionSpeakers ul > .flex-item {
+          width: 50%; } }
+      .page-welcome section#sectionSpeakers ul > .flex-item img {
+        -webkit-transition: all .15s;
+        -o-transition: all .15s;
+        transition: all .15s;
+        cursor: pointer;
+        width: 100%;
+        max-width: 9.375rem;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        margin: 0 auto 1rem;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+        .page-welcome section#sectionSpeakers ul > .flex-item img:hover {
+          -webkit-transform: scale(1.1, 1.1);
+          -ms-transform: scale(1.1, 1.1);
+          -o-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1); }
+        @media all and (max-width: 500px) {
+          .page-welcome section#sectionSpeakers ul > .flex-item img {
+            max-width: 12.5rem; } }
+      .page-welcome section#sectionSpeakers ul > .flex-item strong {
+        display: block;
+        font-size: 1.25rem; }
+      .page-welcome section#sectionSpeakers ul > .flex-item small {
+        color: #839ba3;
+        font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif; }
   .page-welcome section#sectionTopics {
     padding: 5rem 0;
     border-bottom: 1px solid #E1E5E6;
@@ -1484,9 +1511,9 @@ small {
       .page-welcome section#sectionTopics article p {
         margin: 0;
         line-height: 1.4;
-        font-family: "Georgia", Times, serif; }
+        font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif; }
       .page-welcome section#sectionTopics article h4 {
-        color: #04F799;
+        color: #09E791;
         font-size: 1.375rem;
         font-weight: 700; }
       .page-welcome section#sectionTopics article .bio {
@@ -1506,7 +1533,7 @@ small {
             display: block;
             margin-bottom: 0.25rem; }
           .page-welcome section#sectionTopics article .bio aside small {
-            font-family: "Georgia", Times, serif; }
+            font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif; }
   .page-welcome section#sectionVenue {
     padding: 5rem 0;
     background-image: url("../images//background/bg-venue.jpg");

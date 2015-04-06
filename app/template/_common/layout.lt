@@ -58,7 +58,7 @@
 		 	<li><a href="/">Home</a></li>
 			<li><a href="about">Story</a></li>
 			<li><a href="/resources">Resources</a></li>
-			<li><a href="/get-involved">Get Involved</a></li>
+			<!-- <li><a href="/get-involved">Get Involved</a></li> -->
 			<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button white block">Book Tickets</a>
 		</nav>
 		<!-- / Navigation !-->
@@ -75,10 +75,10 @@
 		<footer>
 			<div class="container-wide">
 				<ul class="site-links">
-					<li><a class="toggle-our-story">Story</a></li>
+					<li><a href="about">Story</a></li>
 					<li><a href="{href array("resources") /href}">Resources</a></li>
-					<li><a href="{href array("contact") /href}">Contact</a></li>
-					<li><a href="{href array("code-of-conduct") /href}">Get Involved</a></li>
+					<li><a href="mailto:hello@jam2015.london">Contact</a></li>
+					<!-- <li><a href="get-involved">Get Involved</a></li> -->
 					<li><a href="{href array("code-of-conduct") /href}">Code of Conduct</a></li>
 				</ul>
 				<ul class="social-links">

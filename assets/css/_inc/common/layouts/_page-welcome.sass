@@ -1,11 +1,27 @@
-small
-	font-family: $font-family-secondary
+.masthead
+	text-align: center
+	padding: 40px 0
+
+
+.columns
+	columns: 2
+
+.quote
+	background: #e5e5e5
+	text-align: center
+
+.description
+	color: #B3B3B3
+	font-size: rem(14px)
+	font-weight: 600
+
+
 
 .page-welcome
 	padding-top: 0
 
 	.small-heading
-		font-size: rem(14px)
+		font-size: rem(18px)
 		text-transform: uppercase
 		letter-spacing: 2px
 		font-weight: 600
@@ -39,7 +55,7 @@ small
 			padding: ($quadruple-unit-layout + $base-unit-layout) 0
 			background: $color-brand-secondary
 			button
-				background: #09BB76
+				background: #0DA96D
 				color: white
 
 			h2
@@ -60,14 +76,19 @@ small
 				margin-top: $quadruple-unit-layout
 
 				> .flex-item
-					cursor: pointer
-					&:nth-child(2), &:nth-child(5), &:nth-child(8)
-						padding-top: 60px
+					
+					+respond-to-size($phone)
+						width: 50%
+					// &:nth-child(2), &:nth-child(5), &:nth-child(8)
+					// 	padding-top: 60px
+					// 	+respond-to-size($phone)
+					// 		padding-top: 0 
 
 					img
 						+transition(all .15s)
+						cursor: pointer
 						width: 100%
-						max-width: rem(140px)
+						max-width: rem(150px)
 						border-radius: 100%
 						margin: 0 auto $unit-layout
 						background:
@@ -76,6 +97,8 @@ small
 							repeat: no-repeat
 						&:hover
 							+transform(scale(1.1, 1.1))
+						+respond-to-size($phone)
+							max-width: rem(200px)
 
 					strong
 						display: block

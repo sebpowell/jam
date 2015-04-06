@@ -27,15 +27,17 @@ html
 	+respond-to-size($phone)
 		font-size: 12px
 
+.show-nav
+	left: 400px !important
+
 #wrapper
 	+transition(all .5s)
 	position: relative
 	left: 0
-	&.show-nav
-		left: 400px
 
 body
 	padding-top: $size-nav-height
+	overflow-x: hidden
 	
 
 img

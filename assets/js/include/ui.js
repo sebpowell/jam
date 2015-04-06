@@ -9,7 +9,7 @@ $(document).ready(function () {
 		$(this).toggleClass("close-navigation");
 		$(".nav-links").toggleClass("show");
 		$(".modal-backdrop").toggleClass("is-visible");
-		$("#wrapper").toggleClass("show-nav");
+		$("#wrapper, #top-nav").toggleClass("show-nav");
 	});
 
 	function openModal(timeout, contentUrl) {

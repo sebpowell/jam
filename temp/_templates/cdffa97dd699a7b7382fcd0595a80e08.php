@@ -1,7 +1,8 @@
 <div class="page-content">
-	<article class="container-narrow typography">
-		
-		<h1>Code of Conduct</h1>
+	<div class="container-narrow typography">
+		<div class="masthead">
+			<h1>Code of Conduct</h1>
+		</div>
 		<p>We are committed to organising a safe, friendly and reputable event. We want everyone to have a great experience, and feel welcomed, regardless of their gender, sexual orientation, disability, ethnicity or religion.</p>
 		
 		<p>Unacceptable behaviour and harassment of any kind will not be tolerated. This includes intimidation, physical or verbal abuse, inappropriate use of nudity and/or sexual images (including in presentation slides), intimidation, stalking and unwanted photography or recording.</p>
@@ -11,5 +12,5 @@
 		<p>Respect one another and be kind and have a great event!</p>
 
 		<p>This document is based on <a href="http://www.codeofconduct.com" target="_blank">codeofconduct.com</a>, licensed under a Creative Commons Attribution 3.0 Unported License.</p>
-	</article>
+	</div>
 </div>
