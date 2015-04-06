@@ -1,38 +1,26 @@
 .alert
-	+border-radius(3px)
+	+transition(top .25s)
+	+z-index(alert)
 
-	background: $color-yellow
-	border: 1px solid $color-yellow-700
-
-	color: rgba(0,0,0,.4)
-	padding: $base-unit-layout
-	margin: 0 0 $base-unit-layout
-	line-height: 1.5
-	position: relative
-	font:
-		family: $font-family-primary
-		size: $base-unit-font-size
-
-	.close
-		+transition(color .25s)
-
-		color: inherit
-		top: $base-unit-layout
-		right: $base-unit-layout
-		text-decoration: none
-		float: right
-
-		+hover
-			color: rgba(0,0,0,.6)
+	position: fixed
+	left: 0
+	top: -($quadruple-unit-layout)
+	width: 100%
+	height: $quadruple-unit-layout
+	background: $color-blue
+	color: rgba(0, 0, 0, .4)
 
 	&.info
 		background: $color-blue
-		border: 1px solid $color-blue-700
 
-	&.success
-		background: $color-green
-		border: 1px solid $color-green-700
+	&.warning
+		background: $color-alert-warning
 
 	&.error
-		background: $color-red
-		border: 1px solid $color-red-700
+		background: $color-alert-error
+
+	&.success
+		background: $color-alert-success
+
+	&.active
+		top: 0

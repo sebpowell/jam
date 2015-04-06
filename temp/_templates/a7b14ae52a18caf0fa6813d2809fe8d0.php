@@ -1,6 +1,6 @@
 <article>
 	<div class="content">
-		<p>Add a new resource:</p>
+		<h2 class="text-center padding-top-double">Add a new resource:</h2>
 
 		<div class="temporary-alert hide">
 		<?php 

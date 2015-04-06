@@ -29,10 +29,10 @@
 			</div>
 		</noscript>
 
-		<!--<div class="alert flex center-horizontally center-vertically info">This is an info message</div>-->
-		<!--<div class="alert flex center-horizontally center-vertically warning">This is a warning message</div>-->
-		<!--<div class="alert flex center-horizontally center-vertically error">This is an error message</div>-->
-		<!--<div class="alert flex center-horizontally center-vertically success">This is a success message</div>-->
+		<div class="alert flex center-horizontally center-vertically info">This is an info message</div>
+		<div class="alert flex center-horizontally center-vertically warning">This is a warning message</div>
+		<div class="alert flex center-horizontally center-vertically error">This is an error message</div>
+		<div class="alert flex center-horizontally center-vertically success">This is a success message</div>
 
 		<div class="modal-backdrop"></div>
 		<div class="modal is-hidden">
@@ -50,7 +50,7 @@
 		<header id="top-nav">
 			<div class="container-fluid">
 				<a class="logo" href="/"></a>
-				<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button" id="bookTickets">Book Tickets</a>
+				<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button" id="bookTickets" target="_blank">Book Tickets</a>
 			</div>
 		</header>
 
@@ -59,7 +59,7 @@
 			<li><a href="about">Story</a></li>
 			<li><a href="/resources">Resources</a></li>
 			<!-- <li><a href="/get-involved">Get Involved</a></li> -->
-			<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button white block">Book Tickets</a>
+			<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button white block" target="_blank">Book Tickets</a>
 		</nav>
 		<!-- / Navigation !-->
 
