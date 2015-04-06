@@ -1,5 +1,3 @@
-
-
 <article class="flex-1" id="measureScroll">
 	<div class="content">
 		<div class="resources">
@@ -24,9 +22,10 @@
 				<!--<p class="description">Curated tools &amp; food for thought, updated daily.</p>-->
 
 				<?php  foreach($template["content"] as $k) {  ?>
+				<a href="<?php echo( $k["link"] ); ?>" target="_blank">
 				<article>
 					<div class="container-narrow">
-						<h3><a href="<?php echo( $k["link"] ); ?>" target="_blank"><?php echo( $k["title"] ); ?></a></h3>
+						<h3><?php echo( $k["title"] ); ?></h3>
 						<small><strong><?php echo( $k["date"] ); ?></strong></small>
 						<!-- <strong><?php echo( $k["author"] ); ?></strong> -->
 						<p><?php echo( $k["desc"] ); ?></p>
@@ -37,6 +36,7 @@
 						</div>
 					</div>
 				</article>
+				</a>
 				<?php  }  ?>
 			<?php  }  ?>
 		</div>

@@ -1,5 +1,3 @@
-
-
 <article class="flex-1" id="measureScroll">
 	<div class="content">
 		<div class="resources">
@@ -24,9 +22,10 @@
 				<!--<p class="description">Curated tools &amp; food for thought, updated daily.</p>-->
 
 				{? foreach($template["content"] as $k) { ?}
+				<a href="{?= $k["link"] =?}" target="_blank">
 				<article>
 					<div class="container-narrow">
-						<h3><a href="{?= $k["link"] =?}" target="_blank">{?= $k["title"] =?}</a></h3>
+						<h3>{?= $k["title"] =?}</h3>
 						<small><strong>{?= $k["date"] =?}</strong></small>
 						<!-- <strong>{?= $k["author"] =?}</strong> -->
 						<p>{?= $k["desc"] =?}</p>
@@ -37,6 +36,7 @@
 						</div>
 					</div>
 				</article>
+				</a>
 				{? } ?}
 			{? } ?}
 		</div>
