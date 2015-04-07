@@ -442,7 +442,7 @@ h3 {
 
 h4, h5, h6 {
   margin: 1rem 0 0.5rem;
-  font-weight: 500; }
+  font-weight: 600; }
 
 h1 {
   font-size: 3.875rem; }
@@ -835,13 +835,13 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 .align-left {
   margin-right: auto !important; }
 
-.flex, .checkbox-holder .checkbox, .checkbox-holder .radio-button, .radio-button-holder .checkbox, .radio-button-holder .radio-button, .page-resources #mc-embedded-subscribe-form {
+.flex, .checkbox-holder .checkbox, .checkbox-holder .radio-button, .radio-button-holder .checkbox, .radio-button-holder .radio-button {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex; }
-  .flex.column, .checkbox-holder .column.checkbox, .checkbox-holder .column.radio-button, .radio-button-holder .column.checkbox, .radio-button-holder .column.radio-button, .page-resources .column#mc-embedded-subscribe-form {
+  .flex.column, .checkbox-holder .column.checkbox, .checkbox-holder .column.radio-button, .radio-button-holder .column.checkbox, .radio-button-holder .column.radio-button {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -849,7 +849,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
     -moz-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .flex.row, .checkbox-holder .row.checkbox, .checkbox-holder .row.radio-button, .radio-button-holder .row.checkbox, .radio-button-holder .row.radio-button, .page-resources .row#mc-embedded-subscribe-form {
+  .flex.row, .checkbox-holder .row.checkbox, .checkbox-holder .row.radio-button, .radio-button-holder .row.checkbox, .radio-button-holder .row.radio-button {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -857,13 +857,13 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
     -moz-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row; }
-  .flex.center-vertically, .checkbox-holder .center-vertically.checkbox, .checkbox-holder .center-vertically.radio-button, .radio-button-holder .center-vertically.checkbox, .radio-button-holder .center-vertically.radio-button, .page-resources .center-vertically#mc-embedded-subscribe-form {
+  .flex.center-vertically, .checkbox-holder .center-vertically.checkbox, .checkbox-holder .center-vertically.radio-button, .radio-button-holder .center-vertically.checkbox, .radio-button-holder .center-vertically.radio-button {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .flex.center-horizontally, .checkbox-holder .center-horizontally.checkbox, .checkbox-holder .center-horizontally.radio-button, .radio-button-holder .center-horizontally.checkbox, .radio-button-holder .center-horizontally.radio-button, .page-resources .center-horizontally#mc-embedded-subscribe-form {
+  .flex.center-horizontally, .checkbox-holder .center-horizontally.checkbox, .checkbox-holder .center-horizontally.radio-button, .radio-button-holder .center-horizontally.checkbox, .radio-button-holder .center-horizontally.radio-button {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -moz-box-pack: center;
@@ -1378,9 +1378,6 @@ input:invalid, textarea:invalid {
     color: white;
     background: #FF4040; }
 
-#mc-embedded-subscribe-form {
-  display: none; }
-
 .page-content {
   padding: 2rem 0; }
 
@@ -1564,43 +1561,71 @@ section {
   background: black;
   color: white; }
 
+.page-resources .newsletter-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 2rem 0; }
+  @media all and (max-width: 500px) {
+    .page-resources .newsletter-banner .flex, .page-resources .newsletter-banner .checkbox-holder .checkbox, .checkbox-holder .page-resources .newsletter-banner .checkbox, .page-resources .newsletter-banner .checkbox-holder .radio-button, .checkbox-holder .page-resources .newsletter-banner .radio-button, .page-resources .newsletter-banner .radio-button-holder .checkbox, .radio-button-holder .page-resources .newsletter-banner .checkbox, .page-resources .newsletter-banner .radio-button-holder .radio-button, .radio-button-holder .page-resources .newsletter-banner .radio-button {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 .page-resources #mc-embedded-subscribe-form {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem; }
+  margin-left: auto; }
+  @media all and (max-width: 500px) {
+    .page-resources #mc-embedded-subscribe-form {
+      -webkit-box-orient: horizontal !important;
+      -webkit-box-direction: normal !important;
+      -webkit-flex-direction: row !important;
+      -moz-box-orient: horizontal !important;
+      -moz-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+      flex-direction: row !important;
+      width: 100%; } }
   .page-resources #mc-embedded-subscribe-form input {
     margin: 0;
-    min-width: 18.75rem; }
+    height: 52px;
+    min-width: 18.75rem;
+    border-color: white !important; }
     .page-resources #mc-embedded-subscribe-form input:hover, .page-resources #mc-embedded-subscribe-form input:focus {
       border-color: #181e20; }
   .page-resources #mc-embedded-subscribe-form button {
     -webkit-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0;
+    background: white;
+    height: 52px;
+    color: black;
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 0.9375rem; }
 .page-resources #bookTickets {
   display: none; }
-
-.resources .container-narrow, .resources .page-add form, .page-add .resources form {
+.page-resources .resources .container-narrow, .page-resources .resources .page-add form, .page-add .page-resources .resources form {
   max-width: 43.75rem; }
-.resources a:hover, .resources a:focus {
+.page-resources .resources a:hover, .page-resources .resources a:focus {
   text-decoration: none !important; }
-  .resources a:hover h3, .resources a:focus h3 {
+  .page-resources .resources a:hover h3, .page-resources .resources a:focus h3 {
     text-decoration: underline !important; }
-.resources article {
+.page-resources .resources article {
   border-bottom: 1px solid #E1E5E6;
   padding: 40px 0; }
-  .resources article:hover, .resources article:focus {
+  .page-resources .resources article:hover, .page-resources .resources article:focus {
     cursor: pointer;
     background: #eef1f3; }
-.resources h3 {
+.page-resources .resources h3 {
   margin-bottom: 0;
   line-height: 1.25; }
-.resources p {
+.page-resources .resources p {
   font-size: 1.125rem; }
-.resources a {
+.page-resources .resources a {
   color: black;
   text-decoration: none; }
-  .resources a:hover, .resources a:focus {
+  .page-resources .resources a:hover, .page-resources .resources a:focus {
     text-decoration: underline; }

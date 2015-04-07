@@ -1,3 +1,27 @@
+<div class="newsletter-banner">
+	<div class="container-fluid">
+		<div class="flex center-vertically">
+
+			<div class="left">
+				<h5 class="no-margin">Get the best design links sent to your inbox, weekly.</h5>
+				
+			</div>
+
+			<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+				<div class="form-group">
+					<input style="display: none" type="text" name="b_7f799244738e8b8558a646378_6c81011ad7" tabindex="-1" value="">
+					<input autofocus="" class="flex-8" type="email" name="EMAIL" placeholder="Email address" required="">
+					<button class="flex-4 primary" name="subscribe">Sign up</button>
+				</div>
+				
+				<!-- <small>Unsubscribe at any time.  We won't share your details with anyone.</small> -->
+				
+			</form>
+		</div>
+	</div>
+	
+</div>
+
 <article class="flex-1" id="measureScroll">
 	<div class="content">
 		<div class="resources">
