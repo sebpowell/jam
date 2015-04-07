@@ -1,26 +1,48 @@
+.team
+	.flex-row:not(:last-child)
+		margin-bottom: $double-unit-layout
+
+
 .page-resources
 
 	.newsletter-banner
+
+		form, .left
+			flex: 6
+
+		+transition(left .5s)
 		position: fixed
+		left: 0
 		bottom: 0
 		width: 100%
 		background: black
 		color: white
 		padding: $double-unit-layout 0
 		+respond-to-size($phone)
+			text-align: center
 			.flex
 				flex-direction: column
 
+		h5
+			margin: 0
+			+respond-to-size($phone)
+				margin: $unit-layout
+
 	#mc-embedded-subscribe-form
 		margin-left: auto
+		display: flex
 		+respond-to-size($phone)
 			flex-direction: row !important
 			width: 100%
 		input
+			+border-radius(3px 0 0 3px)
 			margin: 0
+			color: white
+			margin-right: -4px // Hack, not sure why this is needed
 			height: 52px
-			min-width: rem(300px)
+	
 			border-color: white !important
+
 
 			+hover
 				border-color: $color-black

@@ -52,13 +52,14 @@ header#top-nav
 	position: fixed
 	background: black
 	top: 0
-	left: -100%
+	left: -400px
 	height: 100%
-
-	max-width: 400px
-	width: 75%
+	width: 400px
 	padding: $triple-unit-layout
 	padding-top: rem(80px)
+	+respond-to-size($phone)
+		left: -300px
+		width: 300px
 
 	.button
 		background: white
@@ -89,10 +90,16 @@ header#top-nav
 				background: white
 				width: 0
 				height: 8px
+				+respond-to-size($phone)
+					display: none
+			
 			&:hover
 				// color: $color-brand-secondary
 				&:after
 					width: 100%
+
+				
+
 
 
 .navigation-toggle

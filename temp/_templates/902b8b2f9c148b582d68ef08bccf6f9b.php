@@ -41,23 +41,24 @@
 
 <section class="quote">
 	<div class="container-wide">
-		<p>We believe a great product should be the first focus of every startup.</p>
+		<p>We believe a great product should be the </br> first focus of every startup.</p>
 		<small>Intercom, Product Management</small>
 	</div>
 </section>
 
 <section id="sectionTopics">
 		<!-- <h2 class="text-center no-margin">20 Minute Talks, 6 Topics.</h2> -->
-		<h3 class="small-heading">Schedule</h3>
+		<h3 class="small-heading margin-bottom double-unit">Themes</h3>
+
 		<?php  foreach ($template["schedule"] as $k) {  ?>
 		<article>
 			<div class="container-wide">
-			<small><?php echo( $k["time"] ); ?></small>
+			<!-- <small><?php echo( $k["time"] ); ?></small> -->
 			<h3><?php echo( $k["title"] ); ?></h3>
 
 			<?php  $author = $template["authors"][$k["author"]];  ?>
-			<strong><?php echo( $k["author"] ); ?></strong></br>
-			<small><?php echo( $author["position"] ); ?>, <?php echo( $author["company"] ); ?></small>
+		<!-- 	<strong><?php echo( $k["author"] ); ?></strong></br>
+			<small><?php echo( $author["position"] ); ?>, <?php echo( $author["company"] ); ?></small> -->
 			</div>
 		</article>
 		<?php  }  ?>
