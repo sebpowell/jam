@@ -24,7 +24,7 @@ select yn in "Yes" "No"; do
 		git add -A
 		git commit -m "${1}"
 		git push origin ${branch_name}
-		#git push heroku master
+		git push heroku master
 		
 		break;;
         No )
