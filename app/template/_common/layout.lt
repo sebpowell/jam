@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="google-site-verification" content="uxoGRyCIKZAqXoimSbwGR7hmpL-tBV0aA6Pu-ypnIMA" />
 		<meta name="description" content="{{ app.description }}">
-		<meta property="og:title" content="{? echo isset($template["omTitle"]) ? $template["omTitle"] : "JAM London" ?}">
+		<meta property="og:title" content="{? echo isset($template["omTitle"]) ? $template["omTitle"] : "JAM 2015" ?}">
 		<meta property="og:description" content="{? echo isset($template["omDescription"]) ? $template["omDescription"] : $template["app"]["description"] ?}">
 		<meta property="og:url" content="{? echo isset($template["omUrl"]) ? $template["omUrl"] : "http://www.jam2015.london" ?}">
 		<meta property="og:image" content="{? echo $template["omImage"] ? $template["omImage"] : "http://www.jam2015.london/assets/images/logo/logo-social.png" ?}">
