@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ app.lang }}">
 	<head>
-
 		<meta charset="{{ app.encoding }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<meta name="google-site-verification" content="uxoGRyCIKZAqXoimSbwGR7hmpL-tBV0aA6Pu-ypnIMA" />
 		<meta name="description" content="{{ app.description }}">
 		<meta property="og:title" content="{? echo isset($template["omTitle"]) ? $template["omTitle"] : "JAM London" ?}">
 		<meta property="og:description" content="{? echo isset($template["omDescription"]) ? $template["omDescription"] : $template["app"]["description"] ?}">
@@ -13,16 +12,17 @@
 
 		<title>{{ app.siteName }} / {{ page.title }}</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:700,400" rel="stylesheet" type="text/css">
+		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:300,500,700" rel="stylesheet" type="text/css">
+		<script src="//use.typekit.net/gwv4cfc.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
 
-		<link rel="stylesheet" href="/assets/css/screen.css">
+		<link rel="stylesheet" href="/assets/css/litchi.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" href="/screen-icon.png">
-
 	</head>
 
 	<body class="preload page-{{ page.url.template|lower }} {{ app.lang }}">
-
+		<div id="wrapper">
 		<noscript>
 			<div id="warning">
 				To be able to experience {{ app.siteName }} with all its features, you need a browser that supports JavaScript, and it <strong>needs to be enabled.</strong>
@@ -34,36 +34,67 @@
 		<div class="alert flex center-horizontally center-vertically error">This is an error message</div>
 		<div class="alert flex center-horizontally center-vertically success">This is a success message</div>
 
-		<div class="flex column container-outer">
-			{? if ($template["page"]["url"]["template"] !== "welcome") { ?}
-			<div class="sign-up-top flex center-horizontally center-vertically">
-				<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex">
-					<input style="display: none" type="text" name="b_7f799244738e8b8558a646378_6c81011ad7" tabindex="-1" value="">
-					<input autofocus class="flex-8" type="email" name="EMAIL" placeholder="Get curated tools &amp; food for thought weekly" required/>
-					<button class="flex-4 button primary" name="subscribe">Sign up</button>
-				</form>
-			</div>
-			{? } ?}
-
-			<div class="flex-1 flex column container">
-				<nav class="flex center-vertically">
-					<a id="glyph" href="/"></a>
-
-					<a class="flex-1" href="/about">About</a>
-					<a class="flex-1" href="/resources">Resources</a>
-				</nav>
-
-				{inc template /inc}
-
-				<nav class="flex center-vertically">
-					<a class="flex-1" href="https://twitter.com/jamlondon2015">Twitter</a>
-					<a class="flex-1" href="mailto:mathildeleo@gmail.com">Get involved</a>
-				</nav>
+		<div class="modal-backdrop"></div>
+		<div class="modal is-hidden">
+			<div class="modal-content">
+				<div class="close-modal">&times;</div>
+				<article id="loadModalContent"></article>
 			</div>
 		</div>
 
+		<!-- Navigation !-->
+		<ul class="navigation-toggle">
+			<li></li>
+		</ul>
+		
+		<header id="top-nav">
+			<div class="container-fluid">
+				<a class="logo" href="/"></a>
+				<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button" id="bookTickets" target="_blank">Book Tickets</a>
+			</div>
+		</header>
+
+		<nav class="nav-links">
+		 	<li><a href="/">Home</a></li>
+			<li><a href="about">Story</a></li>
+			<li><a href="/resources">Resources</a></li>
+			<!-- <li><a href="/get-involved">Get Involved</a></li> -->
+			<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button white block" target="_blank">Book Tickets</a>
+		</nav>
+		<!-- / Navigation !-->
+
+		<div class="promotion">
+			<div class="container-wide">
+				<p>Tell the world about JAM, and get £5 off your ticket</p>
+				<button class="">Share</button>
+			</div>
+		</div>
+
+		{inc template /inc}
+
+		<footer>
+			<div class="container-wide">
+				<ul class="site-links">
+					<li><a href="about">Story</a></li>
+					<li><a href="{href array("resources") /href}">Resources</a></li>
+					<li><a href="mailto:hello@jam2015.london">Contact</a></li>
+					<!-- <li><a href="get-involved">Get Involved</a></li> -->
+					<li><a href="{href array("code-of-conduct") /href}">Code of Conduct</a></li>
+				</ul>
+				<ul class="social-links">
+					<li><a href="https://www.facebook.com/makingjam" class="facebook" target="_blank"></a></li>
+					<li><a href="https://twitter.com/JamLondon2015" class="twitter" target="_blank"></a></li>
+				</ul>
+				<div class="copyright">
+					<h6>Made In London</h6>
+					<!--<small>JAM is a company registered in England & Wales, company number 789798.</small>-->
+				</div>
+			</div>
+		</footer>
+
 		<script src="/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-		<script src="/assets/js/app.js" type="text/javascript"></script>
+		<script src="/assets/js/smooth-scroll.min.js" type="text/javascript"></script>
+		<script src="/assets/js/litchi.js" type="text/javascript"></script>
 
 		{?= (isset($template["page"]["scripts"]) && is_array($template["page"]["scripts"])) ? Template\jsCompile::compile($template["page"]["scripts"]) : "" =?}
 
@@ -76,6 +107,6 @@
 			ga('create', 'UA-56807522-1', 'auto');
 			ga('send', 'pageview');
 		</script>
-
+		</div>
 	</body>
 </html>

@@ -1,0 +1,32 @@
+$border-radius: 3px
+
+.button, button
+
+	+border-radius($border-radius)
+	text-decoration: none
+	display: inline-block
+	padding: $unit-layout
+	cursor: pointer
+	background: black
+	color: white
+	font:
+		weight: 600
+		family: $font-family-primary
+	text: 
+		align: center
+		transform: capitalize
+
+	&.large
+		font-size: rem(18px)
+		padding: $unit-layout $double-unit-layout
+
+	&.brand
+		background: $color-brand-secondary
+		&:hover
+			background: darken($color-brand-secondary, 5%)
+
+	&.brand-secondary
+	
+	&.white
+		background: white
+		color: black

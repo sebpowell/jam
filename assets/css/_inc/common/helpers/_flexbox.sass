@@ -1,0 +1,79 @@
+$column-numbers: 12
+$column-width: 100% / $column-numbers
+$gutter: $unit-layout
+
+
+.flex-row
+	display: flex
+	margin-left: -($unit-layout)
+	margin-right: -($unit-layout)
+
+// Generates classes for columns 1 - 12.
+@for $i from 1 through $column-numbers
+	.columns-#{$i}
+		width: $i * $column-width
+		padding: 0 $unit-layout
+		float: left
+		// +respond-to-size($tablet)
+		// 	width: 100%
+		// 	margin-bottom: $double-unit-layout
+
+
+@for $i from 1 through $column-numbers
+	.flex-grid-#{$i}
+		+no-bullet
+		display: flex
+		flex-wrap: wrap
+		margin-left: -$gutter
+		margin-right: -$gutter
+
+		> .flex-item
+
+			width: (100% / $i)
+			// This doesn't work, because it rounds numbers down, so items don't take up the full width of the container 
+			// (for exapmple, flex-grid-3 was giving me widths of 33%, rather than 33.33%)
+			// width: floor(100% / $i)
+			margin-bottom: $double-unit-layout
+			padding: 0 $gutter
+
+			+respond-to-size(800px)
+				width: 100%
+
+				&:last-of-type
+					margin-bottom: 0
+
+// @NOTE this is a very silly hotfix to make all .flex-grid-* classes display: flex
+[class^="flex-grid"]
+	display: flex
+
+.align-right
+	margin-left: auto !important
+
+.align-left
+	margin-right: auto !important
+
+.flex
+	display: flex
+
+	&.column
+		flex-direction: column
+
+	&.row
+		flex-direction: row
+
+	&.center-vertically
+		align-items: center
+
+	&.center-horizontally
+		justify-content: center
+
+
+	// +respond-to-size(500px)
+	// 	display: block
+
+	// 	> .flex-1
+	// 		flex: initial
+
+@for $i from 1 through $column-numbers
+	.flex-#{$i}
+		flex: $i

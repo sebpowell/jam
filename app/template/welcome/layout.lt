@@ -1,18 +1,73 @@
-<article class="flex-1">
-	<a id="logo" href="/">
-		<h1>Making JAM London</h1>
-	</a>
-
-	<div class="content">
-		<p>We're a London-based community for people who build products. Launching Spring 2015.</p>
-
-		<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex">
-			<input style="display: none" type="text" name="b_7f799244738e8b8558a646378_6c81011ad7" tabindex="-1" value="">
-			<input autofocus class="flex-8" type="email" name="EMAIL" placeholder="Sign up for updates" required/>
-			<button class="flex-4 button primary" name="subscribe">Sign up</button>
-		</form>
-
-		<p>In the meantime, <a href="/about">read our story</a>.</p>
+<section id="masthead" class="flex center-vertically">
+	<div class="container-wide">
+		<h1>Sharing the stories behind </br> great products.</h1>
+		<h3>1 day. 9 speakers. Great coffee.</h3>
+		<h2>London, Saturday 3rd of October 2015. 10am - 9pm.</h2>
+		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="no-margin button brand large" target="_blank">Book Tickets</a>
+		<p class="description">Early Bird Tickets Available!</p>
 	</div>
+</section>
 
-</article>
+<section id="sectionStory">
+	<div class="container-wide">
+		<h3 class="small-heading">Story</h3>
+		<h2>Why JAM?</h2>
+		<p>We started JAM to help people build better products. As product makers, we’ve often asked ourselves - what’s happening backstage? How do others do it? What tools do they use? How do they organise their teams?</p>
+		
+		<p>We wanted to know more, and thought others would too.</p>
+		<button class="large toggle-our-story">Read More</button>
+	</div>
+</section>
+
+<section id="sectionSpeakers" class="text-center border-bottom">
+	<div class="container-wide">
+		<h3 class="small-heading">Speakers</h3>
+		<h2>Hear it straight from the horses’ mouth. </br>
+		9 speakers share their experiences.</h2>
+
+		<ul class="flex-grid-3">
+			{? foreach ($template["authors"] as $k => $v) { ?}
+			<li class="flex-item toggle-speaker-bio" id="{?= Utilities\String::sanUrl($k) =?}">
+				<img src="/assets/images/speakers/{?= $v["img"] =?}">
+				<strong>{?= $k =?}</strong>
+
+				<small>{?= $v["position"] =?}<br/>{?= $v["company"] =?}
+				</small>
+			</li>
+			{? } ?}
+		</ul>
+	</div>
+</section>
+
+<section class="quote">
+	<div class="container-wide">
+		<p>We believe a great product should be the </br> first focus of every startup.</p>
+		<a href="https://www.intercom.io/books/product-management" target="_blank"><small>Intercom, Product Management</small></a>
+	</div>
+</section>
+
+<section id="sectionTopics">
+		<!-- <h2 class="text-center no-margin">20 Minute Talks, 6 Topics.</h2> -->
+		<h3 class="small-heading margin-bottom double-unit">Themes</h3>
+
+		{? foreach ($template["schedule"] as $k) { ?}
+		<article>
+			<div class="container-wide">
+			<!-- <small>{?= $k["time"] =?}</small> -->
+			<h3>{?= $k["title"] =?}</h3>
+
+			{? $author = $template["authors"][$k["author"]]; ?}
+		<!-- 	<strong>{?= $k["author"] =?}</strong></br>
+			<small>{?= $author["position"] =?}, {?= $author["company"] =?}</small> -->
+			</div>
+		</article>
+		{? } ?}
+</section>
+
+<section id="sectionVenue" class="text-center">
+	<div class="container-wide">
+		<h2>Hosted in the iconic Oval Space, East London.<br/>
+			Food & Drink included</h2>
+		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" target="_blank" class="button brand large">Book Tickets</a>
+	</div>
+</section>

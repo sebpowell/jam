@@ -1,0 +1,43 @@
+.label
+	color: $color-grey-300
+	border: 1px solid $color-grey-300
+	background: white
+	padding: 0.5rem 0.5rem 0.35rem 0.5rem
+	text-transform: uppercase
+	letter-spacing: 1px
+	line-height: 1
+	margin-right: $half-unit-layout
+	font:
+		family: $font-family-primary
+		size: rem(12px)
+		weight: 600
+
+	&.blue
+		color: $color-blue
+		border-color: $color-blue
+
+	&.yellow
+		color: $color-yellow
+		border-color: $color-yellow
+
+	&.green
+		color: $color-green
+		border-color: $color-green
+
+	&.red
+		color: $color-red
+		border-color: $color-red
+
+	&.numeric
+		+border-radius($base-unit-layout + $quarter-unit-layout)
+
+		padding: 0 ($quarter-unit-layout  + rem(2px))
+		text-align: center
+		font-size: rem(10px)
+		display: inline-block
+		min-width: $base-unit-layout + $quarter-unit-layout
+		height: $base-unit-layout + $quarter-unit-layout
+		line-height: $base-unit-layout + $quarter-unit-layout + rem(2px)
+		border: 0
+		color: white
+		background: $color-label-numeric

@@ -1,0 +1,153 @@
+header#top-nav
+	+z-index(nav)
+	+transition(all .5s)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+
+	background: white
+	border-bottom: 1px solid $color-keyline
+	
+	> .container-wide, .container-fluid
+		height: $size-nav-height
+		display: flex
+		align-items: center
+	
+	.logo
+		display: block
+		width: 50px
+		margin: auto
+		height: 50px
+		background:
+			color: transparent
+			position: center center
+			repeat: no-repeat
+			size: 50px 50px
+			image: url("#{$image-base}/logo/logo-glyph.svg")
+
+	.button
+		+transition(opacity .25s)
+		opacity: 0
+		position: absolute
+		right: rem(55px) / 2
+		top: 50%
+		margin: -(rem(55px) / 2) 0 0
+		
+		&.active
+			opacity: 1
+
+
+.promotion
+	position: fixed
+	top: 80px
+	display: none
+	width: 100%
+	background: rgb(249, 249, 249)
+
+.nav-links
+	+z-index(navigation)
+	+no-bullet
+	+transition(all .5s)
+	position: fixed
+	background: black
+	top: 0
+	left: -400px
+	height: 100%
+	width: 400px
+	padding: $triple-unit-layout
+	padding-top: rem(80px)
+	+respond-to-size($phone)
+		left: -300px
+		width: 300px
+
+	.button
+		background: white
+		font-size: rem(28px)
+		font-weight: 700
+		border: 0
+	&.show
+		left: 0
+	li
+		&:not(:last-child)
+			margin-bottom: $double-unit-layout
+		a
+			position: relative
+			font:
+				size: rem(42px)
+				weight: 600
+			color: white
+			padding-bottom: 10px
+			text-decoration: none
+			
+			&:after
+				+transition(all 250ms)
+				position: absolute
+				left: 0
+				bottom: 0
+				margin-top: -2px
+				content: ""
+				background: white
+				width: 0
+				height: 8px
+				+respond-to-size($phone)
+					display: none
+			
+			&:hover
+				// color: $color-brand-secondary
+				&:after
+					width: 100%
+
+				
+
+
+
+.navigation-toggle
+	+z-index(navigation-toggle)
+	+no-bullet
+	position: fixed
+	left: $double-unit-layout
+	top: rem(44px)
+	width: 18px
+	height: 12px
+	cursor: pointer
+
+	li
+		left: 0
+		top: 50%
+		margin-top: -2px
+		position: absolute
+		width: 100%
+		height: 2px
+		background: black
+		&:before, &:after
+			+transition(all 1s)
+			content: ""
+			position: absolute
+			width: 100%
+			height: 2px
+			background: black
+		&:before
+			top: -6px
+		&:after
+			top: 6px
+	&.close-navigation
+		li
+			background: black
+			&:before, &:after
+				background: white
+			&:before
+				top: 0
+				+transform(rotate(45deg))
+			&:after
+				top: 0
+				+transform(rotate(-45deg))
+
+
+
+
+
+
+
+
+

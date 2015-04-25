@@ -1,0 +1,26 @@
+.alert
+	+transition(top .25s)
+	+z-index(alert)
+
+	position: fixed
+	left: 0
+	top: -($quadruple-unit-layout)
+	width: 100%
+	height: $quadruple-unit-layout
+	background: $color-blue
+	color: rgba(0, 0, 0, .4)
+
+	&.info
+		background: $color-blue
+
+	&.warning
+		background: $color-alert-warning
+
+	&.error
+		background: $color-alert-error
+
+	&.success
+		background: $color-alert-success
+
+	&.active
+		top: 0

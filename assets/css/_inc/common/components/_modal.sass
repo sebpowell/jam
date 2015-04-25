@@ -1,0 +1,69 @@
+.modal-backdrop
+	+transition(all 1s)
+	+z-index(modal-backdrop)
+	position: fixed
+	display: none
+	top: 0
+	left: 0
+	background: rgba(00,00,00,0.4)
+	width: 100%
+	height: 100%
+	&.is-visible
+		display: block
+
+.modal
+	+z-index(modal)
+	+transition(opacity .45s)
+
+	cursor: pointer
+	text-align: center
+	width: 100%
+	height: 100%
+	background: rgba(0,0,0,.8)
+	overflow-y: scroll
+	position: fixed
+	opacity: 0
+	left: 0
+	top: 0
+	color: white
+
+	&.show
+		opacity: 1
+
+	.modal-content
+		//+border-radius(8px)
+		//+box-shadow(0px 0px 4px rgba(0,0,0,.5))
+
+		//background: white
+		//padding: $double-unit-layout
+		position: relative
+		cursor: default
+		max-width: rem(650px)
+		margin: ($quadruple-unit-layout + $double-unit-layout) auto $quadruple-unit-layout
+
+		.close-modal
+			position: absolute
+			right: 0
+			top: $base-unit-layout
+			cursor: pointer
+			font-size: rem(24px)
+			//font:
+			//	weight: 500
+
+		p
+			line-height: 1.8
+			margin-bottom: $double-half-unit-layout
+			font:
+				family: $font-family-custom
+
+			a
+				color: white
+
+			&:last-of-type
+				margin-bottom: 0
+
+			&.heading
+				//margin-bottom: $double-unit-layout
+				font:
+					size: rem(24px)
+					weight: 500
