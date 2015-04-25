@@ -1511,6 +1511,8 @@ input:invalid, textarea:invalid {
       .page-welcome section#sectionSpeakers ul > .flex-item small {
         color: #839ba3;
         font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif; }
+        .page-welcome section#sectionSpeakers ul > .flex-item small a {
+          color: inherit; }
   .page-welcome section#sectionTopics {
     padding: 5rem 0;
     border-bottom: 1px solid #E1E5E6;

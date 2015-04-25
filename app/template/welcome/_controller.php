@@ -23,16 +23,16 @@ final class controller extends Controller\baseController
 	{
 
 		return [
-			"James Gill"      => [ "img" => "james-gill.png" , "position" => "CEO" , "company" => "GoSquared" ] ,
-			"Scott Weiss"     => [ "img" => "scott-weiss.jpg" , "position" => "VP Design" , "company" => "SwiftKey" ] ,
-			//"Martin Willers"  => [ "img" => "martin-willers.jpg" , "position" => "Founder" , "company" => "PeoplePeople" ] ,
-			"Tim Davey"       => [ "img" => "tim-davey.jpg" , "position" => "Co-Founder &amp; VP Product" , "company" => "OneFineStay" ] ,
-			"Graham Paterson" => [ "img" => "graham-paterson.jpg" , "position" => "Product Manager" , "company" => "Transferwise" ],
-			"Will Swannell" => [ "img" => "will-swannell.png" , "position" => "Founder & CEO" , "company" => "Hire Space" ],
-			"Pip Jamieson" => [ "img" => "pip-jamieson.png" , "position" => "Founder" , "company" => "The Dots" ],
-			"To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "" ],
-			"To be announced " => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "" ],
-			" To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "" ]
+			"James Gill"      => [ "img" => "james-gill.png" , "position" => "CEO" , "company" => "GoSquared", "link" => "https://www.gosquared.com/" ] ,
+			"Scott Weiss"     => [ "img" => "scott-weiss.jpg" , "position" => "VP Design" , "company" => "SwiftKey", "link" => "http://swiftkey.com/en/" ] ,
+			//"Martin Willers"  => [ "img" => "martin-willers.jpg" , "position" => "Founder" , "company" => "PeoplePeople", "link" => "http://www.peoplepeople.se/" ] ,
+			"Tim Davey"       => [ "img" => "tim-davey.jpg" , "position" => "Co-Founder &amp; VP Product" , "company" => "OneFineStay", "link" => "http://www.onefinestay.com/" ] ,
+			"Graham Paterson" => [ "img" => "graham-paterson.jpg" , "position" => "Product Manager" , "company" => "Transferwise", "link" => "https://transferwise.com/" ],
+			"Will Swannell" => [ "img" => "will-swannell.png" , "position" => "Founder & CEO" , "company" => "Hire Space", "link" => "https://hirespace.com/" ],
+			"Pip Jamieson" => [ "img" => "pip-jamieson.png" , "position" => "Founder" , "company" => "The Dots", "link" => "https://the-dots.co.uk/" ],
+			"To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ],
+			"To be announced " => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ],
+			" To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ]
 		];
 	}
 

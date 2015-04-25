@@ -31,7 +31,7 @@
 				<img src="/assets/images/speakers/<?php echo( $v["img"] ); ?>">
 				<strong><?php echo( $k ); ?></strong>
 
-				<small><?php echo( $v["position"] ); ?><br/><?php echo( $v["company"] ); ?>
+				<small><?php echo( $v["position"] ); ?><br/><a href="<?php echo( $v["link"] ); ?>" target="_blank"><?php echo( $v["company"] ); ?></a>
 				</small>
 			</li>
 			<?php  }  ?>
@@ -66,8 +66,8 @@
 
 <section id="sectionVenue" class="text-center">
 	<div class="container-wide">
-		<h2>Hosted in the iconic Oval Space, East London.<br/>
-			Food & Drink included</h2>
+		<h2>Hosted in the iconic Oval Space,<br/>East London.<br/>
+			Food & Drinks included</h2>
 		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" target="_blank" class="button brand large">Book Tickets</a>
 	</div>
 </section>
