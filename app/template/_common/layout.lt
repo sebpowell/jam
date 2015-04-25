@@ -10,7 +10,7 @@
 		<meta property="og:url" content="{? echo isset($template["omUrl"]) ? $template["omUrl"] : "http://www.jam2015.london" ?}">
 		<meta property="og:image" content="{? echo $template["omImage"] ? $template["omImage"] : "http://www.jam2015.london/assets/images/logo/logo-social.png" ?}">
 
-		<title>{{ app.siteName }} / {{ page.title }}</title>
+		<title>{{ app.siteName }} 2015</title>
 
 		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:300,500,700" rel="stylesheet" type="text/css">
 		<script src="//use.typekit.net/gwv4cfc.js"></script>
