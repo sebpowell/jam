@@ -2,9 +2,9 @@
 	<div class="container-wide">
 		<h1>Sharing the stories behind </br> great products.</h1>
 		<h3>1 day. 9 speakers. Great coffee.</h3>
-		<h2>London, Saturday 3rd of October 2015. 10am - 6pm.</h2>
+		<h2>London, Saturday 3rd of October 2015. 10am - 9pm.</h2>
 		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="no-margin button brand large" target="_blank">Book Tickets</a>
-		<p class="description">Early Bird Discounts Available!</p>
+		<p class="description">Early Bird Tickets Available!</p>
 	</div>
 </section>
 
@@ -12,7 +12,7 @@
 	<div class="container-wide">
 		<h3 class="small-heading">Story</h3>
 		<h2>Why JAM?</h2>
-		<p>We started JAM to help people build better products. As product makers ourselves, we’ve often asked ourselves - what’s happening backstage? How do others do it? What tools do they use? How do they organise their teams?</p>
+		<p>We started JAM to help people build better products. As product makers, we’ve often asked ourselves - what’s happening backstage? How do others do it? What tools do they use? How do they organise their teams?</p>
 		
 		<p>We wanted to know more, and thought others would too.</p>
 		<button class="large toggle-our-story">Read More</button>
@@ -42,7 +42,7 @@
 <section class="quote">
 	<div class="container-wide">
 		<p>We believe a great product should be the </br> first focus of every startup.</p>
-		<small>Intercom, Product Management</small>
+		<a href="https://www.intercom.io/books/product-management" target="_blank"><small>Intercom, Product Management</small></a>
 	</div>
 </section>
 
@@ -68,6 +68,6 @@
 	<div class="container-wide">
 		<h2>Hosted in the iconic Oval Space, East London.<br/>
 			Food & Drink included</h2>
-		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" class="button brand large">Book Tickets</a>
+		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" target="_blank" class="button brand large">Book Tickets</a>
 	</div>
 </section>

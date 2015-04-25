@@ -6,7 +6,7 @@
 
 		<section class="no-padding">
 			<p>Building products is hard. When the three of us started working
-				together at <a href="http://www.adbrain.com">Adbrain</a> a year ago, we struggled. We’d
+				together at <a href="http://www.adbrain.com" target="_blank">Adbrain</a> a year ago, we struggled. We’d
 				worked on products before, but nothing quite like this (ad tech
 				products are complicated). How do you decide what to build? How do
 				designers, engineers and product managers seamlessly work together?

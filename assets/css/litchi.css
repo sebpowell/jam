@@ -1431,6 +1431,8 @@ input:invalid, textarea:invalid {
   .quote p {
     font-size: 2.625rem;
     font-weight: 600; }
+  .quote a {
+    color: inherit; }
   .quote small {
     text-transform: uppercase;
     letter-spacing: 1px;

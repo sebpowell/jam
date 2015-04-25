@@ -25,13 +25,14 @@ final class controller extends Controller\baseController
 		return [
 			"James Gill"      => [ "img" => "james-gill.png" , "position" => "CEO" , "company" => "GoSquared" ] ,
 			"Scott Weiss"     => [ "img" => "scott-weiss.jpg" , "position" => "VP Design" , "company" => "SwiftKey" ] ,
-			"Martin Willers"  => [ "img" => "martin-willers.jpg" , "position" => "Founder" , "company" => "PeoplePeople" ] ,
+			//"Martin Willers"  => [ "img" => "martin-willers.jpg" , "position" => "Founder" , "company" => "PeoplePeople" ] ,
 			"Tim Davey"       => [ "img" => "tim-davey.jpg" , "position" => "Co-Founder &amp; VP Product" , "company" => "OneFineStay" ] ,
 			"Graham Paterson" => [ "img" => "graham-paterson.jpg" , "position" => "Product Manager" , "company" => "Transferwise" ],
 			"Will Swannell" => [ "img" => "will-swannell.png" , "position" => "Founder & CEO" , "company" => "Hire Space" ],
-			"TBC2" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "TBC" ],
-			"TBC3" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "TBC" ],
-			"TBC4" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "TBC" ]
+			"Pip Jamieson" => [ "img" => "pip-jamieson.png" , "position" => "Founder" , "company" => "The Dots" ],
+			"To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "" ],
+			"To be announced " => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "" ],
+			" To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "" ]
 		];
 	}
 

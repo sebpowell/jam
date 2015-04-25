@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="<?php echo( $template["app"]["encoding"] ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<meta name="google-site-verification" content="uxoGRyCIKZAqXoimSbwGR7hmpL-tBV0aA6Pu-ypnIMA" />
 		<meta name="description" content="<?php echo( $template["app"]["description"] ); ?>">
 		<meta property="og:title" content="<?php  echo isset($template["omTitle"]) ? $template["omTitle"] : "JAM London"  ?>">
 		<meta property="og:description" content="<?php  echo isset($template["omDescription"]) ? $template["omDescription"] : $template["app"]["description"]  ?>">
@@ -87,7 +87,7 @@
 				</ul>
 				<div class="copyright">
 					<h6>Made In London</h6>
-					<small>JAM is a company registered in England & Wales, company number 789798.</small>
+					<!--<small>JAM is a company registered in England & Wales, company number 789798.</small>-->
 				</div>
 			</div>
 		</footer>
