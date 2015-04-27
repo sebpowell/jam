@@ -30,7 +30,7 @@ final class controller extends Controller\baseController
 			"Graham Paterson" => [ "img" => "graham-paterson.jpg" , "position" => "Product Manager" , "company" => "Transferwise", "link" => "https://transferwise.com/" ],
 			"Will Swannell" => [ "img" => "will-swannell.png" , "position" => "Founder & CEO" , "company" => "Hire Space", "link" => "https://hirespace.com/" ],
 			"Pip Jamieson" => [ "img" => "pip-jamieson.png" , "position" => "Founder" , "company" => "The Dots", "link" => "https://the-dots.co.uk/" ],
-			"To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ],
+			"Rachel Ilan Simpson" => [ "img" => "rachel-ilan-simpson.png" , "position" => "UX Designer" , "company" => "Google Chrome Team", "link" => "https://www.google.co.uk/about/company/" ],
 			"To be announced " => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ],
 			" To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ]
 		];
