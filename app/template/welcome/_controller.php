@@ -27,10 +27,10 @@ final class controller extends Controller\baseController
 			"Rachel Ilan Simpson" => [ "img" => "rachel-ilan-simpson.png" , "position" => "UX Designer" , "company" => "Google Chrome Team", "link" => "https://www.google.co.uk/about/company/" ],
 			"Scott Weiss"     => [ "img" => "scott-weiss.jpg" , "position" => "VP Design" , "company" => "SwiftKey", "link" => "http://swiftkey.com/en/" ] ,
 			//"Martin Willers"  => [ "img" => "martin-willers.jpg" , "position" => "Founder" , "company" => "PeoplePeople", "link" => "http://www.peoplepeople.se/" ] ,
-			"Tim Davey"       => [ "img" => "tim-davey.jpg" , "position" => "Co-Founder &amp; VP Product" , "company" => "OneFineStay", "link" => "http://www.onefinestay.com/" ] ,
+			"Pip Jamieson" => [ "img" => "pip-jamieson.png" , "position" => "Founder" , "company" => "The Dots", "link" => "https://the-dots.co.uk/" ],
 			"Graham Paterson" => [ "img" => "graham-paterson.jpg" , "position" => "Product Manager" , "company" => "Transferwise", "link" => "https://transferwise.com/" ],
 			"Will Swannell" => [ "img" => "will-swannell.png" , "position" => "Founder & CEO" , "company" => "Hire Space", "link" => "https://hirespace.com/" ],
-			"Pip Jamieson" => [ "img" => "pip-jamieson.png" , "position" => "Founder" , "company" => "The Dots", "link" => "https://the-dots.co.uk/" ],
+			"Tim Davey"       => [ "img" => "tim-davey.jpg" , "position" => "Co-Founder &amp; VP Product" , "company" => "OneFineStay", "link" => "http://www.onefinestay.com/" ] ,
 			"To be announced " => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ],
 			" To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ]
 		];
