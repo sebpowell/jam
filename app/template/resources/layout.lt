@@ -25,14 +25,16 @@
 				<h2><a href="{{ resourceDetails.link }}" target="_blank">{{ resourceDetails.title }}</a></h2>
 
 				<article style="padding-top: 0">
-					<h3 class="title">
-						<small><strong>{{ resourceDetails.date }}</strong> by <strong>{{ resourceDetails.author }}</strong></small>
-					</p>
-					<p>{{ resourceDetails.desc }}</p>
-					<div class="tags flex">
-						{? foreach ($template["resourceDetails"]["tags"] as $tag) { ?}
-						<span class="label {?= $tag =?}">{?= $tag =?}</span>
-						{? } ?}
+					<div class="container-narrow">
+						<h3 class="title">
+							<small><strong>{{ resourceDetails.date }}</strong> by <strong>{{ resourceDetails.author }}</strong></small>
+						</p>
+						<p>{{ resourceDetails.desc }}</p>
+						<div class="tags flex">
+							{? foreach ($template["resourceDetails"]["tags"] as $tag) { ?}
+							<span class="label {?= $tag =?}">{?= $tag =?}</span>
+							{? } ?}
+						</div>
 					</div>
 				</article>
 			{? } else { ?}
