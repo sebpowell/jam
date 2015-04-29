@@ -40,10 +40,6 @@ final class controller extends Controller\baseController
 	private function addContent ( $data )
 	{
 
-		if ( $data[ "code" ] !== "jamisawesome" ) {
-			return Alert::render ( "Your secret code is not valid, sorry. I am not going to publish anything!!" , "alert error" );
-		}
-
 		$timeStamp = strtotime ( $data[ "date" ] );
 		$fileName = String::sanUrl ( $data[ "title" ] );
 		$newJsonName = APP_DIR . "/assets/content/" . $fileName . ".json";
@@ -79,7 +75,6 @@ final class controller extends Controller\baseController
 
 		$form = new Form( "post" , "add" );
 
-		$form->addInput ( "password" , "code" , "App Secret" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "author" , "Author's name" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "title" , "Title" , false , false , false , [ "required" ] );
 		$form->addInput ( "text" , "link" , "Article URL" , false , false , false , [ "required" ] );
