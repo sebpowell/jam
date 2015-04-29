@@ -21,20 +21,20 @@
 	<div class="content">
 		<div class="resources">
 			<?php  if (isset($template["resourceDetails"])) {  ?>
-
-				<h2><a href="<?php echo( $template["resourceDetails"]["link"] ); ?>" target="_blank"><?php echo( $template["resourceDetails"]["title"] ); ?></a></h2>
-
-				<article style="padding-top: 0">
-					<h3 class="title">
-						<small><strong><?php echo( $template["resourceDetails"]["date"] ); ?></strong> by <strong><?php echo( $template["resourceDetails"]["author"] ); ?></strong></small>
-					</p>
-					<p><?php echo( $template["resourceDetails"]["desc"] ); ?></p>
-					<div class="tags flex">
-						<?php  foreach ($template["resourceDetails"]["tags"] as $tag) {  ?>
-						<span class="label <?php echo( $tag ); ?>"><?php echo( $tag ); ?></span>
-						<?php  }  ?>
-					</div>
-				</article>
+					<article>
+						<div class="container-narrow">
+							<h3 class="title">
+								<a href="<?php echo( $template["resourceDetails"]["link"] ); ?>" target="_blank"><?php echo( $template["resourceDetails"]["title"] ); ?></a>
+								<small><strong><?php echo( $template["resourceDetails"]["date"] ); ?></strong> by <strong><?php echo( $template["resourceDetails"]["author"] ); ?></strong></small>
+							</p>
+							<p><?php echo( $template["resourceDetails"]["desc"] ); ?></p>
+							<div class="tags flex">
+								<?php  foreach ($template["resourceDetails"]["tags"] as $tag) {  ?>
+								<span class="label <?php echo( $tag ); ?>"><?php echo( $tag ); ?></span>
+								<?php  }  ?>
+							</div>
+						</div>
+					</article>
 			<?php  } else {  ?>
 
 				<!--<h2>Resources</h2>-->
