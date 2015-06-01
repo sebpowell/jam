@@ -21,12 +21,11 @@
 	<div class="content">
 		<div class="resources">
 			<?php  if (isset($template["resourceDetails"])) {  ?>
+					<a href="<?php echo( $template["resourceDetails"]["link"] ); ?>" target="_blank">
 					<article>
 						<div class="container-narrow">
-							<h3 class="title">
-								<a href="<?php echo( $template["resourceDetails"]["link"] ); ?>" target="_blank"><?php echo( $template["resourceDetails"]["title"] ); ?></a>
-								<small><strong><?php echo( $template["resourceDetails"]["date"] ); ?></strong> by <strong><?php echo( $template["resourceDetails"]["author"] ); ?></strong></small>
-							</p>
+							<h3 class="title"><?php echo( $template["resourceDetails"]["title"] ); ?></h3>
+							<small><strong><?php echo( $template["resourceDetails"]["date"] ); ?></strong> by <strong><?php echo( $template["resourceDetails"]["author"] ); ?></strong></small>
 							<p><?php echo( $template["resourceDetails"]["desc"] ); ?></p>
 							<div class="tags flex">
 								<?php  foreach ($template["resourceDetails"]["tags"] as $tag) {  ?>
@@ -35,6 +34,7 @@
 							</div>
 						</div>
 					</article>
+					</a>
 			<?php  } else {  ?>
 
 				<!--<h2>Resources</h2>-->
