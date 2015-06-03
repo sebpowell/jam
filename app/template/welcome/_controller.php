@@ -23,16 +23,16 @@ final class controller extends Controller\baseController
 	{
 
 		return [
-			"James Gill"      => [ "img" => "james-gill.png" , "position" => "CEO" , "company" => "GoSquared", "link" => "https://www.gosquared.com/" ] ,
-			"Rachel Ilan Simpson" => [ "img" => "rachel-ilan-simpson.png" , "position" => "UX Designer" , "company" => "Google Chrome Team", "link" => "https://www.google.co.uk/about/company/" ],
 			"Scott Weiss"     => [ "img" => "scott-weiss.jpg" , "position" => "VP Design" , "company" => "SwiftKey", "link" => "http://swiftkey.com/en/" ] ,
+			"Rachel Ilan Simpson" => [ "img" => "rachel-ilan-simpson.png" , "position" => "UX Designer" , "company" => "Google Chrome Team", "link" => "https://www.google.co.uk/about/company/" ],
+			"James Gill"      => [ "img" => "james-gill.png" , "position" => "CEO" , "company" => "GoSquared", "link" => "https://www.gosquared.com/" ] ,
 			//"Martin Willers"  => [ "img" => "martin-willers.jpg" , "position" => "Founder" , "company" => "PeoplePeople", "link" => "http://www.peoplepeople.se/" ] ,
 			"Pip Jamieson" => [ "img" => "pip-jamieson.png" , "position" => "Founder" , "company" => "The Dots", "link" => "https://the-dots.co.uk/" ],
 			"Graham Paterson" => [ "img" => "graham-paterson.jpg" , "position" => "Product Manager" , "company" => "Transferwise", "link" => "https://transferwise.com/" ],
+			"Karolis Kosas" => [ "img" => "karolis-kosas.png" , "position" => "Creative Director" , "company" => "YPlan", "link" => "https://yplanapp.com/" ],
 			"Will Swannell" => [ "img" => "will-swannell.png" , "position" => "Founder & CEO" , "company" => "Hire Space", "link" => "https://hirespace.com/" ],
 			"Tim Davey"       => [ "img" => "tim-davey.png" , "position" => "Co-Founder &amp; Head of Product" , "company" => "OneFineStay", "link" => "http://www.onefinestay.com/" ] ,
-			"To be announced " => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ],
-			" To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ]
+			"To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ]
 		];
 	}
 
