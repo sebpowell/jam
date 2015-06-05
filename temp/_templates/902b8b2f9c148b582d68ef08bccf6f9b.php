@@ -41,7 +41,7 @@
 
 <section class="quote">
 	<div class="container-wide">
-		<p>We believe a great product should be the </br> first focus of every startup.</p>
+		<p>&ldquo;We believe a great product should be the </br> first focus of every startup.&rdquo;</p>
 		<a href="https://www.intercom.io/books/product-management" target="_blank"><small>Intercom, Product Management</small></a>
 	</div>
 </section>
