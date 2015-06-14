@@ -1672,7 +1672,8 @@ section {
     background: #eef1f3; }
 .page-resources .resources h3 {
   margin-bottom: 0;
-  line-height: 1.25; }
+  line-height: 1.25;
+  text-transform: capitalize; }
 .page-resources .resources p {
   font-size: 1.125rem; }
 .page-resources .resources a {
