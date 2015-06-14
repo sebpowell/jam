@@ -31,7 +31,11 @@
 				<img src="/assets/images/speakers/{?= $v["img"] =?}">
 				<strong>{?= $k =?}</strong>
 
-				<small>{?= $v["position"] =?}<br/><a href="{?= $v["link"] =?}" target="_blank">{?= $v["company"] =?}</a>
+				<small>{?= $v["position"] =?}
+				<br/>
+				<a class="{?= Utilities\String::sanUrl($v["company"]) =?}" href="{?= $v["link"] =?}" target="_blank">
+					<em>{?= $v["company"] =?}</em>
+				</a>
 				</small>
 			</li>
 			{? } ?}

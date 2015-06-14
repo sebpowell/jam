@@ -22,7 +22,7 @@
 <section id="sectionSpeakers" class="text-center border-bottom">
 	<div class="container-wide">
 		<h3 class="small-heading">Speakers</h3>
-		<h2>Hear it straight from the horses’ mouth. </br>
+		<h2>Hear it straight from the horse’s mouth. </br>
 		9 speakers share their experiences.</h2>
 
 		<ul class="flex-grid-3">
@@ -31,7 +31,11 @@
 				<img src="/assets/images/speakers/<?php echo( $v["img"] ); ?>">
 				<strong><?php echo( $k ); ?></strong>
 
-				<small><?php echo( $v["position"] ); ?><br/><a href="<?php echo( $v["link"] ); ?>" target="_blank"><?php echo( $v["company"] ); ?></a>
+				<small><?php echo( $v["position"] ); ?>
+				<br/>
+				<a class="<?php echo( Utilities\String::sanUrl($v["company"]) ); ?>" href="<?php echo( $v["link"] ); ?>" target="_blank">
+					<em><?php echo( $v["company"] ); ?></em>
+				</a>
 				</small>
 			</li>
 			<?php  }  ?>

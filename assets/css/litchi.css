@@ -1481,38 +1481,72 @@ input:invalid, textarea:invalid {
     padding: 5rem 0; }
     .page-welcome section#sectionSpeakers ul {
       margin-top: 4rem; }
-      @media all and (max-width: 500px) {
-        .page-welcome section#sectionSpeakers ul > .flex-item {
-          width: 50%; } }
-      .page-welcome section#sectionSpeakers ul > .flex-item img {
-        -webkit-transition: all .15s;
-        -o-transition: all .15s;
-        transition: all .15s;
-        cursor: pointer;
-        width: 100%;
-        max-width: 9.375rem;
-        -webkit-border-radius: 100%;
-        border-radius: 100%;
-        margin: 0 auto 1rem;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat; }
-        .page-welcome section#sectionSpeakers ul > .flex-item img:hover {
-          -webkit-transform: scale(1.1, 1.1);
-          -ms-transform: scale(1.1, 1.1);
-          -o-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1); }
+      .page-welcome section#sectionSpeakers ul > .flex-item {
+        margin-bottom: 3rem; }
         @media all and (max-width: 500px) {
-          .page-welcome section#sectionSpeakers ul > .flex-item img {
-            max-width: 12.5rem; } }
-      .page-welcome section#sectionSpeakers ul > .flex-item strong {
-        display: block;
-        font-size: 1.25rem; }
-      .page-welcome section#sectionSpeakers ul > .flex-item small {
-        color: #839ba3;
-        font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif; }
-        .page-welcome section#sectionSpeakers ul > .flex-item small a {
-          color: inherit; }
+          .page-welcome section#sectionSpeakers ul > .flex-item {
+            width: 50%; } }
+        .page-welcome section#sectionSpeakers ul > .flex-item img {
+          -webkit-transition: all .15s;
+          -o-transition: all .15s;
+          transition: all .15s;
+          cursor: pointer;
+          width: 100%;
+          max-width: 9.375rem;
+          -webkit-border-radius: 100%;
+          border-radius: 100%;
+          margin: 0 auto 1rem;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+          .page-welcome section#sectionSpeakers ul > .flex-item img:hover {
+            -webkit-transform: scale(1.1, 1.1);
+            -ms-transform: scale(1.1, 1.1);
+            -o-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); }
+          @media all and (max-width: 500px) {
+            .page-welcome section#sectionSpeakers ul > .flex-item img {
+              max-width: 12.5rem; } }
+        .page-welcome section#sectionSpeakers ul > .flex-item strong {
+          display: block;
+          font-size: 1.25rem; }
+        .page-welcome section#sectionSpeakers ul > .flex-item small {
+          display: block;
+          color: #839ba3;
+          font-family: "proxima nova", "proxima-nova", Helvetica, Arial, sans-serif;
+          padding: 0.5rem 0; }
+          .page-welcome section#sectionSpeakers ul > .flex-item small a {
+            display: block;
+            margin-top: 0.5rem;
+            width: 100%;
+            height: 25px;
+            color: inherit;
+            background-color: transparent;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 100%; }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a em {
+              opacity: 0; }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.google-chrome-team {
+              background-image: url('../images//speakers/companies/google.png'); }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.gosquared {
+              background-image: url('../images//speakers/companies/gosquared.png');
+              background-size: auto 85%; }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.hire-space {
+              background-image: url('../images//speakers/companies/hirespace.png'); }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.onefinestay {
+              background-image: url('../images//speakers/companies/onefinestay.png'); }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.swiftkey {
+              background-image: url('../images//speakers/companies/swiftkey.png');
+              background-size: auto 85%; }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.the-dots {
+              background-image: url('../images//speakers/companies/thedots.png'); }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.transferwise {
+              background-image: url('../images//speakers/companies/transferwise.png');
+              background-size: auto 80%; }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.yplan {
+              background-image: url('../images//speakers/companies/yplan.png');
+              background-size: auto 70%; }
   .page-welcome section#sectionTopics {
     padding: 5rem 0;
     border-bottom: 1px solid #E1E5E6;
