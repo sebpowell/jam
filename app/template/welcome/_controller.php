@@ -30,9 +30,9 @@ final class controller extends Controller\baseController
 			"Pip Jamieson" => [ "img" => "pip-jamieson.png" , "position" => "Founder" , "company" => "The Dots", "link" => "https://the-dots.co.uk/" ],
 			"Graham Paterson" => [ "img" => "graham-paterson.jpg" , "position" => "Product Manager" , "company" => "Transferwise", "link" => "https://transferwise.com/" ],
 			"Karolis Kosas" => [ "img" => "karolis-kosas.png" , "position" => "Creative Director" , "company" => "YPlan", "link" => "https://yplanapp.com/" ],
+			"Anna Wojnarowska" => [ "img" => "anna-wojnarowska.png" , "position" => "User Researcher" , "company" => "Government Digital Service", "link" => "anna-wojnarowska.html" ],
 			"Will Swannell" => [ "img" => "will-swannell.png" , "position" => "Founder & CEO" , "company" => "Hire Space", "link" => "https://hirespace.com/" ],
-			"Tim Davey"       => [ "img" => "tim-davey.png" , "position" => "Co-Founder &amp; Head of Product" , "company" => "OneFineStay", "link" => "http://www.onefinestay.com/" ] ,
-			"To be announced" => [ "img" => "tbc.png" , "position" => "TBC" , "company" => "", "link" => "" ]
+			"Tim Davey"       => [ "img" => "tim-davey.png" , "position" => "Co-Founder &amp; Head of Product" , "company" => "OneFineStay", "link" => "http://www.onefinestay.com/" ],
 		];
 	}
 

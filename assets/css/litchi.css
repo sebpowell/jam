@@ -1532,6 +1532,9 @@ input:invalid, textarea:invalid {
             .page-welcome section#sectionSpeakers ul > .flex-item small a.gosquared {
               background-image: url('../images//speakers/companies/gosquared.png');
               background-size: auto 85%; }
+            .page-welcome section#sectionSpeakers ul > .flex-item small a.government-digital-service {
+              background-image: url('../images//speakers/companies/governmentds.png');
+              background-size: auto 100%; }
             .page-welcome section#sectionSpeakers ul > .flex-item small a.hire-space {
               background-image: url('../images//speakers/companies/hirespace.png'); }
             .page-welcome section#sectionSpeakers ul > .flex-item small a.onefinestay {
