@@ -75,3 +75,17 @@
 		<a href="https://www.eventbrite.com/e/jam-london-2015-tickets-16351563968" target="_blank" class="button brand large">Book Tickets</a>
 	</div>
 </section>
+
+<section id="sectionSponsors">
+	<div class="container-wide">
+		<h2 class="text-center">Who makes this possible?</h2>
+
+		<ul>
+			<li id="adbrain"><a href="" target="_blank"><strong>Adbrain</strong></a></li>
+			<li id="gocardless"><a href="" target="_blank"><strong>GOCARDLESS</strong></a></li>
+			<li id="hirespace"><a href="" target="_blank"><strong>Hire Space</strong></a></li>
+			<li id="deskbeers"><a href="" target="_blank"><strong>DeskBeers</strong></a></li>
+			<li id="balsamiq"><a href="" target="_blank"><strong>balsamiq</strong></a></li>
+		</ul>
+	</div>
+</section>

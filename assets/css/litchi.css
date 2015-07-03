@@ -190,7 +190,7 @@ ul, ol {
     margin: 0; }
   ul:last-child, ol:last-child {
     margin-bottom: 0; }
-  ul.unstyled, ol.unstyled {
+  ul.unstyled, .page-welcome section#sectionSponsors ul, ol.unstyled {
     list-style-type: none;
     margin: 0;
     padding: 0; }
@@ -1115,7 +1115,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 .margin-double {
   margin: 2rem !important; }
 
-.text-center, .page-welcome section#sectionStory {
+.text-center, .page-welcome section#sectionStory, .page-welcome section#sectionSponsors ul li a {
   text-align: center; }
 
 .text-right {
@@ -1550,6 +1550,46 @@ input:invalid, textarea:invalid {
             .page-welcome section#sectionSpeakers ul > .flex-item small a.yplan {
               background-image: url('../images//speakers/companies/yplan.png');
               background-size: auto 70%; }
+  .page-welcome section#sectionSponsors ul {
+    zoom: 1; }
+    .page-welcome section#sectionSponsors ul:before, .page-welcome section#sectionSponsors ul:after {
+      content: "";
+      display: table; }
+    .page-welcome section#sectionSponsors ul:after {
+      clear: both; }
+    .page-welcome section#sectionSponsors ul li {
+      float: left;
+      width: 20%; }
+      .page-welcome section#sectionSponsors ul li a {
+        display: block;
+        height: 6rem;
+        line-height: 6rem;
+        background-color: transparent;
+        background-image: url('../images//sponsors/adbrain.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 80% auto; }
+        .page-welcome section#sectionSponsors ul li a strong {
+          opacity: 0; }
+      .page-welcome section#sectionSponsors ul li#balsamiq a {
+        background-image: url('../images//sponsors/balsamiq.png');
+        background-size: 70% auto; }
+      .page-welcome section#sectionSponsors ul li#deskbeers a {
+        background-image: url('../images//sponsors/deskbeers.jpg');
+        background-size: 70% auto; }
+      .page-welcome section#sectionSponsors ul li#gocardless a {
+        background-image: url('../images//sponsors/gocardless.png');
+        background-size: 90% auto; }
+      .page-welcome section#sectionSponsors ul li#hirespace a {
+        background-image: url('../images//sponsors/hirespace.png'); }
+      @media all and (max-width: 800px) {
+        .page-welcome section#sectionSponsors ul li {
+          float: none;
+          width: 100%; }
+          .page-welcome section#sectionSponsors ul li a {
+            background-size: auto 50% !important; }
+          .page-welcome section#sectionSponsors ul li#gocardless a {
+            background-size: auto 35% !important; } }
   .page-welcome section#sectionTopics {
     padding: 5rem 0;
     border-bottom: 1px solid #E1E5E6;

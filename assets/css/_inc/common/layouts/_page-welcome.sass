@@ -174,6 +174,67 @@
                   image: url('#{$image-base}/speakers/companies/yplan.png')
                   size: auto 70%
 
+    &#sectionSponsors
+      ul
+        @extend .unstyled
+        +clearfix
+
+        li
+          float: left
+          width: 20%
+
+          a
+            @extend .text-center
+
+            display: block
+            height: $triple-unit-layout * 2
+            line-height: $triple-unit-layout * 2
+            background:
+              color: transparent
+              image: url('#{$image-base}/sponsors/adbrain.png')
+              position: center center
+              repeat: no-repeat
+              size: 80% auto
+
+            strong
+              opacity: 0
+
+          &#balsamiq
+            a
+              background:
+                image: url('#{$image-base}/sponsors/balsamiq.png')
+                size: 70% auto
+
+          &#deskbeers
+            a
+              background:
+                image: url('#{$image-base}/sponsors/deskbeers.jpg')
+                size: 70% auto
+
+          &#gocardless
+            a
+              background:
+                image: url('#{$image-base}/sponsors/gocardless.png')
+                size: 90% auto
+
+          &#hirespace
+            a
+              background:
+                image: url('#{$image-base}/sponsors/hirespace.png')
+
+          +respond-to-size(800px)
+            float: none
+            width: 100%
+
+            a
+              background:
+                size: auto 50% !important
+
+            &#gocardless
+              a
+                background:
+                  size: auto 35% !important
+
     &#sectionTopics
       padding: ($quadruple-unit-layout + $base-unit-layout) 0
       border-bottom: 1px solid $color-keyline
